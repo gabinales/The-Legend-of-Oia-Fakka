@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
+    private DamageHandler damageHandler;
+
     [Header("Movimento")]
     public float moveSpeed;
     private bool isMoving;
@@ -26,6 +28,8 @@ public class playerController : MonoBehaviour
     
     private void Awake() {
         animator = GetComponent<Animator>();
+        damageHandler = GetComponent<DamageHandler>();
+
     }
 
     public void HandleUpdate(){
@@ -42,8 +46,8 @@ public class playerController : MonoBehaviour
                 animator.SetFloat(moveYHash, input.y);
 
                 var targetPos = transform.position;
-                targetPos.x += input.x;
-                targetPos.y += input.y;
+                targetPos.x += input.x / 4;
+                targetPos.y += input.y / 4;
 
                 //Antes de executar a movimentação, verifica se o alvo é caminhável (detecta colisão)
                 if(IsWalkable(targetPos)){
@@ -86,28 +90,34 @@ public class playerController : MonoBehaviour
 
     public void Ataca(){
         var orientacaoJogador = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
-        var posicaoAtaque = (Vector2)transform.position;
+        int targetLayer = LayerMask.GetMask("Destrutiveis");
+        float raycastDistance = 1f;
 
-        RaycastHit2D raycastHit2D = Physics2D.Raycast((Vector2)transform.position, orientacaoJogador, LayerMask.GetMask("Destrutiveis"));
+        //o target apenas é detectado na "targetLayer" "Destrutiveis"
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, orientacaoJogador, raycastDistance, targetLayer); 
 
-        if (raycastHit2D){
-            Debug.Log(raycastHit2D.collider.gameObject.name);
-            Debug.DrawRay((Vector2)transform.position, orientacaoJogador, Color.blue, 2f);
+        Debug.DrawRay(transform.position, orientacaoJogador, Color.blue, raycastDistance);
+
+        //se detectou um target, faz um debug log. além dissose estiver armado, chama a função "Damage" do script DamageHandler.cs
+        if (raycastHit2D.collider != null){
+            GameObject objectHit = raycastHit2D.collider.gameObject;
+            Debug.Log(objectHit);
+            
+            bool desarmado = animator.GetBool("Desarmado");            
+            if (!desarmado){
+                damageHandler.Damage(objectHit);
+            }    
         }
-               // GameObject hitObject = hit.collider.gameObject;
-
-    }
-
+     }
 
     IEnumerator Move(Vector3 targetPos){ //Coroutine para mover o sprite.
         isMoving = true;
-
+        //enquanto a posicao nao for igual à targetPos...
         while((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon){ //Garante que o while seja executado contanto que haja QUALQUER movimento (Epsilon lida com valores muito pequenos)
             transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
             yield return null;
         }
         transform.position = targetPos;
-
         isMoving = false;
     }
 

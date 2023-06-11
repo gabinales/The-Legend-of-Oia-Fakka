@@ -11,16 +11,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -5987561344384346597}
-    m_Position: {x: 300, y: -110, z: 0}
+    m_Position: {x: 300, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -409214767192583608}
-    m_Position: {x: 300, y: 20, z: 0}
+    m_Position: {x: 300, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2382432834563063930}
-    m_Position: {x: 110, y: -280, z: 0}
+    m_Position: {x: 170, y: -290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4316900768826223448}
-    m_Position: {x: 480, y: -280, z: 0}
+    m_Position: {x: 420, y: -290, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -4994432556615762464}
@@ -375,7 +375,7 @@ AnimatorController:
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 0}
   - m_Name: Desarmado
     m_Type: 4
