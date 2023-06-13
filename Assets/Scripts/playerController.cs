@@ -19,6 +19,7 @@ public class playerController : MonoBehaviour
 
     public void podeMover(){
         animator.ResetTrigger("Atacando");
+        isAttacking = false;
     }
     
     //Detecção de colisão do sprite utilizando a layer
@@ -66,7 +67,8 @@ public class playerController : MonoBehaviour
             Interacao();
         }
         //Botão de Ataque (X)
-        if(Input.GetKey(KeyCode.X)){
+        if(Input.GetKeyDown(KeyCode.X)){
+            isAttacking = true;
             animator.SetTrigger("Atacando"); //Este trigger deverá ser desativado futuramente.
             Ataque();
         }
@@ -107,11 +109,6 @@ public class playerController : MonoBehaviour
                 damageHandler.Damage(objectHit);
             }    
         }
-
-        //atualização_Patrick 12.06 ---- Problemas relativos a animação do Svard
-
-
-
     }
 
     IEnumerator Move(Vector3 targetPos){ //Coroutine para mover o sprite.
