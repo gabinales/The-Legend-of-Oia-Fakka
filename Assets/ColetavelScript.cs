@@ -24,9 +24,6 @@ public class ColetavelScript : MonoBehaviour
                 otherAnimator.ResetTrigger("Desarmado");
             }
         }
-        else{
-            Debug.Log("Deu errado");
-        }
     }
     void OnTriggerExit2D(Collider2D other)
     {

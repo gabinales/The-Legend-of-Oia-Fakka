@@ -110,17 +110,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 28
+      alignment: 9
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51772b1c3ca6cb49a2b1659fe129456
-      internalID: -697976339
+      spriteID: 6cf3f5952f78e734ebb91cf627e5ec6e
+      internalID: 1381148344
       vertices: []
       indices: 
       edges: []
@@ -129,19 +129,19 @@ TextureImporter:
       name: svard_EspadadaCima2
       rect:
         serializedVersion: 2
-        x: 16
+        x: 36
         y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 28
+      alignment: 9
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 442db399dad340744919b5b716a125af
-      internalID: -2087092420
+      spriteID: f65cb563f6dbf0746b449fdeadfbce97
+      internalID: 311955128
       vertices: []
       indices: 
       edges: []
@@ -150,19 +150,19 @@ TextureImporter:
       name: svard_EspadadaCima3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 72
         y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 28
+      alignment: 9
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50759704ff3dab247bc2b21ad24ce7be
-      internalID: -1593357840
+      spriteID: d5527d383a1b0bf499d85ed8cb28c2a8
+      internalID: -661997069
       vertices: []
       indices: 
       edges: []
@@ -171,61 +171,19 @@ TextureImporter:
       name: svard_EspadadaCima4
       rect:
         serializedVersion: 2
-        x: 48
+        x: 108
         y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 28
+      alignment: 9
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b938ad4b091ae9d49a997a7fe408967f
-      internalID: 2069378540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: svard_EspadadaCima5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4749cee23addcd54f9ee098c70e7a421
-      internalID: 1660816563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: svard_EspadadaCima6
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80008dea240bf564a950bbce38f22d7b
-      internalID: 1556769499
+      spriteID: 660d078f65635554db692ac42ea8a5d1
+      internalID: -37512957
       vertices: []
       indices: 
       edges: []
@@ -241,12 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      svard_EspadadaCima1: -697976339
-      svard_EspadadaCima2: -2087092420
-      svard_EspadadaCima3: -1593357840
-      svard_EspadadaCima4: 2069378540
-      svard_EspadadaCima5: 1660816563
-      svard_EspadadaCima6: 1556769499
+      svard_EspadadaCima1: 1381148344
+      svard_EspadadaCima2: 311955128
+      svard_EspadadaCima3: -661997069
+      svard_EspadadaCima4: -37512957
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

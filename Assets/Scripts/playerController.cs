@@ -4,11 +4,23 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
+    public void InterrompeMovimentacao(){
+        moveSpeed = 0f;
+        Debug.Log("Interrompeu");
+    }
+    public void RetomaMovimentacao(){
+        moveSpeed = 4f;
+        Debug.Log("Retomou");
+    }
+
+   
+
     private DamageHandler damageHandler;
 
     [Header("Movimento")]
     public float moveSpeed;
-    private bool isMoving;
+    private bool isMoving = false;
+    private bool isAttacking = false; // Para controlar o estado de ataque.
     private Vector2 input;
 
     //Animação do sprite
@@ -16,15 +28,10 @@ public class playerController : MonoBehaviour
     private int moveXHash = Animator.StringToHash("moveX");
     private int moveYHash = Animator.StringToHash("moveY");
     
-    
     //Detecção de colisão do sprite utilizando a layer
     public LayerMask corposSolidosLayer;
     public LayerMask npcLayer;
     public LayerMask destrutiveisLayer;
-
-    //Ataque
-    //private bool atacando = false;
-    //private int atacandoHash = Animator.StringToHash("Atacando");
     
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -33,8 +40,8 @@ public class playerController : MonoBehaviour
     }
 
     public void HandleUpdate(){
-        //1. Verifica se o jogador está pressionando alguma tecla. Se não, executa o bloco correspondente à posição IDLE
-        if(!isMoving){
+        //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando. Se não, executa o bloco correspondente à posição IDLE
+        if(!isMoving && !isAttacking){
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
@@ -42,6 +49,7 @@ public class playerController : MonoBehaviour
 
             if(input != Vector2.zero){
                 //Animação
+                animator.SetBool("isMoving", true);
                 animator.SetFloat(moveXHash, input.x); //Essa parada de Hash é recomendação da Unity.
                 animator.SetFloat(moveYHash, input.y);
 
@@ -54,23 +62,20 @@ public class playerController : MonoBehaviour
                     StartCoroutine(Move(targetPos));
                 }   
             }
-
-            //Botão de Interação (C)
-            if(Input.GetKeyDown(KeyCode.C)){
-                Interacao();
+            else{
+                animator.SetBool("isMoving", false);
             }
-            //Botão de Ataque (X)
-            if(Input.GetKeyDown(KeyCode.X)){
-                if(!isMoving){
-                //if(!isMoving && !Atacando){
-                    animator.SetTrigger("Atacando");
-                    Ataca();
-                }
-            }
-            
         }
-        //2. Se está se movendo, executa a animação correspondente (CORRE)
-        animator.SetBool("isMoving", isMoving);
+        //Botão de Interação (C)
+        if(Input.GetKeyDown(KeyCode.C)){
+            Interacao();
+        }
+        //Botão de Ataque (X)
+        if(Input.GetKey(KeyCode.X)){
+            isAttacking = true;
+            animator.SetTrigger("Atacando");
+            Ataque();
+        }
         
     }
     public void Interacao(){
@@ -88,7 +93,7 @@ public class playerController : MonoBehaviour
         }
     }
 
-    public void Ataca(){
+    public void Ataque(){
         var orientacaoJogador = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
         int targetLayer = LayerMask.GetMask("Destrutiveis");
         float raycastDistance = 1f;
@@ -108,7 +113,7 @@ public class playerController : MonoBehaviour
                 damageHandler.Damage(objectHit);
             }    
         }
-     }
+    }
 
     IEnumerator Move(Vector3 targetPos){ //Coroutine para mover o sprite.
         isMoving = true;
@@ -128,6 +133,10 @@ public class playerController : MonoBehaviour
         }
         return true;
     }
-
-    
+    /*private void OnDrawGizmos(Vector3 targetPos){ // Permite que o Physics2D.OverlapCircle seja visualizado na Scene
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 0.2f);
+    }*/
 }
+
+

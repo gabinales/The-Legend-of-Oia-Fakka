@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f023cceed74e2e44dbc84d3605a50728
+guid: 820c85cf312b1bb499b367f881cf6851
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,169 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: svard_EspadadaBaixo1
+      name: svardEspadadaDireita1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 31
-        height: 31
+        width: 40
+        height: 32
       alignment: 9
-      pivot: {x: 0.7, y: 0.7}
+      pivot: {x: 0.3, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38ac8756dd42af64b98bb8056ac38ba5
-      internalID: -269851853
+      spriteID: 5e5d4cf7a4b14ed4798f9bf5f36cea92
+      internalID: 138161191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: svard_EspadadaBaixo2
+      name: svardEspadadaDireita2
       rect:
         serializedVersion: 2
-        x: 31
+        x: 40
         y: 0
-        width: 31
-        height: 31
+        width: 40
+        height: 32
       alignment: 9
-      pivot: {x: 0.7, y: 0.7}
+      pivot: {x: 0.3, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f2c9e56285fb6b438b7b687304f4ab9
-      internalID: 782598174
+      spriteID: 36cf40bf60e611d48ae0a88ac4bf1402
+      internalID: -537428051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: svard_EspadadaBaixo3
+      name: svardEspadadaDireita3
       rect:
         serializedVersion: 2
-        x: 62
+        x: 80
         y: 0
-        width: 31
-        height: 31
+        width: 40
+        height: 32
       alignment: 9
-      pivot: {x: 0.7, y: 0.7}
+      pivot: {x: 0.3, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 104d65921fb2e6647bfe8b5be19dbce1
-      internalID: -1437781215
+      spriteID: 813af5cf2ccce164b98fff3578a75c78
+      internalID: -1510759406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: svard_EspadadaBaixo4
+      name: svardEspadadaDireita4
       rect:
         serializedVersion: 2
-        x: 93
+        x: 120
         y: 0
-        width: 31
-        height: 31
+        width: 40
+        height: 32
       alignment: 9
-      pivot: {x: 0.7, y: 0.7}
+      pivot: {x: 0.3, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83594443300a41d4dbab6e4abc61c554
-      internalID: -451645839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: svard_EspadadaBaixo5
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 0
-        width: 31
-        height: 31
-      alignment: 9
-      pivot: {x: 0.7, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afa4147d6cdb1f34dab75adb38198477
-      internalID: 440823990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: svard_EspadadaBaixo6
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 0
-        width: 31
-        height: 31
-      alignment: 9
-      pivot: {x: 0.7, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 989427becac9e2a4b9aab0f38177a261
-      internalID: 144018078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: svard_EspadadaBaixo7
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 0
-        width: 31
-        height: 31
-      alignment: 9
-      pivot: {x: 0.7, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7ed97732b57e1940821858769c9ff24
-      internalID: -1668633630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: svard_EspadadaBaixo8
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 0
-        width: 31
-        height: 31
-      alignment: 9
-      pivot: {x: 0.7, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f778a0b5ffba7049b2b79ed872089a0
-      internalID: -1934308129
+      spriteID: bf96caff8a11eed489482a46c114bafd
+      internalID: -441421941
       vertices: []
       indices: 
       edges: []
@@ -283,14 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      svard_EspadadaBaixo1: -269851853
-      svard_EspadadaBaixo2: 782598174
-      svard_EspadadaBaixo3: -1437781215
-      svard_EspadadaBaixo4: -451645839
-      svard_EspadadaBaixo5: 440823990
-      svard_EspadadaBaixo6: 144018078
-      svard_EspadadaBaixo7: -1668633630
-      svard_EspadadaBaixo8: -1934308129
+      svardEspadadaDireita1: 138161191
+      svardEspadadaDireita2: -537428051
+      svardEspadadaDireita3: -1510759406
+      svardEspadadaDireita4: -441421941
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

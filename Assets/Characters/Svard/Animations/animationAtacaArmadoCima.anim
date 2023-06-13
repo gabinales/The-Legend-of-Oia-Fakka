@@ -20,22 +20,18 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -697976339, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - time: 0.055555556
-      value: {fileID: -2087092420, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - time: 0.11111111
-      value: {fileID: -1593357840, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - time: 0.16666667
-      value: {fileID: 2069378540, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - time: 0.22222222
-      value: {fileID: 1660816563, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - time: 0.2777778
-      value: {fileID: 1556769499, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
+      value: {fileID: 1381148344, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
+    - time: 0.0625
+      value: {fileID: 311955128, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
+    - time: 0.125
+      value: {fileID: -661997069, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
+    - time: 0.1875
+      value: {fileID: -37512957, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 18
+  m_SampleRate: 16
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -50,18 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -697976339, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - {fileID: -2087092420, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - {fileID: -1593357840, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - {fileID: 2069378540, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - {fileID: 1660816563, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
-    - {fileID: 1556769499, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
+    - {fileID: 1381148344, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
+    - {fileID: 311955128, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
+    - {fileID: -661997069, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
+    - {fileID: -37512957, guid: 4fd5cf5913c7f59499a21abfd4628ece, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.33333334
+    m_StopTime: 0.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -80,4 +74,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: InterrompeMovimentacao
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: e984c28242981bf45b91c39b62dfb428, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.1875
+    functionName: RetomaMovimentacao
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: e984c28242981bf45b91c39b62dfb428, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
