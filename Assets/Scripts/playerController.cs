@@ -69,7 +69,7 @@ public class playerController : MonoBehaviour
         //Botão de Ataque (X)
         if(Input.GetKeyDown(KeyCode.X)){
             isAttacking = true;
-            animator.SetTrigger("Atacando"); //Este trigger deverá ser desativado futuramente.
+            animator.SetTrigger("Atacando");
             Ataque();
         }
         
