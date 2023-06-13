@@ -6,13 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class EnemyNPCController : MonoBehaviour
 {
-    private SceneChanger sceneChanger;
 
     private Transform escala;
 
     private void Awake(){
         escala = transform;
-        
+
     }
 
     public void Interacao(){
