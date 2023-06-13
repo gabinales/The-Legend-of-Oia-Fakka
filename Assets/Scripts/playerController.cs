@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
-    public void InterrompeMovimentacao(){
-        moveSpeed = 0f;
-        Debug.Log("Interrompeu");
-    }
-    public void RetomaMovimentacao(){
-        moveSpeed = 4f;
-        Debug.Log("Retomou");
-    }
-
-   
-
     private DamageHandler damageHandler;
 
     [Header("Movimento")]
@@ -27,11 +16,17 @@ public class playerController : MonoBehaviour
     private Animator animator;
     private int moveXHash = Animator.StringToHash("moveX");
     private int moveYHash = Animator.StringToHash("moveY");
+
+    public void podeMover(){
+        animator.ResetTrigger("Atacando");
+    }
     
     //Detecção de colisão do sprite utilizando a layer
     public LayerMask corposSolidosLayer;
     public LayerMask npcLayer;
     public LayerMask destrutiveisLayer;
+
+
     
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -40,8 +35,8 @@ public class playerController : MonoBehaviour
     }
 
     public void HandleUpdate(){
-        //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando. Se não, executa o bloco correspondente à posição IDLE
-        if(!isMoving && !isAttacking){
+        //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando.
+        if(!isMoving && !isAttacking){ //Move-se apenas se estiver parado e não estiver atacando.
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
@@ -72,8 +67,7 @@ public class playerController : MonoBehaviour
         }
         //Botão de Ataque (X)
         if(Input.GetKey(KeyCode.X)){
-            isAttacking = true;
-            animator.SetTrigger("Atacando");
+            animator.SetTrigger("Atacando"); //Este trigger deverá ser desativado futuramente.
             Ataque();
         }
         
@@ -113,6 +107,11 @@ public class playerController : MonoBehaviour
                 damageHandler.Damage(objectHit);
             }    
         }
+
+        //atualização_Patrick 12.06 ---- Problemas relativos a animação do Svard
+
+
+
     }
 
     IEnumerator Move(Vector3 targetPos){ //Coroutine para mover o sprite.
