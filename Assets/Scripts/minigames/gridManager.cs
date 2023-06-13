@@ -9,7 +9,7 @@ public class gridManager : MonoBehaviour
     void Start()
     {
         CreateGrid();
-        PlaceSpriteInMiddle();
+        Spawn();
     }
 
     void CreateGrid()
@@ -27,7 +27,7 @@ public class gridManager : MonoBehaviour
         }
     }
 
-     void PlaceSpriteInMiddle()
+    void Spawn()
     {
         GameObject middleCell = transform.Find("Cell (2, 2)").gameObject;
         GameObject sprite = Instantiate(spritePrefab, middleCell.transform.position, Quaternion.identity);
@@ -35,4 +35,6 @@ public class gridManager : MonoBehaviour
 
         sprite.AddComponent<SpriteMovement>();
     } 
+
+    
 }
