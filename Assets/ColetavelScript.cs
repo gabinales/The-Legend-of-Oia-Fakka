@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 
 public class ColetavelScript : MonoBehaviour
@@ -15,7 +16,7 @@ public class ColetavelScript : MonoBehaviour
         otherAnimator = otherObject.GetComponent<Animator>();
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    public void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player")){
             if(Input.GetKeyDown(KeyCode.V)){
@@ -25,10 +26,9 @@ public class ColetavelScript : MonoBehaviour
             }
         }
     }
-    void OnTriggerExit2D(Collider2D other)
-    {
-        
-    }
+    /*public void Pegar(InputAction.CallbackContext context){
+        Debug.Log("PEGOU");
+    }*/
 }
     
 

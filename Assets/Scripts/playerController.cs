@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class playerController : MonoBehaviour
 {
@@ -26,14 +27,19 @@ public class playerController : MonoBehaviour
     public LayerMask corposSolidosLayer;
     public LayerMask npcLayer;
     public LayerMask destrutiveisLayer;
-
-
     
     private void Awake() {
         animator = GetComponent<Animator>();
         damageHandler = GetComponent<DamageHandler>();
-
     }
+
+    /*public void Ataque(InputAction.CallbackContext context){
+        isAttacking = true;
+        animator.SetTrigger("Atacando");
+    }
+    public void Pegar(InputAction.CallbackContext context){
+        Debug.Log("PEGOU");
+    }*/
 
     public void HandleUpdate(){
         //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando.
@@ -62,7 +68,7 @@ public class playerController : MonoBehaviour
                 animator.SetBool("isMoving", false);
             }
         }
-        //Botão de Interação (C)
+         //Botão de Interação (C)
         if(Input.GetKeyDown(KeyCode.C)){
             Interacao();
         }
@@ -72,8 +78,8 @@ public class playerController : MonoBehaviour
             animator.SetTrigger("Atacando");
             Ataque();
         }
-        
     }
+
     public void Interacao(){
         var orientacaoJogador = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
         var posicaoInteracao = transform.position + orientacaoJogador;
@@ -90,6 +96,8 @@ public class playerController : MonoBehaviour
     }
 
     public void Ataque(){
+        Debug.Log("Apertou X para atacar [mas ainda não existe nenhuma função para isso]");
+        
         var orientacaoJogador = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
         int targetLayer = LayerMask.GetMask("Destrutiveis");
         float raycastDistance = 1f;

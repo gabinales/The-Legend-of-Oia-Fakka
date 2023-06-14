@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class tileSFXScript : MonoBehaviour
 {
-    public AudioClip tileSFX;
-    private bool jogadorEmCima = false;
+    public AudioClip[] sfxArray;
 
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.CompareTag("Player")){
-            jogadorEmCima = true;
-            TocaSFXPassos();
+            TocaSFX(0);
+        }
+        if(collision.gameObject.CompareTag("svard_hitbox")){
+            int randomNumber = Random.Range(1,3);
+            TocaSFX(randomNumber);
         }
     }
-    private void OnTriggerExit2D(Collider2D collision){
-        if(collision.CompareTag("Player")){
-            jogadorEmCima = false;
-        }
-    }
-    private void TocaSFXPassos(){
-        if(jogadorEmCima && tileSFX != null){
-            AudioSource.PlayClipAtPoint(tileSFX, transform.position);
-        }
+
+    private void TocaSFX(int index){
+        AudioSource.PlayClipAtPoint(sfxArray[index], transform.position);
+        //Debug.Log(sfxArray[index]);
     }
 }
