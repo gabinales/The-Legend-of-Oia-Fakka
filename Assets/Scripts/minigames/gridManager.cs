@@ -2,21 +2,22 @@ using UnityEngine;
 
 public class gridManager : MonoBehaviour
 {
-    public GameObject spritePrefab;  // Reference to the sprite prefab you want to place in the middle
+    public GameObject PlayerPrefab;
+    public GameObject EnemyPrefab;
 
     public Sprite cellSprite;
 
     void Start()
     {
         CreateGrid();
-        Spawn();
+        Spawn(1);
     }
 
     void CreateGrid()
     {
-        for (int row = 0; row < 5; row++)
+        for (int row = 0; row < 7; row++)
         {
-            for (int col = 0; col < 5; col++)
+            for (int col = 0; col < 7; col++)
             {
                 GameObject cell = new GameObject("Cell (" + row + ", " + col + ")");
                 cell.transform.parent = transform;
@@ -27,14 +28,35 @@ public class gridManager : MonoBehaviour
         }
     }
 
-    void Spawn()
+    public void Spawn(int entity)
     {
-        GameObject middleCell = transform.Find("Cell (2, 2)").gameObject;
-        GameObject sprite = Instantiate(spritePrefab, middleCell.transform.position, Quaternion.identity);
-        sprite.transform.parent = middleCell.transform;
+        GameObject spawnCell = transform.Find("Cell (6, 0)").gameObject;
 
-        sprite.AddComponent<SpriteMovement>();
-    } 
+        // 1 = Jogador
+        if (entity == 1)
+        {
+            GameObject playerSprite = Instantiate(PlayerPrefab, spawnCell.transform.position, Quaternion.identity);
+            playerSprite.AddComponent<SpriteMovement>();
+        }
+        else
+        // 2 = Inimigo
+        if (entity == 2)
+        {
+            GameObject enemySprite = Instantiate(EnemyPrefab, spawnCell.transform.position, Quaternion.identity);
+            Debug.Log("enemy spawned");
+            Vector3 randomVector = new Vector3(
+             Random.Range(0, 6),
+             Random.Range(0, 6),
+             Random.Range(0, 6)
+             );
+            enemySprite.transform.position = randomVector;
+            //sprite.AddComponent<EnemyMovement>();
+        }
+    }
 
-    
+    void Update()
+    {
+    }
+
+
 }
