@@ -25,8 +25,8 @@ public class playerBehavior : MonoBehaviour
         //ataque
         if (Input.GetMouseButtonDown(0))
         {
-            animator.SetTrigger("Atacando");
-            //ataca(transform.eulerAngles);
+            //animator.SetTrigger("Atacando");
+            ataca();
         }
 
         //movimento
@@ -50,7 +50,9 @@ public class playerBehavior : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             if (transform.eulerAngles == Down)
+            {
                 moveVertical = -1f;
+            }
             else
                 rotaciona(down);
         }
@@ -64,11 +66,11 @@ public class playerBehavior : MonoBehaviour
         Collider2D collider = Physics2D.OverlapCircle(newPosition, 0.2f);
         if (collider != null) return;
 
-            if (!(newPosition.x < 0f || newPosition.x > 6f ||
-                 newPosition.y < 0f || newPosition.y > 6f))
-            {
-                transform.position = newPosition;
-            }
+        if (!(newPosition.x < 0f || newPosition.x > 6f ||
+             newPosition.y < 0f || newPosition.y > 6f))
+        {
+            transform.position = newPosition;
+        }
 
     }
     void rotaciona(float orientacao)
@@ -99,6 +101,7 @@ public class playerBehavior : MonoBehaviour
             atacaVertical = -1;
         }
         Vector3 posicaoDoAtacado = transform.position + new Vector3(atacaHorizontal, atacaVertical, 0f);
+        Debug.Log("atacando em " + posicaoDoAtacado);
         Collider2D collider = Physics2D.OverlapCircle(posicaoDoAtacado, 0.2f);
 
         if (collider != null && collider.CompareTag("enemy"))

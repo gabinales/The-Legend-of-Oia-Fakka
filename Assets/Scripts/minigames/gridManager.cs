@@ -36,7 +36,6 @@ public class gridManager : MonoBehaviour
         if (entity == 1)
         {
             GameObject playerSprite = Instantiate(PlayerPrefab, spawnCell.transform.position, Quaternion.identity);
-            playerSprite.AddComponent<SpriteMovement>();
         }
         else
         // 2 = Inimigo
