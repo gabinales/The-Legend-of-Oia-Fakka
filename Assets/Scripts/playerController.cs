@@ -6,6 +6,10 @@ using UnityEngine.InputSystem;
 public class playerController : MonoBehaviour
 {
     private DamageHandler damageHandler;
+    
+    // Patrick 15.06 --- Blocos empurráveis
+    public blocoEmpurravel blocoEmpurravel;
+    //
 
     [Header("Movimento")]
     public float moveSpeed;
@@ -31,6 +35,7 @@ public class playerController : MonoBehaviour
     private void Awake() {
         animator = GetComponent<Animator>();
         damageHandler = GetComponent<DamageHandler>();
+
     }
 
     /*public void Ataque(InputAction.CallbackContext context){
@@ -131,8 +136,10 @@ public class playerController : MonoBehaviour
     }
 
     private bool IsWalkable(Vector3 targetPos){
-        if(Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer) != null){ // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
+        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer);
+        if(colisor != null){ // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
             
+            blocoEmpurravel.Empurra(targetPos, moveSpeed, colisor.gameObject);
             return false;
         }
         return true;
@@ -144,3 +151,4 @@ public class playerController : MonoBehaviour
 }
 
 
+// Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer
