@@ -10,7 +10,7 @@ public class blocoEmpurravel : MonoBehaviour
     private float velocidadeMultiplicador = 1.5f;
 
 
-    public void Empurra(Vector3 direcao, float vel, GameObject bloco){
+    public void Empurra(Vector3 direcao, float vel){
         if(!sendoEmpurrado){
             if(ChecaDirecao(direcao)){
                 destino = transform.position + direcao;
@@ -26,6 +26,7 @@ public class blocoEmpurravel : MonoBehaviour
             sendoEmpurrado = false;
         }
         else if(sendoEmpurrado){
+            Debug.Log("sendo empurrado");
             transform.position = Vector3.MoveTowards(
                 transform.position,
                 destino,

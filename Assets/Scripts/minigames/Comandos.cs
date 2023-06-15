@@ -9,8 +9,10 @@ public class Comandos : MonoBehaviour
 
     void Update()
     {
-     if (Input.GetKeyDown(KeyCode.F)) SceneManager.LoadScene("Mjonir Field 01");
+        if (Input.GetKeyDown(KeyCode.F)) SceneManager.LoadScene("Mjonir Field 01");
 
-     if (Input.GetKeyDown(KeyCode.Space)) gridManagerInstance.Spawn(2);
+        if (Input.GetKeyDown(KeyCode.Space)) gridManagerInstance.Spawn(2);
+
+        if (Input.GetKeyDown(KeyCode.Z)) gridManagerInstance.Spawn(1);
     }
 }

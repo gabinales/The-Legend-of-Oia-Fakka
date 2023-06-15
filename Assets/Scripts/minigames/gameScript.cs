@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class gameScript : MonoBehaviour
 {
+    private Animator animator = new Animator();
+
     public static void damage(string arma, GameObject danificado)
     {
         if (arma == "sabreDeLuz")
@@ -14,14 +16,18 @@ public class gameScript : MonoBehaviour
         }
     }
 
-    void Start()
+    public static void kill(string arma, GameObject danificado)
     {
-
+        if (arma == "sabreDeLuz")
+        {
+            Debug.Log(arma+ " aniquilou " + danificado);
+            Destroy(danificado);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public static void parry(GameObject parrier, GameObject parried)
     {
-
+        Debug.Log(parrier.name + " PAROU O ATAQUE DE " + parried.name);
+        parried.GetComponent<Rigidbody2D>().gravityScale = 1;    
     }
 }

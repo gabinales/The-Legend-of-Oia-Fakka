@@ -3,6 +3,8 @@ using static Comandos;
 
 public class playerBehavior : MonoBehaviour
 {
+    public GameObject Debug_Sprite;
+
     public int hitPoints = 2;
     private Animator animator;
     private const float StepSize = 1f;
@@ -100,14 +102,32 @@ public class playerBehavior : MonoBehaviour
         {
             atacaVertical = -1;
         }
-        Vector3 posicaoDoAtacado = transform.position + new Vector3(atacaHorizontal, atacaVertical, 0f);
-        Debug.Log("atacando em " + posicaoDoAtacado);
-        Collider2D collider = Physics2D.OverlapCircle(posicaoDoAtacado, 0.2f);
+        Vector3 posicaoDoAtacado = transform.position + new Vector3(atacaHorizontal, atacaVertical, 0f) * 0.6f;
 
-        if (collider != null && collider.CompareTag("enemy"))
+        /* //circulo para debugar a hitbox do ataque
+        GameObject circulo = GameObject.Find("Circle(Clone)");
+        if (circulo) Destroy(circulo);
+        GameObject debugSprite = Instantiate(Debug_Sprite, posicaoDoAtacado, Quaternion.identity);
+        */
+        
+        Collider2D collider = Physics2D.OverlapCircle(posicaoDoAtacado, 0.2f);
+        if (collider != null)
         {
-            Debug.Log("Enemy found at position: " + posicaoDoAtacado);
-            gameScript.damage("sabreDeLuz", collider.gameObject);
+            GameObject parentObject = collider.gameObject.transform.parent.gameObject;
+
+            if (parentObject.CompareTag("enemy"))
+            {
+                Debug.Log("Enemy found at position: " + posicaoDoAtacado);
+
+                //checa qual parte da hitbox foi atingida
+                if (collider.gameObject.name == "lateral")
+                    gameScript.damage("sabreDeLuz", parentObject);
+
+                if (collider.gameObject.name == "costas")
+                    gameScript.kill("sabreDeLuz", parentObject);
+
+                if (collider.gameObject.name == "frente") gameScript.parry(parentObject, this.gameObject);
+            }
         }
     }
 }

@@ -6,9 +6,9 @@ using UnityEngine.InputSystem;
 public class playerController : MonoBehaviour
 {
     private DamageHandler damageHandler;
-    
+
     // Patrick 15.06 --- Blocos empurráveis
-    public blocoEmpurravel blocoEmpurravel;
+    //public GameObject blocoEmpurravel;
     //
 
     [Header("Movimento")]
@@ -22,17 +22,19 @@ public class playerController : MonoBehaviour
     private int moveXHash = Animator.StringToHash("moveX");
     private int moveYHash = Animator.StringToHash("moveY");
 
-    public void podeMover(){
+    public void podeMover()
+    {
         animator.ResetTrigger("Atacando");
         isAttacking = false;
     }
-    
+
     //Detecção de colisão do sprite utilizando a layer
     public LayerMask corposSolidosLayer;
     public LayerMask npcLayer;
     public LayerMask destrutiveisLayer;
-    
-    private void Awake() {
+
+    private void Awake()
+    {
         animator = GetComponent<Animator>();
         damageHandler = GetComponent<DamageHandler>();
 
@@ -46,15 +48,18 @@ public class playerController : MonoBehaviour
         Debug.Log("PEGOU");
     }*/
 
-    public void HandleUpdate(){
+    public void HandleUpdate()
+    {
         //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando.
-        if(!isMoving && !isAttacking){ //Move-se apenas se estiver parado e não estiver atacando.
+        if (!isMoving && !isAttacking)
+        { //Move-se apenas se estiver parado e não estiver atacando.
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
-            if(input.x != 0) input.y = 0; // Garante que o sprite movimente-se apenas em 4 direções.
+            if (input.x != 0) input.y = 0; // Garante que o sprite movimente-se apenas em 4 direções.
 
-            if(input != Vector2.zero){
+            if (input != Vector2.zero)
+            {
                 //Animação
                 animator.SetBool("isMoving", true);
                 animator.SetFloat(moveXHash, input.x); //Essa parada de Hash é recomendação da Unity.
@@ -65,27 +70,32 @@ public class playerController : MonoBehaviour
                 targetPos.y += input.y / 4;
 
                 //Antes de executar a movimentação, verifica se o alvo é caminhável (detecta colisão)
-                if(IsWalkable(targetPos)){
+                if (IsWalkable(targetPos))
+                {
                     StartCoroutine(Move(targetPos));
-                }   
+                }
             }
-            else{
+            else
+            {
                 animator.SetBool("isMoving", false);
             }
         }
-         //Botão de Interação (C)
-        if(Input.GetKeyDown(KeyCode.C)){
+        //Botão de Interação (C)
+        if (Input.GetKeyDown(KeyCode.C))
+        {
             Interacao();
         }
         //Botão de Ataque (X)
-        if(Input.GetKeyDown(KeyCode.X)){
+        if (Input.GetKeyDown(KeyCode.X))
+        {
             isAttacking = true;
             animator.SetTrigger("Atacando");
             Ataque();
         }
     }
 
-    public void Interacao(){
+    public void Interacao()
+    {
         var orientacaoJogador = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
         var posicaoInteracao = transform.position + orientacaoJogador;
 
@@ -93,41 +103,47 @@ public class playerController : MonoBehaviour
 
         var collider = Physics2D.OverlapCircle(posicaoInteracao, 0.2f, npcLayer); // Checa se, ao fim da linha vermelha (posicaoInteracao) há um NPC.
         Debug.Log(collider);
-        
-        if(collider != null){
+
+        if (collider != null)
+        {
             // Checa se o NPC alvo da interação é inimigo, personagem etc.
             collider.GetComponent<NPC>()?.Interacao(); // Se é interagível, execute a função.
         }
     }
 
-    public void Ataque(){
+    public void Ataque()
+    {
         Debug.Log("Apertou X para atacar [mas ainda não existe nenhuma função para isso]");
-        
+
         var orientacaoJogador = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
         int targetLayer = LayerMask.GetMask("Destrutiveis");
         float raycastDistance = 1f;
 
         //o target apenas é detectado na "targetLayer" "Destrutiveis"
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, orientacaoJogador, raycastDistance, targetLayer); 
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, orientacaoJogador, raycastDistance, targetLayer);
 
         Debug.DrawRay(transform.position, orientacaoJogador, Color.blue, raycastDistance);
 
         //se detectou um target, faz um debug log. além dissose estiver armado, chama a função "Damage" do script DamageHandler.cs
-        if (raycastHit2D.collider != null){
+        if (raycastHit2D.collider != null)
+        {
             GameObject objectHit = raycastHit2D.collider.gameObject;
             Debug.Log(objectHit);
-            
-            bool desarmado = animator.GetBool("Desarmado");            
-            if (!desarmado){
+
+            bool desarmado = animator.GetBool("Desarmado");
+            if (!desarmado)
+            {
                 damageHandler.Damage(objectHit);
-            }    
+            }
         }
     }
 
-    IEnumerator Move(Vector3 targetPos){ //Coroutine para mover o sprite.
+    IEnumerator Move(Vector3 targetPos)
+    { //Coroutine para mover o sprite.
         isMoving = true;
         //enquanto a posicao nao for igual à targetPos...
-        while((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon){ //Garante que o while seja executado contanto que haja QUALQUER movimento (Epsilon lida com valores muito pequenos)
+        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
+        { //Garante que o while seja executado contanto que haja QUALQUER movimento (Epsilon lida com valores muito pequenos)
             transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
             yield return null;
         }
@@ -135,11 +151,18 @@ public class playerController : MonoBehaviour
         isMoving = false;
     }
 
-    private bool IsWalkable(Vector3 targetPos){
+    private bool IsWalkable(Vector3 targetPos)
+    {
         Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer);
-        if(colisor != null){ // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
+        if (colisor != null)
+        { // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
             
-            blocoEmpurravel.Empurra(targetPos, moveSpeed, colisor.gameObject);
+            Vector3 direction = targetPos - transform.position;
+            direction.Normalize();
+
+            //collider.GetComponent<NPC>()?.Interacao(); // Se é interagível, execute a função.
+
+            colisor.GetComponent<blocoEmpurravel>()?.Empurra(direction, moveSpeed);
             return false;
         }
         return true;
