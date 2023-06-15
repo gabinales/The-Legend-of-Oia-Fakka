@@ -7,10 +7,6 @@ public class playerController : MonoBehaviour
 {
     private DamageHandler damageHandler;
 
-    // Patrick 15.06 --- Blocos empurráveis
-    //public GameObject blocoEmpurravel;
-    //
-
     [Header("Movimento")]
     public float moveSpeed;
     private bool isMoving = false;
@@ -32,6 +28,7 @@ public class playerController : MonoBehaviour
     public LayerMask corposSolidosLayer;
     public LayerMask npcLayer;
     public LayerMask destrutiveisLayer;
+    public LayerMask blocoEmpurravelLayer;
 
     private void Awake()
     {
@@ -153,25 +150,22 @@ public class playerController : MonoBehaviour
 
     private bool IsWalkable(Vector3 targetPos)
     {
-        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer);
+        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer | blocoEmpurravelLayer);
         if (colisor != null)
         { // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
-            
+            Debug.Log(colisor.gameObject.layer);
             Vector3 direction = targetPos - transform.position;
             direction.Normalize();
-
-            //collider.GetComponent<NPC>()?.Interacao(); // Se é interagível, execute a função.
-
-            colisor.GetComponent<blocoEmpurravel>()?.Empurra(direction, moveSpeed);
-            return false;
+            Collider2D bloqueioAtras = Physics2D.OverlapCircle(targetPos + direction, 0.2f, corposSolidosLayer | npcLayer | blocoEmpurravelLayer);
+            if(colisor.gameObject.layer == 10 && bloqueioAtras == null){ //10 = blocoEmpurravel
+                
+                colisor.gameObject.transform.position = colisor.gameObject.transform.position + direction;
+                return false;
+            }
+            else{
+                return false;
+            }
         }
         return true;
     }
-    /*private void OnDrawGizmos(Vector3 targetPos){ // Permite que o Physics2D.OverlapCircle seja visualizado na Scene
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 0.2f);
-    }*/
 }
-
-
-// Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer
