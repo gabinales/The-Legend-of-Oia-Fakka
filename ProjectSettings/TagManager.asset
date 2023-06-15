@@ -6,6 +6,7 @@ TagManager:
   tags:
   - destrutivel
   - svard_hitbox
+  - enemy
   layers:
   - Default
   - TransparentFX
