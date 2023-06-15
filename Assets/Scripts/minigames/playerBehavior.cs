@@ -25,8 +25,8 @@ public class playerBehavior : MonoBehaviour
         //ataque
         if (Input.GetMouseButtonDown(0))
         {
-            //animator.SetTrigger("Atacando");
-            ataca();
+            animator.SetTrigger("Atacando");
+            //ataca();
         }
 
         //movimento
