@@ -107,6 +107,7 @@ public class playerController : MonoBehaviour
 
     void SeguraBloco(){
         blocoSeguravel.transform.SetParent(transform);
+        
         segurandoBloco = true;
     }
     void SoltaBloco(){
