@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Cohen : AdversarioScript // Cohen contém todas as funções de Adversario.
 {
+    public int HP;
+
     public Transform alvo; // Posição do jogador
     public Transform posicaoInicial;
     public float areaDePerseguicao;
@@ -13,6 +15,7 @@ public class Cohen : AdversarioScript // Cohen contém todas as funções de Adv
     void Start()
     {
         alvo = GameObject.FindWithTag("Player").transform;
+       // HP = GetComponentInChildren<DisplayHp>();
     }
     void FixedUpdate()
     {

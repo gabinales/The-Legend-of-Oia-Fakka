@@ -6,22 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class EnemyNPCController : MonoBehaviour
 {
-
     private Transform escala;
 
-    private void Awake(){
+    private void Awake()
+    {
         escala = transform;
-
     }
 
-    public void Interacao(){
+    public void Interacao()
+    {
         Debug.Log("INIMIGO");
     }
-    
-    void Update(){
 
-    if(escala.localScale.y > 3){
-        SceneManager.LoadScene("MINIGAME01");
-    }
+    void Update()
+    {
+
+        if (escala.localScale.y > 3)
+        {
+            SceneManager.LoadScene("MINIGAME01");
+        }
     }
 }

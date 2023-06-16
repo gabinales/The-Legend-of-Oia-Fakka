@@ -6,8 +6,7 @@ public class DamageHandler : MonoBehaviour
 {
     public void Damage(GameObject target)
     {
-        Debug.Log("target: " + target);
-        if (target.name == "npcEnemy")
+        if (target.CompareTag("npcEnemy"))
         {
             Transform targetTransform = target.transform;
             // Increase the Y scale by 1
@@ -16,7 +15,7 @@ public class DamageHandler : MonoBehaviour
             targetTransform.localScale = currentScale;
         }
         if (target.CompareTag("enemy"))
-        Debug.Log("inimigo");
+        Debug.Log("inimigo "+ target.name + " machucado");
         {
             target.GetComponent<Cohen>().HP -= 1;
             

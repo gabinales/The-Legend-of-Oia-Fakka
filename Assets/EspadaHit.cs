@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Knockback : MonoBehaviour
+public class EspadaHit : MonoBehaviour
 {
     private DamageHandler damageHandler;
     public float investida;

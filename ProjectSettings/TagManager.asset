@@ -7,6 +7,7 @@ TagManager:
   - destrutivel
   - enemy
   - weapon
+  - npcEnemy
   layers:
   - Default
   - TransparentFX
