@@ -2716,6 +2716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxArray:
   - {fileID: 8300000, guid: 8c5cc253f9c1acb4daf93f7e7538a427, type: 3}
+  - {fileID: 8300000, guid: a7b9de16400176f4bb423db826fb17f4, type: 3}
+  - {fileID: 8300000, guid: a7641e6e5c68c9a4aa0a87361ec2da39, type: 3}
 --- !u!1001 &53311534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7472,7 +7474,7 @@ GameObject:
   - component: {fileID: 241289119}
   m_Layer: 0
   m_Name: hitboxEspadaCima
-  m_TagString: svard_hitbox
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7915,7 +7917,7 @@ GameObject:
   - component: {fileID: 331185578}
   m_Layer: 0
   m_Name: hitboxEspadaBaixo
-  m_TagString: svard_hitbox
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12995,7 +12997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1145318036
 Transform:
   m_ObjectHideFlags: 0
@@ -14222,7 +14224,7 @@ GameObject:
   - component: {fileID: 1226016561}
   m_Layer: 0
   m_Name: hitboxEspadaEsquerda
-  m_TagString: svard_hitbox
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17552,6 +17554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f729168c8600641abb5624356bc190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 10
   nomeAdversario: Cohen
   velocidade: 2
   alvo: {fileID: 0}
@@ -17871,7 +17874,7 @@ GameObject:
   - component: {fileID: 1778534787}
   m_Layer: 0
   m_Name: hitboxEspadaDireita
-  m_TagString: svard_hitbox
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19927,7 +19930,7 @@ GameObject:
   m_Layer: 0
   m_Name: Svard
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
