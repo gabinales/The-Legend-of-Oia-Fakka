@@ -1,0 +1,883 @@
+fileFormatVersion: 2
+guid: 2a1628225f817db48b7655cce741c1eb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818a63686c5cf55478146def8849d516
+      internalID: -1164610843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15221b49cc003fa4ca22935d8acccfa7
+      internalID: -440999595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 1, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ffbe6e2278a6d43a065a02c047dfba
+      internalID: -1613862974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ad20d89f7f1ea4fb8a25053fc937a9
+      internalID: -176112694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a81a409d8126704eacc4dc84ddb76a5
+      internalID: 1411364343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f42ed3badc440a43aa16dfb9cca6b41
+      internalID: 1448943819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acdf9c509ad8ab4c85585bdcf3d46db
+      internalID: -1543049244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29780d1032780ae48bc4ce766db9b481
+      internalID: 2137368191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae591e9a52a1124aada9a2a2ab96e4f
+      internalID: -1634483401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e447789ddf7c24f84be01d26fce79e
+      internalID: -1048180660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f006970870dbbf94c857d1d7ea86dd47
+      internalID: -142725578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a47e51c4ed1aab4db808642d308f141
+      internalID: -1436137237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_12
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a819ade14b36d4faca80d4da1808e2
+      internalID: 24616186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_13
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0d9cf6a15302c44a3dac5c74e49047
+      internalID: 1995774054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_14
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac34a22e75dfa745a13428be58334e8
+      internalID: -209319419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_15
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908c7574cde4423428d229e9b69e5eb5
+      internalID: -1254771776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73cb22a7614e9d4586e318a8115cd64
+      internalID: 2074869653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_17
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929fe1cfc726a2e4a8f9cbd007c98848
+      internalID: 1440742819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_18
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d1ab8bfd92a104c9a58b414e61b709
+      internalID: -1967288176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_19
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4fdb38e955968e42b0e507aa0416889
+      internalID: 999789008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenPerseguicao_20
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -2}
+        - {x: 3, y: 4}
+        - {x: 0, y: 5}
+        - {x: -4, y: 5}
+        - {x: -8, y: 4}
+        - {x: -14, y: -1}
+        - {x: -14, y: -7}
+        - {x: -10, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -17}
+        - {x: -1, y: -17}
+        - {x: 3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 7, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12a1b008f3fee34e86b93688b1c2bf1
+      internalID: 1132309577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spritesheet_cohenPerseguicao_0: -1164610843
+      spritesheet_cohenPerseguicao_1: -440999595
+      spritesheet_cohenPerseguicao_10: -142725578
+      spritesheet_cohenPerseguicao_11: -1436137237
+      spritesheet_cohenPerseguicao_12: 24616186
+      spritesheet_cohenPerseguicao_13: 1995774054
+      spritesheet_cohenPerseguicao_14: -209319419
+      spritesheet_cohenPerseguicao_15: -1254771776
+      spritesheet_cohenPerseguicao_16: 2074869653
+      spritesheet_cohenPerseguicao_17: 1440742819
+      spritesheet_cohenPerseguicao_18: -1967288176
+      spritesheet_cohenPerseguicao_19: 999789008
+      spritesheet_cohenPerseguicao_2: -1613862974
+      spritesheet_cohenPerseguicao_20: 1132309577
+      spritesheet_cohenPerseguicao_3: -176112694
+      spritesheet_cohenPerseguicao_4: 1411364343
+      spritesheet_cohenPerseguicao_5: 1448943819
+      spritesheet_cohenPerseguicao_6: -1543049244
+      spritesheet_cohenPerseguicao_7: 2137368191
+      spritesheet_cohenPerseguicao_8: -1634483401
+      spritesheet_cohenPerseguicao_9: -1048180660
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

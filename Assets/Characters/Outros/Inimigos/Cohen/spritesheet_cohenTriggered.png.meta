@@ -1,0 +1,703 @@
+fileFormatVersion: 2
+guid: 9177f01c5f89c81458fbdca49ca62aaf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a612f425ab90e4597374aa54f43239
+      internalID: 1420269591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48f3fda1f5aa614c92f0a9bb9341114
+      internalID: -1260891116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf347a05dbd6c894a9c4ad9f6f6ee59c
+      internalID: -736760051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e0df197ea79fd4ebf1c8fc75c73c4f
+      internalID: 30762220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6079110ee96ac40900f9ddd29331f7
+      internalID: 1613037199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93b85b2d0268474a9efe5c019d15c53
+      internalID: -692358784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_6
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7dd98a2a871c7e4c90bdf7d7a2159d5
+      internalID: -1778797304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_7
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55562299b1f7c145a62efbb2fcacb2b
+      internalID: 2026964371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112b45080e495614b8089675c462a65d
+      internalID: -1767123674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_9
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f383d17716032fd4882ca7fcd04f6c16
+      internalID: -162449225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_10
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b024d3dfedea1428b8e486973e2fa3
+      internalID: 1073158086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_11
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05701a43a4d8d694ea1269cc4bea761f
+      internalID: 1261651896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_12
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba8c11b95dc2a843b7ed9d9f2ebd571
+      internalID: 454178966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_13
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8194e630acb53842b1d09d3d1304dcb
+      internalID: 1985958918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_14
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77746bead71fd784e9abd6d48a3af434
+      internalID: 1028499400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_15
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ff41567b6c5094abd94029a596bce8
+      internalID: 758977174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_16
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f602117f86d1b4da3feffc53875409
+      internalID: -710400826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenTriggered_17
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 0
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 0, y: -3}
+        - {x: -5, y: -6}
+        - {x: -8, y: -9}
+        - {x: -8, y: -14}
+        - {x: 0, y: -22}
+        - {x: 6, y: -20}
+        - {x: 12, y: -15}
+        - {x: 12, y: -8}
+        - {x: 10, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c153d3a082861ed44a863a05f1a569f5
+      internalID: 1239136655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spritesheet_cohenTriggered_0: 1420269591
+      spritesheet_cohenTriggered_1: -1260891116
+      spritesheet_cohenTriggered_10: 1073158086
+      spritesheet_cohenTriggered_11: 1261651896
+      spritesheet_cohenTriggered_12: 454178966
+      spritesheet_cohenTriggered_13: 1985958918
+      spritesheet_cohenTriggered_14: 1028499400
+      spritesheet_cohenTriggered_15: 758977174
+      spritesheet_cohenTriggered_16: -710400826
+      spritesheet_cohenTriggered_17: 1239136655
+      spritesheet_cohenTriggered_2: -736760051
+      spritesheet_cohenTriggered_3: 30762220
+      spritesheet_cohenTriggered_4: 1613037199
+      spritesheet_cohenTriggered_5: -692358784
+      spritesheet_cohenTriggered_6: -1778797304
+      spritesheet_cohenTriggered_7: 2026964371
+      spritesheet_cohenTriggered_8: -1767123674
+      spritesheet_cohenTriggered_9: -162449225
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
