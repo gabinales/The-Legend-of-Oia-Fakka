@@ -28,6 +28,6 @@ public class combateScript : MonoBehaviour
     {
         Debug.Log(parrier.name + " PAROU O ATAQUE DE " + parried.name);
 
-        parried.GetComponent<Animator>().SetTrigger("Atacando");
+        parried.GetComponent<Animator>().SetTrigger("Parried");
     }
 }

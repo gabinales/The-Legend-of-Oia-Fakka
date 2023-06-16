@@ -44,12 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Terreno
+  - name: Segundo plano (Grama e pisos)
     uniqueID: 1838857313
     locked: 0
-  - name: Barreiras
+  - name: Primeiro plano (Objetos e Personagens)
     uniqueID: 635172595
-    locked: 0
-  - name: Personagem
-    uniqueID: 3813149679
     locked: 0

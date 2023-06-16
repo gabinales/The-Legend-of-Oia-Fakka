@@ -11,6 +11,7 @@ public class playerController : MonoBehaviour
     public GameObject blocoSeguravel;
     private bool segurandoBloco = false;
     private bool podePegar = false;
+    //
 
     [Header("Movimento")]
     public float moveSpeed;
@@ -42,14 +43,6 @@ public class playerController : MonoBehaviour
 
     }
 
-    /*public void Ataque(InputAction.CallbackContext context){
-        isAttacking = true;
-        animator.SetTrigger("Atacando");
-    }
-    public void Pegar(InputAction.CallbackContext context){
-        Debug.Log("PEGOU");
-    }*/
-
     public void HandleUpdate()
     {
         //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando.
@@ -64,14 +57,17 @@ public class playerController : MonoBehaviour
             {
                 //Animação
                 animator.SetBool("isMoving", true);
-                animator.SetFloat(moveXHash, input.x); //Essa parada de Hash é recomendação da Unity.
+                animator.SetFloat(moveXHash, input.x); // Recomendação da Unity.
                 animator.SetFloat(moveYHash, input.y);
 
                 var targetPos = transform.position;
                 targetPos.x += input.x / 4;
                 targetPos.y += input.y / 4;
 
-                StartCoroutine(Move(targetPos));
+                if(IsWalkable(targetPos)){
+                    StartCoroutine(Move(targetPos));
+                }
+                
             }
             else
             {
@@ -183,11 +179,9 @@ public class playerController : MonoBehaviour
             Debug.Log(colisor.gameObject.layer);
             Vector3 direction = targetPos - transform.position;
             direction.Normalize();
-         
-       
         
             return false;
-            }
+        }
         return true;
     }
 }
