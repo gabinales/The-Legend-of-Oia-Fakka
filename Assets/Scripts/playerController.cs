@@ -7,9 +7,10 @@ public class playerController : MonoBehaviour
 {
     private DamageHandler damageHandler;
 
-    // Patrick 15.06 --- Blocos empurráveis
-    //public GameObject blocoEmpurravel;
-    //
+    // Patrick 15.06 --- Blocos seguráveis
+    public GameObject blocoSeguravel;
+    private bool segurandoBloco = false;
+    private bool podePegar = false;
 
     [Header("Movimento")]
     public float moveSpeed;
@@ -32,6 +33,7 @@ public class playerController : MonoBehaviour
     public LayerMask corposSolidosLayer;
     public LayerMask npcLayer;
     public LayerMask destrutiveisLayer;
+    public LayerMask blocoEmpurravelLayer;
 
     private void Awake()
     {
@@ -69,11 +71,7 @@ public class playerController : MonoBehaviour
                 targetPos.x += input.x / 4;
                 targetPos.y += input.y / 4;
 
-                //Antes de executar a movimentação, verifica se o alvo é caminhável (detecta colisão)
-                if (IsWalkable(targetPos))
-                {
-                    StartCoroutine(Move(targetPos));
-                }
+                StartCoroutine(Move(targetPos));
             }
             else
             {
@@ -92,6 +90,32 @@ public class playerController : MonoBehaviour
             animator.SetTrigger("Atacando");
             Ataque();
         }
+        // Patrick 15.06 --- Botão de segurar (Z)
+        if(Input.GetKeyDown(KeyCode.Z)){
+            if(segurandoBloco)
+                SoltaBloco();
+            else if (podePegar)
+                SeguraBloco();
+        }
+
+    }
+    // Patrick 15.06 --- Botão de segurar (Z)
+    void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject == blocoSeguravel)
+            podePegar = true;
+    }
+    void OnCollisionExit2D(Collision2D other){
+        if(other.gameObject == blocoSeguravel)
+            podePegar = false;
+    }
+
+    void SeguraBloco(){
+        blocoSeguravel.transform.SetParent(transform);
+        segurandoBloco = true;
+    }
+    void SoltaBloco(){
+        blocoSeguravel.transform.SetParent(null);
+        segurandoBloco = false;
     }
 
     public void Interacao()
@@ -153,25 +177,42 @@ public class playerController : MonoBehaviour
 
     private bool IsWalkable(Vector3 targetPos)
     {
-        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer);
+        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.1f, corposSolidosLayer | npcLayer);
         if (colisor != null)
         { // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
-            
+            Debug.Log(colisor.gameObject.layer);
             Vector3 direction = targetPos - transform.position;
             direction.Normalize();
-
-            //collider.GetComponent<NPC>()?.Interacao(); // Se é interagível, execute a função.
-
-            colisor.GetComponent<blocoEmpurravel>()?.Empurra(direction, moveSpeed);
+         
+       
+        
             return false;
-        }
+            }
         return true;
     }
-    /*private void OnDrawGizmos(Vector3 targetPos){ // Permite que o Physics2D.OverlapCircle seja visualizado na Scene
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 0.2f);
-    }*/
 }
 
 
-// Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer
+
+
+/*
+Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer | blocoEmpurravelLayer);
+        if (colisor != null)
+        { // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
+            Debug.Log(colisor.gameObject.layer);
+            Vector3 direction = targetPos - transform.position;
+            direction.Normalize();
+            Collider2D bloqueioAtras = Physics2D.OverlapCircle(colisor.gameObject.transform.position + direction, 0.2f, corposSolidosLayer | npcLayer | blocoEmpurravelLayer);
+            Debug.Log(bloqueioAtras);
+            Debug.DrawRay(targetPos, direction, Color.red, 0.4f);
+            if(colisor.gameObject.layer == 10 && bloqueioAtras == null){ //10 = blocoEmpurravel
+                colisor.gameObject.transform.position = colisor.gameObject.transform.position + direction;
+                return false;
+            }
+            else{
+                return false;
+            }
+        }
+        return true;
+
+        */
