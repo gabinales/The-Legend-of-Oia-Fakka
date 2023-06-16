@@ -1,0 +1,1983 @@
+fileFormatVersion: 2
+guid: 002e1cdfe1f8e3841a4f3edbefb28086
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f8bffb720c9ee4eb1bff85b0f370b7
+      internalID: 104292562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8878fa34541ea145bfab4c827781ab4
+      internalID: -720074124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3533bf952a6d74eb819e3736289dcd
+      internalID: 875820718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794655236347a1d47b6e705413d6c8dd
+      internalID: 987876807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1480df6d68a70c14e9361b266ba49383
+      internalID: 20851627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47de74edd287e9449cbfdf9d4e9bda2
+      internalID: 1712396822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538d387dc54b36648af483eeda18e2d2
+      internalID: -1721812992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_7
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931452d19949598478218be2d3a03a80
+      internalID: 601021298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f145c67865f3243926c0a65a0dc08e
+      internalID: -550731982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e32994d19dae9d4098e3c4ae8813daf
+      internalID: 667567002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_10
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049773f5ab0560e4c95fb97825914be7
+      internalID: 839574532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_11
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15ba44b05509814e8f2352df6416333
+      internalID: 1114054150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_12
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f474590152156ce4ba531483cfd3fdfa
+      internalID: -206451587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_13
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457dd2d095a9b5e4788d05673d9b3b46
+      internalID: 324689845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_14
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4891edc971168414ea5321093e8d0363
+      internalID: 690732854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_15
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ff3613fd093e84fbe5dbe28c8ce1d1
+      internalID: 845802468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_16
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e9fe6fbce319e4d977094f2e722781
+      internalID: 1542732005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_17
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916e3fae279cb204c96d3819ff32b861
+      internalID: 1116554004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_18
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9de9b968d581e48be2c5b8d1665b5c
+      internalID: -1624918404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_19
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1128f3e484fd741a35a94a827ac05d
+      internalID: -541431877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_20
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0840080f4d4253a48b6f5b3ff2619c91
+      internalID: 825932515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_21
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4a49bcfa6daaa428468cb32169c062
+      internalID: -1624610068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_22
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6565de90f1189cb4481bd3e5258e9d08
+      internalID: -386859929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_23
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c7a3f66600a7c46a403f859bf6faef
+      internalID: 76520910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_24
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54da6ebb4bf97a349b6cc7f0b86ef731
+      internalID: 1295941603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_25
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3668ab0d6b484439b365a0dc94ec46
+      internalID: -1218906861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_26
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c869001a6936efe4ab586514f2a7c7ed
+      internalID: 1073482359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_27
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4694840ae363a164dbb62013fcd9b84d
+      internalID: -1958135972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_28
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5a5abe7efb1ae45be7cfc45712dfa2
+      internalID: 736456491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_29
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583e1d4a4e00a5a4d851f34bf2265abf
+      internalID: -1187657133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_30
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244f479250be10d4db1a1ad472b5dc24
+      internalID: -958429903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_31
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad774eefebf1fc4bb7e2e5e68a92704
+      internalID: 175747287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_32
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14723ef319cc18044becd8f56c5f3198
+      internalID: -877133314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_33
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb8abdb061717e43b7bdf76c67a1203
+      internalID: -1092997168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_34
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ffcbfa53f5adc47a2370baafd5a603
+      internalID: 522590559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_35
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ee3a5aec929294da6e22e077c471f2
+      internalID: -1498295998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_36
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6386d94c11638f4cbfed0ed7e88ac57
+      internalID: -8305756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_37
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f6d9f6ea90e2c4cbd6156cd0619960
+      internalID: 1667929309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_38
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58708865856abc14d94b2a2d92bd1362
+      internalID: 1676778065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_39
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d631e895e8e1a8e4e8d9df861c8eae8d
+      internalID: 472794256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_40
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5938416ab31284199628b659081a1e
+      internalID: -1058959006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_41
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a5275b6d413754492fc4b5e903432a
+      internalID: -1471228795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_42
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604c84ca258bcf14096907a1d6cbc252
+      internalID: 649020577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_43
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95154d9cb09884f47aa3b751cda18bb5
+      internalID: 1745890689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_44
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6bc5f1fab58954f9d738f7416f8116
+      internalID: -596948295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_45
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dad3dd7c1a3f584d981599b03df468f
+      internalID: -734237100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_46
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482ad85ba5b7a3b44a1bf90af91b6b28
+      internalID: 1099817621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_47
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7cfd45862e12a4c92970c9e61524e3
+      internalID: 1637450716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_48
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07424f7f40a56e48873dcd1d1c0fc88
+      internalID: -1018835154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_49
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0a804854c72e643821b9ad94d372f3
+      internalID: 804791413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_50
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cf53ab0303a3442ba610c69ea18b40
+      internalID: -358726517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_51
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200572909b2ce8d4abde9aac8aff11d9
+      internalID: -562832783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_52
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a637a2f4a71c03c4dbe0c7036a9f84e3
+      internalID: -1176933657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_53
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1945a0150d4df4a8ad39dcf6910eb8
+      internalID: 235516191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_54
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3881e7d2cc55fdf46a7c50ea10cfc4b0
+      internalID: -274621260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_55
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5472e917a915e4d900cf5d084edc43
+      internalID: -1031352192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_56
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f60c90526dc6064aa21d80da71134d5
+      internalID: 775503939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_cohenIdle_57
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -6, y: 3}
+        - {x: -9, y: -1}
+        - {x: -9, y: -7}
+        - {x: -3, y: -13}
+        - {x: 4, y: -13}
+        - {x: 10, y: -7}
+        - {x: 10, y: -1}
+        - {x: 6, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08578bb041c60df4884bf048ad132358
+      internalID: -1216203962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spritesheet_cohenIdle_0: 104292562
+      spritesheet_cohenIdle_1: -720074124
+      spritesheet_cohenIdle_10: 839574532
+      spritesheet_cohenIdle_11: 1114054150
+      spritesheet_cohenIdle_12: -206451587
+      spritesheet_cohenIdle_13: 324689845
+      spritesheet_cohenIdle_14: 690732854
+      spritesheet_cohenIdle_15: 845802468
+      spritesheet_cohenIdle_16: 1542732005
+      spritesheet_cohenIdle_17: 1116554004
+      spritesheet_cohenIdle_18: -1624918404
+      spritesheet_cohenIdle_19: -541431877
+      spritesheet_cohenIdle_2: 875820718
+      spritesheet_cohenIdle_20: 825932515
+      spritesheet_cohenIdle_21: -1624610068
+      spritesheet_cohenIdle_22: -386859929
+      spritesheet_cohenIdle_23: 76520910
+      spritesheet_cohenIdle_24: 1295941603
+      spritesheet_cohenIdle_25: -1218906861
+      spritesheet_cohenIdle_26: 1073482359
+      spritesheet_cohenIdle_27: -1958135972
+      spritesheet_cohenIdle_28: 736456491
+      spritesheet_cohenIdle_29: -1187657133
+      spritesheet_cohenIdle_3: 987876807
+      spritesheet_cohenIdle_30: -958429903
+      spritesheet_cohenIdle_31: 175747287
+      spritesheet_cohenIdle_32: -877133314
+      spritesheet_cohenIdle_33: -1092997168
+      spritesheet_cohenIdle_34: 522590559
+      spritesheet_cohenIdle_35: -1498295998
+      spritesheet_cohenIdle_36: -8305756
+      spritesheet_cohenIdle_37: 1667929309
+      spritesheet_cohenIdle_38: 1676778065
+      spritesheet_cohenIdle_39: 472794256
+      spritesheet_cohenIdle_4: 20851627
+      spritesheet_cohenIdle_40: -1058959006
+      spritesheet_cohenIdle_41: -1471228795
+      spritesheet_cohenIdle_42: 649020577
+      spritesheet_cohenIdle_43: 1745890689
+      spritesheet_cohenIdle_44: -596948295
+      spritesheet_cohenIdle_45: -734237100
+      spritesheet_cohenIdle_46: 1099817621
+      spritesheet_cohenIdle_47: 1637450716
+      spritesheet_cohenIdle_48: -1018835154
+      spritesheet_cohenIdle_49: 804791413
+      spritesheet_cohenIdle_5: 1712396822
+      spritesheet_cohenIdle_50: -358726517
+      spritesheet_cohenIdle_51: -562832783
+      spritesheet_cohenIdle_52: -1176933657
+      spritesheet_cohenIdle_53: 235516191
+      spritesheet_cohenIdle_54: -274621260
+      spritesheet_cohenIdle_55: -1031352192
+      spritesheet_cohenIdle_56: 775503939
+      spritesheet_cohenIdle_57: -1216203962
+      spritesheet_cohenIdle_6: -1721812992
+      spritesheet_cohenIdle_7: 601021298
+      spritesheet_cohenIdle_8: -550731982
+      spritesheet_cohenIdle_9: 667567002
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

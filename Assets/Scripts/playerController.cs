@@ -107,7 +107,6 @@ public class playerController : MonoBehaviour
 
     void SeguraBloco(){
         blocoSeguravel.transform.SetParent(transform);
-        
         segurandoBloco = true;
     }
     void SoltaBloco(){
@@ -174,7 +173,7 @@ public class playerController : MonoBehaviour
 
     private bool IsWalkable(Vector3 targetPos)
     {
-        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.1f, corposSolidosLayer | npcLayer);
+        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer);
         if (colisor != null)
         { // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
             Debug.Log(colisor.gameObject.layer);
