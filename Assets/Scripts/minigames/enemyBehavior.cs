@@ -8,7 +8,7 @@ public class enemyBehavior : MonoBehaviour
     // Start is called before the first frame update
     public int hitPoints = 2;
     private Animator animator;
-    private const float StepSize = 1f;
+    public float StepSize = 1f;
 
     // rotacoes no eixo Z
     private float up = 90;
@@ -32,28 +32,31 @@ public class enemyBehavior : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("ture");
             Vector3 direction = getPlayerDirection();
-            if (direction.x == direction.y || direction.x == -direction.y)
+            float epsilon = 0.001f; // Small epsilon for float comparison
+
+            if (Mathf.Abs(direction.x - direction.y) < epsilon)
             {
                 if (direction.x < 0)
                     move("left");
-                if (direction.x > 0)
+                else if (direction.x > 0)
                     move("right");
-            }else
-            if (direction.y > direction.x || -direction.y < -direction.x)
+            }
+            else if (direction.y < 0)
             {
-                if (direction.y < 0)
-                    move("down");
-                if (direction.y > 0)
-                    move("up");
-            }else
-            if (direction.x > direction.y || -direction.x < -direction.y)
+                move("down");
+            }
+            else if (direction.y > 0)
             {
-                if (direction.x < 0)
-                    move("left");
-                if (direction.x > 0)
-                    move("right");
+                move("up");
+            }
+            else if (direction.x < 0)
+            {
+                move("left");
+            }
+            else if (direction.x > 0)
+            {
+                move("right");
             }
             yield return new WaitForSeconds(delay);
         }
@@ -66,8 +69,8 @@ public class enemyBehavior : MonoBehaviour
         Vector3 direction = playerPosition - enemyPosition;
         //direction.Normalize();
         Debug.DrawRay(enemyPosition, direction, Color.red, 0.3f);
-        Debug.Log("direction.x = " + direction.x);
-        Debug.Log("direction.y = " + direction.y);
+        // Debug.Log("direction.x = " + direction.x);
+        // Debug.Log("direction.y = " + direction.y);
         return direction;
     }
 
@@ -104,13 +107,17 @@ public class enemyBehavior : MonoBehaviour
                 rotaciona(up);
 
         Vector3 newPosition = transform.position + new Vector3(moveHorizontal, moveVertical, 0f) * StepSize;
-        Collider2D collider = Physics2D.OverlapCircle(newPosition, 0.2f);
-        if (collider != null) return;
-
-        if (!(newPosition.x < 0f || newPosition.x > 6f ||
-             newPosition.y < 0f || newPosition.y > 6f))
+        if (newPosition != transform.position)
         {
-            transform.position = newPosition;
+            Collider2D collider = Physics2D.OverlapCircle(newPosition, 0.1f);
+            if (collider == null)
+            {
+                if (!(newPosition.x < 0f || newPosition.x > 6f ||
+                     newPosition.y < 0f || newPosition.y > 6f))
+                {
+                    transform.position = newPosition;
+                }
+            }
         }
     }
 

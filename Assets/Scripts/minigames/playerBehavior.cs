@@ -66,6 +66,7 @@ public class playerBehavior : MonoBehaviour
 
         Vector3 newPosition = transform.position + new Vector3(moveHorizontal, moveVertical, 0f) * StepSize;
         Collider2D collider = Physics2D.OverlapCircle(newPosition, 0.2f);
+        //Debug.Log(collider);
         if (collider != null) return;
 
         if (!(newPosition.x < 0f || newPosition.x > 6f ||
@@ -104,12 +105,6 @@ public class playerBehavior : MonoBehaviour
         }
         Vector3 posicaoDoAtacado = transform.position + new Vector3(atacaHorizontal, atacaVertical, 0f) * 0.6f;
 
-        /* //circulo para debugar a hitbox do ataque
-        GameObject circulo = GameObject.Find("Circle(Clone)");
-        if (circulo) Destroy(circulo);
-        GameObject debugSprite = Instantiate(Debug_Sprite, posicaoDoAtacado, Quaternion.identity);
-        */
-        
         Collider2D collider = Physics2D.OverlapCircle(posicaoDoAtacado, 0.2f);
         if (collider != null)
         {
@@ -121,12 +116,12 @@ public class playerBehavior : MonoBehaviour
 
                 //checa qual parte da hitbox foi atingida
                 if (collider.gameObject.name == "lateral")
-                    gameScript.damage("sabreDeLuz", parentObject);
+                    combateScript.damage("sabreDeLuz", parentObject);
 
                 if (collider.gameObject.name == "costas")
-                    gameScript.kill("sabreDeLuz", parentObject);
+                    combateScript.kill("sabreDeLuz", parentObject);
 
-                if (collider.gameObject.name == "frente") gameScript.parry(parentObject, this.gameObject);
+                if (collider.gameObject.name == "frente") combateScript.parry(parentObject, this.gameObject);
             }
         }
     }
