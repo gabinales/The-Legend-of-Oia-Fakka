@@ -6,18 +6,21 @@ public class DamageHandler : MonoBehaviour
 {
     public void Damage(GameObject target)
     {
-    if(target.name == "npcEnemy"){
-        Transform targetTransform = target.transform;
+        Debug.Log("target: " + target);
+        if (target.name == "npcEnemy")
+        {
+            Transform targetTransform = target.transform;
+            // Increase the Y scale by 1
+            Vector3 currentScale = targetTransform.localScale;
+            currentScale.y += 1.0f;
+            targetTransform.localScale = currentScale;
+        }
+        if (target.CompareTag("enemy"))
+        Debug.Log("inimigo");
+        {
+            target.GetComponent<Cohen>().HP -= 1;
+            
+        }
 
-        // Increase the Y scale by 1
-        Vector3 currentScale = targetTransform.localScale;
-        currentScale.y += 1.0f;
-        targetTransform.localScale = currentScale;
-
-    }
-    else
-    {
-         Destroy(target);
-    }    
     }
 }

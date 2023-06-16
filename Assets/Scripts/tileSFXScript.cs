@@ -7,10 +7,11 @@ public class tileSFXScript : MonoBehaviour
     public AudioClip[] sfxArray;
 
     private void OnTriggerEnter2D(Collider2D collision){
+
         if(collision.gameObject.CompareTag("Player")){
             TocaSFX(0);
         }
-        if(collision.gameObject.CompareTag("svard_hitbox")){
+        if(collision.gameObject.CompareTag("weapon")){
             int randomNumber = Random.Range(1,3);
             TocaSFX(randomNumber);
         }

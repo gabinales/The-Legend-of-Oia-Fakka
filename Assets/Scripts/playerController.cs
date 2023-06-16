@@ -80,11 +80,11 @@ public class playerController : MonoBehaviour
             Interacao();
         }
         //Botão de Ataque (X)
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.X))
         {
             isAttacking = true;
             animator.SetTrigger("Atacando");
-            Ataque();
+            //Ataque();
         }
         // Patrick 15.06 --- Botão de segurar (Z)
         if(Input.GetKeyDown(KeyCode.Z)){
@@ -122,7 +122,7 @@ public class playerController : MonoBehaviour
         Debug.DrawLine(transform.position, posicaoInteracao, Color.red, 1f);
 
         var collider = Physics2D.OverlapCircle(posicaoInteracao, 0.2f, npcLayer); // Checa se, ao fim da linha vermelha (posicaoInteracao) há um NPC.
-        Debug.Log(collider);
+        Debug.Log("interagindo com a layer " + collider);
 
         if (collider != null)
         {
@@ -131,16 +131,16 @@ public class playerController : MonoBehaviour
         }
     }
 
-    public void Ataque()
+    /* public void Ataque()
     {
-        Debug.Log("Apertou X para atacar [mas ainda não existe nenhuma função para isso]");
-
         var orientacaoJogador = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
-        int targetLayer = LayerMask.GetMask("Destrutiveis");
+        //int targetLayer = LayerMask.GetMask("Destrutiveis");
+        int playerLayerToIgnore = LayerMask.NameToLayer("Default");
+        LayerMask layerMask = ~(1 << playerLayerToIgnore);
         float raycastDistance = 1f;
 
         //o target apenas é detectado na "targetLayer" "Destrutiveis"
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, orientacaoJogador, raycastDistance, targetLayer);
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, orientacaoJogador, raycastDistance, layerMask);
 
         Debug.DrawRay(transform.position, orientacaoJogador, Color.blue, raycastDistance);
 
@@ -156,7 +156,7 @@ public class playerController : MonoBehaviour
                 damageHandler.Damage(objectHit);
             }
         }
-    }
+    } */
 
     IEnumerator Move(Vector3 targetPos)
     { //Coroutine para mover o sprite.
@@ -176,7 +176,7 @@ public class playerController : MonoBehaviour
         Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer);
         if (colisor != null)
         { // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
-            Debug.Log(colisor.gameObject.layer);
+            Debug.Log("tentando andar para a layer " + colisor.gameObject.layer);
             Vector3 direction = targetPos - transform.position;
             direction.Normalize();
         

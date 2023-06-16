@@ -9,16 +9,21 @@ public class Cohen : AdversarioScript // Cohen contém todas as funções de Adv
     public float areaDePerseguicao;
     public float areaDoAtaque; // ???
 
-    void Start(){
+    void Start()
+    {
         alvo = GameObject.FindWithTag("Player").transform;
     }
-    void Update(){
+    void Update()
+    {
+        if (gameObject.GetComponent<Cohen>().HP<=0) Destroy(gameObject);
         VerificaDistancia();
     }
 
-    void VerificaDistancia(){
-        if(Vector3.Distance(alvo.position, transform.position) <= areaDePerseguicao
-                                                            && Vector3.Distance(alvo.position, transform.position) > areaDoAtaque){ // O inimigo precisa parar de perseguir o jogador assim que entra na área de ataque, se não ele continua tentando ocupar o espaço do jogador.
+    void VerificaDistancia()
+    {
+        if (Vector3.Distance(alvo.position, transform.position) <= areaDePerseguicao
+                                                            && Vector3.Distance(alvo.position, transform.position) > areaDoAtaque)
+        { // O inimigo precisa parar de perseguir o jogador assim que entra na área de ataque, se não ele continua tentando ocupar o espaço do jogador.
             transform.position = Vector3.MoveTowards(transform.position, alvo.position, velocidade * Time.deltaTime);
         }
     }
