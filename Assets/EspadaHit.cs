@@ -29,12 +29,14 @@ public class EspadaHit : MonoBehaviour
         }
         for(int i = _objectsWithHealth.Count - 1; i >= 0; i--){
             _objectsWithHealth[i].Damage(danoAtaque);
+            Debug.Log(_objectsWithHealth[i].tag);
         } 
         _objectsWithHealth.Clear();
 
             //damageHandler.ExibeTexto(other.gameObject);
 
             // KNOCBACK:
+            
             Rigidbody2D adversario = other.gameObject.GetComponent<Rigidbody2D>(); // NOVA
             //Rigidbody2D adversario = other.GetComponent<Rigidbody2D>(); ANTIGA
             if (adversario != null)

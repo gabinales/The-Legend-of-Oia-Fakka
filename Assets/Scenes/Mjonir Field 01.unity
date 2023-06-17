@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 39136105}
   m_Layer: 0
   m_Name: Grama
-  m_TagString: destrutivel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11010,7 +11010,7 @@ GameObject:
   - component: {fileID: 631147924}
   m_Layer: 0
   m_Name: "Gramas Cort\xE1veis"
-  m_TagString: Untagged
+  m_TagString: destrutivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14278,7 +14278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1145318036
 Transform:
   m_ObjectHideFlags: 0
@@ -17375,7 +17375,7 @@ GameObject:
   - component: {fileID: 1489536778}
   m_Layer: 10
   m_Name: Pedra
-  m_TagString: Untagged
+  m_TagString: empurravel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - weapon
   - npcEnemy
+  - empurravel
   layers:
   - Default
   - TransparentFX

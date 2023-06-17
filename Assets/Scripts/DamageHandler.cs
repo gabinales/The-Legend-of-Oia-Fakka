@@ -55,7 +55,7 @@ public class DamageHandler : MonoBehaviour
     public void Damage(int amount){
         Hp -= amount;
 
-        if(gameObject.tag != "destrutivel"){
+        if(!gameObject.CompareTag("destrutivel")){
             // Damage pop-up
             canvas = gameObject.transform.GetChild(0).GetComponentInChildren<Rigidbody2D>();
             valorDano = gameObject.GetComponentInChildren<TMP_Text>();
@@ -63,7 +63,7 @@ public class DamageHandler : MonoBehaviour
             canvas.velocity = new Vector2(Random.Range(-VelXInicialIntervalo, VelXInicialIntervalo), VelYInicial);
             canvas.gravityScale = 0.5f;
             Destroy(canvas, Duracao);
-        }else if(gameObject.tag == "destrutivel"){
+        }else if(gameObject.CompareTag("destrutivel")){
             tileDestrutivel(animator);
         }
     }

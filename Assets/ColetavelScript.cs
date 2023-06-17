@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine.InputSystem;
 
 
+// P.S.: Refatorar esse código depois 
+
 public class ColetavelScript : MonoBehaviour
 {
     public string nomeColetavel;
@@ -16,6 +18,7 @@ public class ColetavelScript : MonoBehaviour
 
     void Awake(){
         textoContextual= alertaContextual.GetComponentInChildren<TextMeshPro>();
+        Debug.Log(textoContextual.text);
         otherAnimator = otherObject.GetComponent<Animator>();
     }
 
