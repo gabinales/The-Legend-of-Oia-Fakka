@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 39136105}
   m_Layer: 0
   m_Name: Grama
-  m_TagString: Untagged
+  m_TagString: destrutivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8052,7 +8052,6 @@ GameObject:
   m_Component:
   - component: {fileID: 241289117}
   - component: {fileID: 241289118}
-  - component: {fileID: 241289119}
   - component: {fileID: 241289120}
   - component: {fileID: 241289121}
   - component: {fileID: 241289122}
@@ -8130,18 +8129,6 @@ PolygonCollider2D:
       - {x: 0.5577079, y: -0.2475723}
       - {x: 1.4924493, y: -0.26746637}
   m_UseDelaunayMesh: 0
---- !u!114 &241289119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241289116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8306a98794841c24b837b7439d5b1406, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &241289120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8727,7 +8714,6 @@ GameObject:
   m_Component:
   - component: {fileID: 331185576}
   - component: {fileID: 331185577}
-  - component: {fileID: 331185578}
   - component: {fileID: 331185579}
   - component: {fileID: 331185580}
   - component: {fileID: 331185581}
@@ -8806,18 +8792,6 @@ PolygonCollider2D:
       - {x: 0.55339754, y: -1.1324004}
       - {x: 0.5269294, y: -0.334616}
   m_UseDelaunayMesh: 0
---- !u!114 &331185578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 331185575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8306a98794841c24b837b7439d5b1406, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &331185579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12773,7 +12747,7 @@ GameObject:
   - component: {fileID: 855837701}
   - component: {fileID: 855837702}
   m_Layer: 0
-  m_Name: Coletavel
+  m_Name: Espada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12878,7 +12852,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.006447792, y: -0.06376314}
+  m_Offset: {x: -0.000024318695, y: 0.003545642}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12889,7 +12863,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48417664, y: 0.42112827}
+  m_Size: {x: 1.0252352, y: 0.55574584}
   m_EdgeRadius: 0
 --- !u!114 &855837702
 MonoBehaviour:
@@ -12905,6 +12879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nomeColetavel: Adaga
   otherObject: {fileID: 2125688386}
+  alertaContextual: {fileID: 1951912023}
 --- !u!1001 &864861851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15596,7 +15571,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1226016559}
   - component: {fileID: 1226016560}
-  - component: {fileID: 1226016561}
   - component: {fileID: 1226016562}
   - component: {fileID: 1226016563}
   - component: {fileID: 1226016564}
@@ -15673,18 +15647,6 @@ PolygonCollider2D:
       - {x: -0.19556129, y: -0.45091558}
       - {x: -0.1924634, y: 0.49780577}
   m_UseDelaunayMesh: 0
---- !u!114 &1226016561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226016558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8306a98794841c24b837b7439d5b1406, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1226016562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17828,12 +17790,12 @@ GameObject:
   - component: {fileID: 1522383608}
   - component: {fileID: 1522383607}
   m_Layer: 5
-  m_Name: AlertaContextual
+  m_Name: Caixa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1522383606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19704,7 +19666,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1778534785}
   - component: {fileID: 1778534786}
-  - component: {fileID: 1778534787}
   - component: {fileID: 1778534788}
   - component: {fileID: 1778534789}
   - component: {fileID: 1778534790}
@@ -19783,18 +19744,6 @@ PolygonCollider2D:
       - {x: 1.6652026, y: -0.30355358}
       - {x: 1.5985694, y: 0.08481127}
   m_UseDelaunayMesh: 0
---- !u!114 &1778534787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778534784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8306a98794841c24b837b7439d5b1406, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1778534788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21040,12 +20989,12 @@ GameObject:
   - component: {fileID: 1951912025}
   - component: {fileID: 1951912024}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: AlertaContextual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1951912024
 MonoBehaviour:
   m_ObjectHideFlags: 0

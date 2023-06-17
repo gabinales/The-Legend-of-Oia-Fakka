@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3373932821641311665}
   - component: {fileID: 3373932821641311664}
   - component: {fileID: 3373932821641311666}
-  - component: {fileID: 3373932821641311667}
   - component: {fileID: 3835499238725725647}
+  - component: {fileID: 115806165889465954}
   m_Layer: 0
   m_Name: "Grama Cort\xE1vel"
   m_TagString: destrutivel
@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3373932821641311665
 SpriteRenderer:
@@ -119,6 +119,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -135,18 +154,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2921066, y: 0.26331186}
   m_EdgeRadius: 0
---- !u!114 &3373932821641311667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3373932821641311630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc7eb0cf975eaa4cbd3cdb206efdbc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3835499238725725647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,3 +170,40 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fdfa07727ba18e146b0d737f16110ba5, type: 3}
   - {fileID: 8300000, guid: a7b9de16400176f4bb423db826fb17f4, type: 3}
   - {fileID: 8300000, guid: a7641e6e5c68c9a4aa0a87361ec2da39, type: 3}
+--- !u!114 &115806165889465954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373932821641311630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8adfabfd6ac7dc7449cea422979ca77f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHp: 1
+  Healed:
+    m_PersistentCalls:
+      m_Calls: []
+  Damaged:
+    m_PersistentCalls:
+      m_Calls: []
+  Died:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 115806165889465954}
+        m_TargetAssemblyTypeName: DamageHandler, Assembly-CSharp
+        m_MethodName: tileDestrutivel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3373932821641311664}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: cortada
+          m_BoolArgument: 0
+        m_CallState: 2
+  VelYInicial: 0
+  VelXInicialIntervalo: 0
+  Duracao: 0

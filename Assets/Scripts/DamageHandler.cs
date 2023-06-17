@@ -13,6 +13,10 @@ public class DamageHandler : MonoBehaviour
 
     public int MaxHp => _maxHp;  // Outros recursos podem utilizar este valor, como barra de vida.
 
+    // Tiles destrutíveis (grama, potes, etc.)
+    private Animator animator;
+    //
+
     public int Hp{
         get => _hp;
         private set{
@@ -36,25 +40,33 @@ public class DamageHandler : MonoBehaviour
 
     private void Awake(){
         _hp = _maxHp;
+
+        animator = GetComponent<Animator>();
     }
 
     // Valor do dano saltando na tela.
-    private Rigidbody2D rbTexto; // O Canvas pai do Texto contém um Rigidbody2D
+    private Rigidbody2D canvas;
     private TMP_Text valorDano;
 
-    public float VelYInicial = 7f;
+    public float VelYInicial = 0f;
     public float VelXInicialIntervalo = 3f;
-    public float Duracao = 0.8f;
+    public float Duracao = 1f;
 
-    public void ExibeTexto(GameObject alvo){
-        rbTexto = alvo.GetComponentInChildren<Rigidbody2D>();
-        valorDano = alvo.GetComponentInChildren<TMP_Text>();
-        rbTexto.velocity = new Vector2(Random.Range(-VelXInicialIntervalo, VelXInicialIntervalo), VelYInicial);
-        Destroy(gameObject, Duracao);        
+    public void Damage(int amount){
+        Hp -= amount;
+
+        if(gameObject.tag != "destrutivel"){
+            // Damage pop-up
+            canvas = gameObject.transform.GetChild(0).GetComponentInChildren<Rigidbody2D>();
+            valorDano = gameObject.GetComponentInChildren<TMP_Text>();
+            valorDano.text = amount.ToString();
+            canvas.velocity = new Vector2(Random.Range(-VelXInicialIntervalo, VelXInicialIntervalo), VelYInicial);
+            canvas.gravityScale = 0.5f;
+            Destroy(canvas, Duracao);
+        }else if(gameObject.tag == "destrutivel"){
+            tileDestrutivel(animator);
+        }
     }
-    // ---
-
-    public void Damage(int amount) => Hp -= amount; // adicionei esse int amount -- Patrick
     
         /*if (target.CompareTag("npcEnemy"))
         {
@@ -70,6 +82,11 @@ public class DamageHandler : MonoBehaviour
         HP += amount;
     }*/
     public void HealFull() => Hp = _maxHp;
-    public void Kill() => Hp = _maxHp;
+    public void Kill() => Destroy(gameObject);
     public void Adjust(int value) => Hp = value;
+
+
+    public void tileDestrutivel(Animator animator){
+        animator.SetBool("cortada", true);
+    }
 }
