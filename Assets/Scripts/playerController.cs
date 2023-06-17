@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class playerController : MonoBehaviour
 {
-    private DamageHandler damageHandler;
+    //private DamageHandler damageHandler;
 
     // Patrick 15.06 --- Blocos seguráveis
     public GameObject blocoSeguravel;
@@ -20,6 +20,7 @@ public class playerController : MonoBehaviour
     private Vector2 input;
 
     //Animação do sprite
+    //[SerializeField]
     private Animator animator;
     private int moveXHash = Animator.StringToHash("moveX");
     private int moveYHash = Animator.StringToHash("moveY");
@@ -39,8 +40,7 @@ public class playerController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        damageHandler = GetComponent<DamageHandler>();
-
+        //damageHandler = GetComponent<DamageHandler>();
     }
 
     public void HandleUpdate()
@@ -67,7 +67,6 @@ public class playerController : MonoBehaviour
                 if(IsWalkable(targetPos)){
                     StartCoroutine(Move(targetPos));
                 }
-                
             }
             else
             {

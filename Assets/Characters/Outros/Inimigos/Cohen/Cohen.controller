@@ -110,11 +110,11 @@ AnimatorController:
   m_Name: Cohen
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Vivo
+  - m_Name: Morte
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 1
+    m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Perseguindo
     m_Type: 4
@@ -190,8 +190,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Vivo
+  - m_ConditionMode: 1
+    m_ConditionEvent: Morte
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3501516003998292660}
@@ -278,7 +278,7 @@ AnimatorStateMachine:
     m_Position: {x: 190, y: -150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3609596147084381347}
-    m_Position: {x: 360, y: -70, z: 0}
+    m_Position: {x: 420, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3501516003998292660}
     m_Position: {x: -30, y: -200, z: 0}
