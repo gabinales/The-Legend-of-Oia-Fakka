@@ -12,7 +12,7 @@ public class EspadaHit : MonoBehaviour
     private int amount;
     public int danoAtaque;
 
-    private List<DamageHandler> _objectsWithHealth = new();
+    private List<DamageHandler> _objectsWithHealth = new List<DamageHandler>();
     //
 
     private void Awake()
@@ -23,12 +23,14 @@ public class EspadaHit : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<DamageHandler>(out var damageHandler))
         {
-            damageHandler.Damage(danoAtaque);  // <---- Fiz assim
-            /*
-            for(var i = _objectsWithHealth.Count - 1; i >= 0; i--){
-                _objectsWithHealth[i].Damage(danoAtaque);
-            }  <---- o cara do tutorial fez assim, mas comigo deu erro não sei p q */
-
+            //damageHandler.Damage(danoAtaque);  // <---- Fiz assim
+            
+            _objectsWithHealth.Add(damageHandler);
+        }
+        for(int i = _objectsWithHealth.Count - 1; i >= 0; i--){
+            _objectsWithHealth[i].Damage(danoAtaque);
+        } 
+        _objectsWithHealth.Clear();
 
             //damageHandler.ExibeTexto(other.gameObject);
 
@@ -44,7 +46,6 @@ public class EspadaHit : MonoBehaviour
                 StartCoroutine(KnockbackCo(adversario));
             }
         }
-    }
     private IEnumerator KnockbackCo(Rigidbody2D adversario)
     {
         if (adversario != null)
