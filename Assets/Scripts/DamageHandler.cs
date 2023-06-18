@@ -56,6 +56,7 @@ public class DamageHandler : MonoBehaviour
         Hp -= amount;
 
         if(!gameObject.CompareTag("destrutivel")){
+
             // Damage pop-up
             canvas = gameObject.transform.GetChild(0).GetComponentInChildren<Rigidbody2D>();
             valorDano = gameObject.GetComponentInChildren<TMP_Text>();

@@ -113,7 +113,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4037622199194172936}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -493,8 +493,8 @@ MonoBehaviour:
   HP: 4
   nomeAdversario: Cohen
   velocidade: 2
-  alvo: {fileID: 0}
-  posicaoInicial: {fileID: 0}
+  alvo: {fileID: 7433985962715555198, guid: dff4d2c7802c60140a275762e33995be, type: 3}
+  posicaoInicial: {fileID: 6145767162611524754}
   areaDePerseguicao: 4
   areaDoAtaque: 2
   animator: {fileID: 7979246356532920102}

@@ -5,14 +5,22 @@ using UnityEngine.InputSystem;
 
 public class playerController : MonoBehaviour
 {
-    //private DamageHandler damageHandler;
-
     // Patrick 15.06 --- Blocos seguráveis
     public GameObject blocoSeguravel;
     private bool segurandoBloco = false;
     private bool podePegar = false;
     //
 
+    // Patrick 17.06 --- SFX da Espada
+    [Header("SFX de Ataque")]
+    public AudioSource espadaSFX;
+
+    public void TocaSwingSFX(){
+        espadaSFX.pitch = (Random.Range(0.7f, 2.5f));
+        espadaSFX.Play();
+    }
+
+    //
     [Header("Movimento")]
     public float moveSpeed;
     private bool isMoving = false;
@@ -83,6 +91,10 @@ public class playerController : MonoBehaviour
         {
             isAttacking = true;
             animator.SetTrigger("Atacando");
+            
+            /*espadaSFX.clip = espadaSwing;
+            espadaSFX.pitch = (Random.Range(0.7f, 2.5f));
+            espadaSFX.Play();*/
             //Ataque();
         }
         // Patrick 15.06 --- Botão de segurar (Z)
