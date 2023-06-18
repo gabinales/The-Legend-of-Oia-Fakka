@@ -7,27 +7,42 @@ public class EspadaHit : MonoBehaviour
     private DamageHandler damageHandler;
     public float investida;
     public float duracaoDoKnockback;
+    public int danoAtaque;
+
+     // SFX do hit Espada
+    public AudioSource AudioSource;
+    public AudioClip espadaHit;
+
+    public void TocaAudioSource()
+    {
+        AudioSource.clip = espadaHit;
+        AudioSource.pitch = (Random.Range(1.5f, 1.8f));
+        AudioSource.Play();
+    } 
 
     private void Awake()
     {
         damageHandler = GetComponent<DamageHandler>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    //porrada da espada
+    void OnTriggerEnter2D(Collider2D other)
     {
+        //TocaAudioSource();
+
+        // KNOCBACK: (apenas inimigos)
+
         if (other.gameObject.CompareTag("enemy"))
         {
-            damageHandler.Damage(other.gameObject);
+            //    Debug.Log("machucado: " + other.gameObject.name);
 
-            Rigidbody2D adversario = other.GetComponent<Rigidbody2D>();
-            if (adversario != null)
-            {
-                adversario.isKinematic = false;
-                Vector2 diferenca = adversario.transform.position - transform.position;
-                diferenca = diferenca.normalized * investida;
-                adversario.AddForce(diferenca, ForceMode2D.Impulse);
-                StartCoroutine(KnockbackCo(adversario));
-            }
+            Rigidbody2D adversario = other.gameObject.GetComponent<Rigidbody2D>();
+            Vector2 diferenca = adversario.transform.position - transform.position;
+            diferenca = diferenca.normalized * investida;
+            adversario.AddForce(diferenca, ForceMode2D.Impulse);
+            StartCoroutine(KnockbackCo(adversario));
+
+            damageHandler.Damage(danoAtaque, other.gameObject);
         }
     }
     private IEnumerator KnockbackCo(Rigidbody2D adversario)
@@ -36,7 +51,7 @@ public class EspadaHit : MonoBehaviour
         {
             yield return new WaitForSeconds(duracaoDoKnockback);
             adversario.velocity = Vector2.zero;
-            adversario.isKinematic = true;
+            //adversario.isKinematic = true;
         }
     }
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3373932821641311665}
   - component: {fileID: 3373932821641311664}
   - component: {fileID: 3373932821641311666}
-  - component: {fileID: 3373932821641311667}
   - component: {fileID: 3835499238725725647}
   m_Layer: 0
   m_Name: "Grama Cort\xE1vel"
@@ -90,7 +89,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &3373932821641311664
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,8 +106,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &3373932821641311666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135,18 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2921066, y: 0.26331186}
   m_EdgeRadius: 0
---- !u!114 &3373932821641311667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3373932821641311630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc7eb0cf975eaa4cbd3cdb206efdbc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3835499238725725647
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - weapon
   - npcEnemy
+  - empurravel
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: Primeiro plano (Objetos e Personagens)
     uniqueID: 635172595
+    locked: 0
+  - name: HUD
+    uniqueID: 2217519913
     locked: 0

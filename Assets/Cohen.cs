@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cohen : AdversarioScript // Cohen contém todas as funções de Adversario.
 {
-    public int HP;
+   // public float HP;
 
     public Transform alvo; // Posição do jogador
     public Transform posicaoInicial;
@@ -19,7 +19,7 @@ public class Cohen : AdversarioScript // Cohen contém todas as funções de Adv
     }
     void FixedUpdate()
     {
-        if (gameObject.GetComponent<Cohen>().HP<=0) animator.SetBool("Vivo", false);
+        if (gameObject.GetComponent<Cohen>().HP<=0) animator.SetBool("Morte", true);
         VerificaDistancia();
     }
 

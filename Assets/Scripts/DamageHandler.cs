@@ -3,44 +3,64 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+using UnityEngine.Events;
+
+//Este script serve para definir a funçao dano que acessa o hp do objeto de colisao e modifica o valor
+//Também pode servir para curar (falta implementar Heal();)
 
 public class DamageHandler : MonoBehaviour
 {
-    private Rigidbody2D canvas; // O Canvas pai do Texto contém um Rigidbody2D
+    // Valor do dano saltando na tela.
+    // futuramente mudar isso para sair do bixo e nao da arma
+    private Rigidbody2D canvasRigidBody;
+    private RectTransform canvasPosition;
+    private float VelYInicial = 5f;
+    private float VelXInicialIntervalo = 3f;
+    private float Duracao = 3f;
     private TMP_Text valorDano;
 
-    public float VelYInicial = 0f;
-    public float VelXInicialIntervalo = 3f;
-    public float Duracao = 4f;
-
-    public void Damage(GameObject target, int dano)
+    public void Damage(int dano, GameObject objeto)
     {
-        if (target.CompareTag("npcEnemy"))
+        objeto.GetComponent<Cohen>().HP -= dano;
+
+        if (objeto.CompareTag("enemy"))
         {
-            Transform targetTransform = target.transform;
-            // Increase the Y scale by 1
-            Vector3 currentScale = targetTransform.localScale;
-            currentScale.y += 1.0f;
-            targetTransform.localScale = currentScale;
+            // Damage pop-up
+            canvasRigidBody = objeto.transform.GetChild(0).GetComponentInChildren<Rigidbody2D>();
+            valorDano = objeto.GetComponentInChildren<TMP_Text>();
+            valorDano.text = dano.ToString();
+            canvasRigidBody.velocity = new Vector2(Random.Range(-VelXInicialIntervalo, VelXInicialIntervalo), VelYInicial);
+            canvasRigidBody.gravityScale = 1f;
+
+            /*  canvasPosition = objeto.GetComponentInChildren<RectTransform>();
+             canvasPosition.anchoredPosition3D = Vector3.up; */
         }
-        if (target.CompareTag("enemy"))
-            Debug.Log("inimigo " + target.name + " machucado");
+
+        /* else if (objeto.CompareTag("destrutivel"))
         {
-            target.GetComponent<Cohen>().HP -= dano;
-        }
+            tileDestrutivel(animator);
+        } */
+    }
+    public void resetaDisplay(GameObject objeto)
+    {
+        canvasRigidBody = objeto.transform.GetChild(0).GetComponentInChildren<Rigidbody2D>();
+        canvasRigidBody.velocity = Vector3.zero;
         
-        //exibe dano
-        canvas = target.transform.GetChild(0).GetComponent<Rigidbody2D>();
-        
-        valorDano = target.GetComponentInChildren<TMP_Text>();
-
-        valorDano.text = dano.ToString();
-
-        canvas.velocity = new Vector2(Random.Range(-VelXInicialIntervalo, VelXInicialIntervalo), VelYInicial);
-        canvas.gravityScale = 0.5f;
-        Destroy(canvas, Duracao);
-
-        //canvas.AddComponent<Rigidbody2D>();
+        valorDano = objeto.GetComponentInChildren<TMP_Text>();
+        valorDano.text = null;
+        canvasRigidBody.gravityScale = 0f;
+        canvasPosition = objeto.GetComponentInChildren<RectTransform>();
+        canvasPosition.anchoredPosition3D = Vector3.up;
 
     }
 }
+
+
+
+//public void Heal(int amount) => vida += amount;
+
+//public void HealFull() => vida = _maxHp;
+
+//public void Kill() => Destroy(objeto);
+//public void Adjust(int value) => vida = value;
+

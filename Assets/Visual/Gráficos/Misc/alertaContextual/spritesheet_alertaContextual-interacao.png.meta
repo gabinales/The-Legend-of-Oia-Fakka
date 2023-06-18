@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7b5ed3af926d8fb4bb5931988afd8ffc
+guid: adf1fd6fabfce4949be33a223430008b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,55 +103,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: minigameCombate_Espada1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17bb3d8507c0a8e45b44842ad4c6434c
-      internalID: 781920865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minigameCombate_Espada2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30f5e4338e40dae4c9f2b0371263bdd6
-      internalID: -684752846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minigameCombate_Escudo1
+      name: spritesheet_alertaContextual-interacao_0
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b8e7d1a60c538c45967d97699ab122f
-      internalID: 327136469
+      spriteID: 96ad4f9eb71f71d448ae9ab4d48b05e4
+      internalID: -1543328921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minigameCombate_Escudo2
+      name: spritesheet_alertaContextual-interacao_1
       rect:
         serializedVersion: 2
         x: 16
@@ -182,8 +145,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a93220a32b8d4f84caffde4c70ddc2ac
-      internalID: -1597623589
+      spriteID: 87a00c66f6a0f1643abc8243562601cd
+      internalID: -1274530451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_alertaContextual-interacao_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587cf14037e744643a0b85958429b1dc
+      internalID: -1414433315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_alertaContextual-interacao_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e11ab5d5872e3c4ca99056865500c79
+      internalID: 37461594
       vertices: []
       indices: 
       edges: []
@@ -199,13 +204,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      minigameCombate_Escudo1: 327136469
-      minigameCombate_Escudo2: -1597623589
-      minigameCombate_Espada1: 781920865
-      minigameCombate_Espada2: -684752846
-  spritePackingTag: 
+      spritesheet_alertaContextual-interacao_0: -1543328921
+      spritesheet_alertaContextual-interacao_1: -1274530451
+      spritesheet_alertaContextual-interacao_2: -1414433315
+      spritesheet_alertaContextual-interacao_3: 37461594
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
