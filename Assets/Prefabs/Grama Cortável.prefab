@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3373932821641311664}
   - component: {fileID: 3373932821641311666}
   - component: {fileID: 3835499238725725647}
+  - component: {fileID: 1548853175646730022}
   m_Layer: 0
   m_Name: "Grama Cort\xE1vel"
   m_TagString: destrutivel
@@ -149,3 +150,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fdfa07727ba18e146b0d737f16110ba5, type: 3}
   - {fileID: 8300000, guid: a7b9de16400176f4bb423db826fb17f4, type: 3}
   - {fileID: 8300000, guid: a7641e6e5c68c9a4aa0a87361ec2da39, type: 3}
+--- !u!114 &1548853175646730022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373932821641311630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc7eb0cf975eaa4cbd3cdb206efdbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

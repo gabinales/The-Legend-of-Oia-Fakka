@@ -16,7 +16,6 @@ public class DamageHandler : MonoBehaviour
     private RectTransform canvasPosition;
     private float VelYInicial = 5f;
     private float VelXInicialIntervalo = 3f;
-    private float Duracao = 3f;
     private TMP_Text valorDano;
 
     public void Damage(int dano, GameObject objeto)
@@ -36,16 +35,12 @@ public class DamageHandler : MonoBehaviour
              canvasPosition.anchoredPosition3D = Vector3.up; */
         }
 
-        /* else if (objeto.CompareTag("destrutivel"))
-        {
-            tileDestrutivel(animator);
-        } */
     }
     public void resetaDisplay(GameObject objeto)
     {
         canvasRigidBody = objeto.transform.GetChild(0).GetComponentInChildren<Rigidbody2D>();
         canvasRigidBody.velocity = Vector3.zero;
-        
+
         valorDano = objeto.GetComponentInChildren<TMP_Text>();
         valorDano.text = null;
         canvasRigidBody.gravityScale = 0f;
@@ -53,6 +48,9 @@ public class DamageHandler : MonoBehaviour
         canvasPosition.anchoredPosition3D = Vector3.up;
 
     }
+
+   // public void Kill() => Destroy(GameObject objeto);
+
 }
 
 
@@ -61,6 +59,5 @@ public class DamageHandler : MonoBehaviour
 
 //public void HealFull() => vida = _maxHp;
 
-//public void Kill() => Destroy(objeto);
 //public void Adjust(int value) => vida = value;
 
