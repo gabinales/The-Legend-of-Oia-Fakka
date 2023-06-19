@@ -14,25 +14,25 @@ public class DamageHandler : MonoBehaviour
     // futuramente mudar isso para sair do bixo e nao da arma
     private Rigidbody2D canvasRigidBody;
     private RectTransform canvasPosition;
-    private float VelYInicial = 5f;
-    private float VelXInicialIntervalo = 3f;
     private TMP_Text valorDano;
+    public GameObject hpDisplay;
 
     public void Damage(int dano, GameObject objeto)
     {
+        //o dano de fato
         objeto.GetComponent<Cohen>().HP -= dano;
 
         if (objeto.CompareTag("enemy"))
         {
-            // Damage pop-up
-            canvasRigidBody = objeto.transform.GetChild(0).GetComponentInChildren<Rigidbody2D>();
+            DamageIndicator indicator = Instantiate(hpDisplay, objeto.transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+            indicator.textMeshPro.text = dano.ToString();
+
+            // dano pop-up
+/*             canvasRigidBody = objeto.transform.GetChild(0).GetComponentInChildren<Rigidbody2D>();
             valorDano = objeto.GetComponentInChildren<TMP_Text>();
             valorDano.text = dano.ToString();
             canvasRigidBody.velocity = new Vector2(Random.Range(-VelXInicialIntervalo, VelXInicialIntervalo), VelYInicial);
-            canvasRigidBody.gravityScale = 1f;
-
-            /*  canvasPosition = objeto.GetComponentInChildren<RectTransform>();
-             canvasPosition.anchoredPosition3D = Vector3.up; */
+            canvasRigidBody.gravityScale = 1f; */
         }
 
     }

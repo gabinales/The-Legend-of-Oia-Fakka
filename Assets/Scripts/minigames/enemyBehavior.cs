@@ -28,6 +28,7 @@ public class enemyBehavior : MonoBehaviour
         StartCoroutine(PerformActionsWithDelay());
     }
 
+    //IA movimentacao e atk
     IEnumerator PerformActionsWithDelay()
     {
         while (true)
@@ -35,6 +36,7 @@ public class enemyBehavior : MonoBehaviour
             Vector3 direction = getPlayerDirection();
             float epsilon = 0.001f; // Small epsilon for float comparison
 
+            //Se x = y (diagonal)...
             if (Mathf.Abs(direction.x - direction.y) < epsilon)
             {
                 if (direction.x < 0)
@@ -42,6 +44,8 @@ public class enemyBehavior : MonoBehaviour
                 else if (direction.x > 0)
                     move("right");
             }
+
+
             else if (direction.y < 0)
             {
                 move("down");
@@ -126,8 +130,13 @@ public class enemyBehavior : MonoBehaviour
         transform.eulerAngles = new Vector3(0f, 0f, orientacao);
     }
 
-
+    void OnTriggerEnter2D(Collider2D colisor){
+        Debug.Log(colisor);
+    }
+        
+    
 }
+
 
 
 
