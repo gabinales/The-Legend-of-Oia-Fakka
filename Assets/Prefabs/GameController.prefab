@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4926716810547104119
 MonoBehaviour:
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caixaDeDialogo: {fileID: 0}
   textoDialogo: {fileID: 0}
-  letrasPorSegundo: 40
+  letrasPorSegundo: 120
 --- !u!114 &1449402897289758495
 MonoBehaviour:
   m_ObjectHideFlags: 0

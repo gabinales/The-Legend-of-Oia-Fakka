@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: caixaDeDialogo
       value: 
       objectReference: {fileID: 1748889139}
+    - target: {fileID: 1497883252546069953, guid: 33abba4421cbe79419fbe6e72668adaa, type: 3}
+      propertyPath: letrasPorSegundo
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 3215853978044471205, guid: 33abba4421cbe79419fbe6e72668adaa, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -350,6 +354,10 @@ PrefabInstance:
     - target: {fileID: 3215853978044471205, guid: 33abba4421cbe79419fbe6e72668adaa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926716810547104119, guid: 33abba4421cbe79419fbe6e72668adaa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4926716810547104119, guid: 33abba4421cbe79419fbe6e72668adaa, type: 3}
       propertyPath: controladorDoJogador
@@ -4279,8 +4287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogo:
     falas:
-    - "[Buscando nos pertences do falecido, voc\xEA encontra o que parece ser uma
-      cueca pu\xEDda e etiquetada...]"
+    - "[Buscando nos pertences do falecido, voc\xEA encontra uma cueca pu\xEDda...]"
     - '[A etiqueta diz: Duardo Mimmcher.]'
 --- !u!1001 &1774755648
 PrefabInstance:
@@ -5101,9 +5108,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4256602851448608453, guid: 3d9d88a99605f6d4d91c9fedeffaf183, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6077830136481882697, guid: 3d9d88a99605f6d4d91c9fedeffaf183, type: 3}
       propertyPath: m_Name
       value: "Di\xE1logos"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509717008945639737, guid: 3d9d88a99605f6d4d91c9fedeffaf183, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215319887117833695, guid: 3d9d88a99605f6d4d91c9fedeffaf183, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215319887117833695, guid: 3d9d88a99605f6d4d91c9fedeffaf183, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215319887117833695, guid: 3d9d88a99605f6d4d91c9fedeffaf183, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215319887117833695, guid: 3d9d88a99605f6d4d91c9fedeffaf183, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215319887117833695, guid: 3d9d88a99605f6d4d91c9fedeffaf183, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
