@@ -19,8 +19,8 @@ public class playerController : MonoBehaviour
         espadaSFX.pitch = (Random.Range(0.7f, 2.5f));
         espadaSFX.Play();
     }
-
     //
+    
     [Header("Movimento")]
     public float moveSpeed;
     private bool isMoving = false;

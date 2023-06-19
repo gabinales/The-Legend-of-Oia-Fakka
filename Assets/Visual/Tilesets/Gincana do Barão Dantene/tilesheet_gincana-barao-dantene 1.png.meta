@@ -1,0 +1,261 @@
+fileFormatVersion: 2
+guid: 7a9c99106a039bc41a44d008e0dd8367
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilesheet_gincana-barao-dantene 1_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80e5c81c50c5e845a0a3e7ccd2cc276
+      internalID: 324791990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesheet_gincana-barao-dantene 1_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1779ab1f8c60ea84abb7a5601d860ccd
+      internalID: -1983395682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesheet_gincana-barao-dantene 1_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9063f738bb30f4c8d793e139115cda
+      internalID: 1750096054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesheet_gincana-barao-dantene 1_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b890ff4b436c8b40b9130b6780c75b3
+      internalID: 1011837597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tilesheet_gincana-barao-dantene 1_0: 1189370494
+      tilesheet_gincana-barao-dantene 1_1: -1706046787
+      tilesheet_gincana-barao-dantene 1_10: -854796549
+      tilesheet_gincana-barao-dantene 1_11: 87585381
+      tilesheet_gincana-barao-dantene 1_12: -458793840
+      tilesheet_gincana-barao-dantene 1_13: 1307984664
+      tilesheet_gincana-barao-dantene 1_14: -1584937247
+      tilesheet_gincana-barao-dantene 1_15: 727922754
+      tilesheet_gincana-barao-dantene 1_16: 356825857
+      tilesheet_gincana-barao-dantene 1_17: 1602630957
+      tilesheet_gincana-barao-dantene 1_18: -880711265
+      tilesheet_gincana-barao-dantene 1_19: -108175037
+      tilesheet_gincana-barao-dantene 1_2: 1888017388
+      tilesheet_gincana-barao-dantene 1_20: 1636926643
+      tilesheet_gincana-barao-dantene 1_21: 1020177823
+      tilesheet_gincana-barao-dantene 1_22: -1646563209
+      tilesheet_gincana-barao-dantene 1_23: -441585725
+      tilesheet_gincana-barao-dantene 1_24: 85082143
+      tilesheet_gincana-barao-dantene 1_25: 14590300
+      tilesheet_gincana-barao-dantene 1_26: 1450660321
+      tilesheet_gincana-barao-dantene 1_27: -264059085
+      tilesheet_gincana-barao-dantene 1_28: 146233726
+      tilesheet_gincana-barao-dantene 1_29: -1439745808
+      tilesheet_gincana-barao-dantene 1_3: -1632004261
+      tilesheet_gincana-barao-dantene 1_30: -373143037
+      tilesheet_gincana-barao-dantene 1_31: 162179178
+      tilesheet_gincana-barao-dantene 1_32: -57705675
+      tilesheet_gincana-barao-dantene 1_33: -1492252657
+      tilesheet_gincana-barao-dantene 1_34: 993628751
+      tilesheet_gincana-barao-dantene 1_35: 322951553
+      tilesheet_gincana-barao-dantene 1_36: -1973013382
+      tilesheet_gincana-barao-dantene 1_37: 622321658
+      tilesheet_gincana-barao-dantene 1_38: 1548999557
+      tilesheet_gincana-barao-dantene 1_39: -1398741646
+      tilesheet_gincana-barao-dantene 1_4: -1378373053
+      tilesheet_gincana-barao-dantene 1_40: 1694479377
+      tilesheet_gincana-barao-dantene 1_41: -1927705866
+      tilesheet_gincana-barao-dantene 1_42: -1761344504
+      tilesheet_gincana-barao-dantene 1_43: -1413613622
+      tilesheet_gincana-barao-dantene 1_44: 324791990
+      tilesheet_gincana-barao-dantene 1_45: -1983395682
+      tilesheet_gincana-barao-dantene 1_46: 1750096054
+      tilesheet_gincana-barao-dantene 1_47: 1934324260
+      tilesheet_gincana-barao-dantene 1_48: 878347399
+      tilesheet_gincana-barao-dantene 1_49: 1011837597
+      tilesheet_gincana-barao-dantene 1_5: 1455905120
+      tilesheet_gincana-barao-dantene 1_6: -1213376116
+      tilesheet_gincana-barao-dantene 1_7: -1143033923
+      tilesheet_gincana-barao-dantene 1_8: 1105084763
+      tilesheet_gincana-barao-dantene 1_9: 1477792965
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
