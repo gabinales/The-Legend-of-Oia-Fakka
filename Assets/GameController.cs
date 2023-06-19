@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using System;
+using System;
 
 // O controlador decide entre os estados CORRENDO e FALANDO, etc.
 public enum GameState

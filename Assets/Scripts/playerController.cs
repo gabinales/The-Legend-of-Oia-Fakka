@@ -20,7 +20,7 @@ public class playerController : MonoBehaviour
         espadaSFX.Play();
     }
     //
-    
+
     [Header("Movimento")]
     public float moveSpeed;
     private bool isMoving = false;
@@ -133,13 +133,13 @@ public class playerController : MonoBehaviour
         Debug.DrawLine(transform.position, posicaoInteracao, Color.red, 1f);
 
         var collider = Physics2D.OverlapCircle(posicaoInteracao, 0.2f, npcLayer); // Checa se, ao fim da linha vermelha (posicaoInteracao) há um NPC.
-        Debug.Log("interagindo com a layer " + collider);
 
         if (collider != null)
         {
-            // Checa se o NPC alvo da interação é inimigo, personagem etc.
-            collider.GetComponent<NPC>()?.Interacao(); // Se é interagível, execute a função.
+            Debug.Log("interagiu com o npc: " + collider);
+            collider.GetComponent<iInteragivel>()?.Interacao(); // ? significa: Se é interagível, execute a função.
         }
+        Debug.Log("não está interagindo com a layer NPC");
     }
 
     /* public void Ataque()
@@ -184,7 +184,7 @@ public class playerController : MonoBehaviour
 
     private bool IsWalkable(Vector3 targetPos)
     {
-        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer);
+        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer); // Patrick 18.06 --- Tirei npcLayer
         if (colisor != null)
         { // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
             Vector3 direction = targetPos - transform.position;

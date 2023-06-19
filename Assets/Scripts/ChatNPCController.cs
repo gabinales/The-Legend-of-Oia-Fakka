@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChatNPCController : MonoBehaviour, NPC // Explicita que esta classe é um NPC interagível
+public class ChatNPCController : MonoBehaviour, iInteragivel // Explicita que esta classe é um NPC interagível
 {
     [SerializeField] Dialog dialogo;
 

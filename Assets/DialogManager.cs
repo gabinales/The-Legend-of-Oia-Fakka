@@ -33,7 +33,7 @@ public class DialogManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.C) && !escrevendo){ // Se eu já pressionei o botão C, e aperto de novo...
             ++falaAtual;
             if(falaAtual < dialogo.Falas.Count){ // Se ainda há falas sobrando...
-                StartCoroutine(TipoDeDialogo(dialogo.Falas[falaAtual]));
+                StartCoroutine(DigitaTexto(dialogo.Falas[falaAtual]));
             }
             else{
                 caixaDeDialogo.SetActive(false); // Oculta a Caixa de Diálogo
@@ -48,10 +48,10 @@ public class DialogManager : MonoBehaviour
         yield return new WaitForEndOfFrame();// Para evitar que possa ser pressionado mais de uma vez.
         this.dialogo = dialogo;
         caixaDeDialogo.SetActive(true); // Exibe a Caixa de Diálogo (gameObject)
-        StartCoroutine(TipoDeDialogo(dialogo.Falas[0]));
+        StartCoroutine(DigitaTexto(dialogo.Falas[0]));
     }
 
-    public IEnumerator TipoDeDialogo(string fala){ // Exibe a fala letra por letra
+    public IEnumerator DigitaTexto(string fala){ // Exibe a fala letra por letra
         escrevendo = true;
         textoDialogo.text = ""; // 1. Primeiro apaga todo o texto
         foreach (var letra in fala.ToCharArray()){ // 2. Reexibe o texto letra por letra
