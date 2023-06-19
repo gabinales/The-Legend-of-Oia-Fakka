@@ -35,6 +35,7 @@ public class EspadaHit : MonoBehaviour
             StartCoroutine(KnockbackCo(adversario));
 
             damageHandler.Damage(danoAtaque, other);
+            danoAtaque *= 2;
         }
         // Outros efeitos (cortar grama, ativar switch...):
         if (other.CompareTag("destrutivel"))
