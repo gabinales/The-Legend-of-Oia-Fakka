@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Alavanca : MonoBehaviour, ISwitch
 {
-    public void Ativa(){
-        Debug.Log("Ativou a alavanca!");
+    public bool ligado;
+    Animator animator;
+
+    public void Toggle(){
+        ligado = !ligado;
+        animator.SetBool("ligado", ligado);
     }
-    public void Desativa(){
-        Debug.Log("Desativou a alavanca!");
+
+    private void Awake() {
+        animator = GetComponent<Animator>();
     }
 }

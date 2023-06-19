@@ -4,6 +4,5 @@ using UnityEngine;
 
 public interface ISwitch
 {
-    void Ativa();
-    void Desativa();
+    void Toggle();
 }

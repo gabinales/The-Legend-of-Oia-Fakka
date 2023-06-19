@@ -46,12 +46,9 @@ public class EspadaHit : MonoBehaviour
         if(other.CompareTag("switch")){
             ISwitch switchObj = other.GetComponent<ISwitch>();
             if(switchObj != null){
-                switchObj.Ativa();
+                switchObj.Toggle();
             }
-
-            Debug.Log("Acertou no switch");
         }
-
     }
     private IEnumerator KnockbackCo(Rigidbody2D adversario)
     {
