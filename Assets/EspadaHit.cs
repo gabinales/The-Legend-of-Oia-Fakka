@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EspadaHit : MonoBehaviour
 {
     private DamageHandler damageHandler;
@@ -24,7 +25,7 @@ public class EspadaHit : MonoBehaviour
         GameObject other = colisor.gameObject;
         //TocaAudioSource();
 
-        // KNOCBACK: (apenas inimigos)
+        // Dano e Knockback: (apenas inimigos)
         if (other.CompareTag("enemy"))
         {
             Rigidbody2D adversario = other.GetComponent<Rigidbody2D>();
@@ -35,11 +36,20 @@ public class EspadaHit : MonoBehaviour
 
             damageHandler.Damage(danoAtaque, other);
         }
-
+        // Outros efeitos (cortar grama, ativar switch...):
         if (other.CompareTag("destrutivel"))
         {
             Animator animator = other.GetComponent<Animator>();
             animator.SetBool("cortada", true);
+        }
+
+        if(other.CompareTag("switch")){
+            ISwitch switchObj = other.GetComponent<ISwitch>();
+            if(switchObj != null){
+                switchObj.Ativa();
+            }
+
+            Debug.Log("Acertou no switch");
         }
 
     }
