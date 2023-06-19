@@ -28,6 +28,9 @@ public class EspadaHit : MonoBehaviour
         // Dano e Knockback: (apenas inimigos)
         if (other.CompareTag("enemy"))
         {
+            Animator advAnimator = other.GetComponent<Animator>();
+            advAnimator.SetTrigger("Damaged");
+
             Rigidbody2D adversario = other.GetComponent<Rigidbody2D>();
             Vector2 diferenca = adversario.transform.position - transform.position;
             diferenca = diferenca.normalized * investida;

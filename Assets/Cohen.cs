@@ -19,7 +19,9 @@ public class Cohen : AdversarioScript // Cohen contém todas as funções de Adv
     }
     void FixedUpdate()
     {
-        if (gameObject.GetComponent<Cohen>().HP<=0) animator.SetBool("Morte", true);
+        if (gameObject.GetComponent<Cohen>().HP<=0){
+            animator.SetBool("Morte", true);
+        }
         VerificaDistancia();
     }
 
