@@ -8,8 +8,9 @@ public class Alavanca : MonoBehaviour, ISwitch
     Animator animator;
     public AudioSource audiosourceAlavanca;
     public AudioClip audioclipAlavanca;
-    //public GameObject other;
-    public List<GameObject> objectsList;
+    public List<GameObject> listaDeObjetos; // Lista de GameObjects afetados pela Alavanca
+
+    private bool enemySpawnerAtivado = false;
 
     public void Toggle(){
         // Alavanca:
@@ -18,15 +19,23 @@ public class Alavanca : MonoBehaviour, ISwitch
         audiosourceAlavanca.PlayOneShot(audioclipAlavanca);
 
         // Objeto(s) afetado(s) pela alavanca:
-        foreach(GameObject obj in objectsList){
+        foreach(GameObject obj in listaDeObjetos){
             ISwitch switchObject = obj.GetComponent<ISwitch>();
             if(switchObject != null){
                 switchObject.Toggle();
             }
         }
 
-        /*ISwitch obj = other.GetComponent<ISwitch>();
-        obj.Toggle();*/
+        // Ativa o EnemySpawner apenas na primeira ativação da alavanca
+        if(estado && !enemySpawnerAtivado){
+            Debug.Log("Deveria spawnaer");
+            EnemySpawner enemySpawner = GetComponentInChildren<EnemySpawner>();
+            if(enemySpawner != null){
+                Debug.Log("Cadee");
+                enemySpawner.SpawnEnemies();
+                enemySpawnerAtivado = true;
+            }
+        }
     }
     private void Awake() {
         animator = GetComponent<Animator>();
