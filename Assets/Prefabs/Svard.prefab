@@ -44,6 +44,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -65,6 +84,7 @@ PolygonCollider2D:
       - {x: -1.7861552, y: -0.4685138}
       - {x: -0.19556129, y: -0.45091558}
       - {x: -0.1924634, y: 0.49780577}
+  m_UseDelaunayMesh: 0
 --- !u!114 &4144866701489363904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adfabfd6ac7dc7449cea422979ca77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpDisplay: {fileID: 0}
 --- !u!114 &8733063064036318444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +159,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -161,6 +201,7 @@ PolygonCollider2D:
       - {x: 0.039111614, y: -1.3648349}
       - {x: 0.55339754, y: -1.1324004}
       - {x: 0.5269294, y: -0.334616}
+  m_UseDelaunayMesh: 0
 --- !u!114 &3073963288671931565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adfabfd6ac7dc7449cea422979ca77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpDisplay: {fileID: 0}
 --- !u!114 &8247982930469908167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +276,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -257,6 +318,7 @@ PolygonCollider2D:
       - {x: 0.6054748, y: -0.427325}
       - {x: 1.6652026, y: -0.30355358}
       - {x: 1.5985694, y: 0.08481127}
+  m_UseDelaunayMesh: 0
 --- !u!114 &1879359543803937190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adfabfd6ac7dc7449cea422979ca77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpDisplay: {fileID: 0}
 --- !u!114 &2384646783010375394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +413,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -399,6 +462,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -539,6 +608,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -557,7 +645,7 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!95 &4518736022279452480
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -574,7 +662,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6690629918226563236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocoSeguravel: {fileID: 0}
   espadaSFX: {fileID: 212677965327485792}
-  moveSpeed: 4
+  moveSpeed: 6
   corposSolidosLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -655,7 +744,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -689,7 +778,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &3972185467710599292
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -706,7 +795,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7921968562661438977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1097,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1029,6 +1138,7 @@ PolygonCollider2D:
       - {x: 0.04885298, y: 0.31888533}
       - {x: 0.5577079, y: -0.2475723}
       - {x: 1.4924493, y: -0.26746637}
+  m_UseDelaunayMesh: 0
 --- !u!114 &5596561896990666139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,6 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adfabfd6ac7dc7449cea422979ca77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpDisplay: {fileID: 0}
 --- !u!114 &5359779842576067158
 MonoBehaviour:
   m_ObjectHideFlags: 0
