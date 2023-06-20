@@ -346,7 +346,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 635172595
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 104292562, guid: 002e1cdfe1f8e3841a4f3edbefb28086, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -465,11 +465,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ba6305075e5bcd4499a936c487f52517, type: 3}
   - {fileID: 8300000, guid: 615a34cf2e2461341981d6efd5ca98cd, type: 3}
   - {fileID: 8300000, guid: e8189fc534168934c82bee56cee0eb1c, type: 3}
+  animator: {fileID: 8713166682096422540}
   alvo: {fileID: 7433985962715555198, guid: dff4d2c7802c60140a275762e33995be, type: 3}
   posicaoInicial: {fileID: 8713166682096422538}
   areaDePerseguicao: 4
   areaDoAtaque: 2
-  animator: {fileID: 8713166682096422540}
 --- !u!82 &7667996191768697265
 AudioSource:
   m_ObjectHideFlags: 0

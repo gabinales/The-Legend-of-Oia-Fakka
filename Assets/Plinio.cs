@@ -23,9 +23,20 @@ public class Plinio : AdversarioScript, ISwitch
         if(layerP == 0){
             gameObject.layer = 7;
         }
+
+        Invoke("Reativa", 5f);
     }
 
     private void Awake() {
         animator = GetComponent<Animator>();
+    }
+
+    void Reativa(){
+        estado = true;
+        animator.SetBool("ativado", estado);
+        gameObject.layer = 7;
+        if(!audiosource.isPlaying){
+            audiosource.PlayOneShot(enemySfx[0]);  // Um pouco redundante
+        }
     }
 }
