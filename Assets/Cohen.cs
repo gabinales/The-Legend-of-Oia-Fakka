@@ -10,16 +10,19 @@ public class Cohen : AdversarioScript // Cohen contém todas as funções de Adv
     public Transform posicaoInicial;
     public float areaDePerseguicao;
     public float areaDoAtaque;
-    public Animator animator;
+    //public Animator animator;
 
     void Start()
     {
         alvo = GameObject.FindWithTag("Player").transform;
-       // HP = GetComponentInChildren<DisplayHp>();
+        hpAtual = hpMax;
     }
     void FixedUpdate()
     {
-        if (gameObject.GetComponent<Cohen>().HP<=0){
+        if (gameObject.GetComponent<Cohen>().hpAtual<=0){
+            if(!audiosource.isPlaying){
+                audiosource.PlayOneShot(enemySfx[2]);
+            }
             animator.SetBool("Morte", true);
         }
         VerificaDistancia();

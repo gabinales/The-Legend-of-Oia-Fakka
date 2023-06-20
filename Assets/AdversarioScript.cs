@@ -4,10 +4,30 @@ using UnityEngine;
 
 public class AdversarioScript : MonoBehaviour
 {
-    public int HP;
+    public int hpMax;
+    public int hpAtual;
     public int defesa;
     public int ataqueBase; // descomentei
     public int ataqueToque;
     public string nomeAdversario;
     public float velocidade;
+    public AudioSource audiosource;
+    public List<AudioClip> enemySfx;
+    public Animator animator;
+
+    public void SfxDamaged(){
+        if(hpAtual >= 0){
+            if(!audiosource.isPlaying){
+                audiosource.PlayOneShot(enemySfx[1]);
+            }
+        }
+        Debug.Log("Hp atual: "+hpAtual);
+        Debug.Log("Som tocado: "+ enemySfx[1]);
+    }
+    public void SfxDefeated(){
+        if(!audiosource.isPlaying){
+            audiosource.PlayOneShot(enemySfx[2]);
+        }
+        animator.SetBool("Morte", true);
+    }
 }
