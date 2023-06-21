@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4780a8a6d2047604bad762b6587d2ae4, type: 3}
+  m_Name: Chorumelo Esguelhudo
+  m_EditorClassIdentifier: 
+  spriteLoot: {fileID: -2019198859, guid: 44f118602ebf33e4cb13bab7261124e6, type: 3}
+  nomeLoot: Chorumelo Esguelhudo
+  chanceDrop: 50
