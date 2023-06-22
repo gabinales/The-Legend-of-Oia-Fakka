@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 8713166682096422539}
   - component: {fileID: 8713166682096422537}
   - component: {fileID: 7667996191768697265}
+  - component: {fileID: 4044653698115083090}
   m_Layer: 7
   m_Name: Cohen
   m_TagString: enemy
@@ -566,3 +567,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4044653698115083090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713166682096422543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7541011ec7a8dee46b4fdce1359a715e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabLoot: {fileID: 7405360897418698051, guid: 1fa37a0c61cb07644b56c1c974b30bad, type: 3}
+  listaLoot:
+  - {fileID: 11400000, guid: 7dd29b3870860d7439db0cffb0f2f430, type: 2}

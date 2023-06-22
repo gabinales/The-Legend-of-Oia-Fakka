@@ -52,6 +52,11 @@ public class EspadaHit : MonoBehaviour
                 switchObj.Toggle();
             }
         }
+        // Patrick -- 21.06 Efeitos de partícula
+        if(other.CompareTag("barreira")){
+            ParticleSystem fagulhas = GetComponent<ParticleSystem>();
+            fagulhas.Play();
+        }
     }
     private IEnumerator KnockbackCo(Rigidbody2D adversario)
     {

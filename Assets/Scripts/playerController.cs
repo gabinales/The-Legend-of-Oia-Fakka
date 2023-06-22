@@ -14,10 +14,11 @@ public class playerController : MonoBehaviour
     // Patrick 17.06 --- SFX da Espada
     [Header("SFX de Ataque")]
     public AudioSource espadaSFX;
+    public AudioClip sfxClip;
 
     public void TocaSwingSFX(){
         espadaSFX.pitch = (Random.Range(0.7f, 2.5f));
-        espadaSFX.Play();
+        espadaSFX.PlayOneShot(sfxClip);
     }
     //
 
@@ -91,6 +92,7 @@ public class playerController : MonoBehaviour
         {
             isAttacking = true;
             animator.SetTrigger("Atacando");
+            TocaSwingSFX();
             
             /*espadaSFX.clip = espadaSwing;
             espadaSFX.pitch = (Random.Range(0.7f, 2.5f));

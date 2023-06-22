@@ -10,6 +10,7 @@ TagManager:
   - npcEnemy
   - empurravel
   - switch
+  - barreira
   layers:
   - Default
   - TransparentFX
