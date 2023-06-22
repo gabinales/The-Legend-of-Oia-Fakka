@@ -14,6 +14,9 @@ public class EspadaHit : MonoBehaviour
     public AudioSource AudioSource;
     public AudioClip espadaHit;
 
+    // VFX dp hit da Espada
+    public GameObject Fagulhas;
+
     private void Awake()
     {
         damageHandler = GetComponent<DamageHandler>();
