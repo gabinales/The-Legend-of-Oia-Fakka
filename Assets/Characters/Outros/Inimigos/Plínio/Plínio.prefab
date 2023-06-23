@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2426477272714110954}
   - component: {fileID: 3501264483970772487}
-  - component: {fileID: 6053448890849642075}
   - component: {fileID: 9151803761088992305}
   - component: {fileID: 4406371279240965934}
   - component: {fileID: 6151995685423880366}
   - component: {fileID: 7463246224905962363}
+  - component: {fileID: 5480611813865553896}
   m_Layer: 7
   m_Name: "Pl\xEDnio"
   m_TagString: Untagged
@@ -89,51 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6053448890849642075
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5215128113245881630}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &9151803761088992305
 Rigidbody2D:
   serializedVersion: 4
@@ -173,11 +128,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f669a60104eec64f8a46d8ba25be90f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 4128413121758549987, guid: d4c85120c11571f419c99add9992be4e, type: 3}
   hpMax: 0
   hpAtual: 0
   defesa: 9999
   danoBase: 0
   danoToque: 1
+  investidaKnockback: 5
+  duracaoKnockback: 0.1
   nomeAdversario: "Pl\xEDnio"
   velocidade: 0
   audiosource: {fileID: 7463246224905962363}
@@ -185,7 +143,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4694603c317340b478278eb7a373da7d, type: 3}
   animator: {fileID: 0}
   estado: 1
-  player: {fileID: 5042882059564935194, guid: dff4d2c7802c60140a275762e33995be, type: 3}
 --- !u!95 &6151995685423880366
 Animator:
   serializedVersion: 5
@@ -303,3 +260,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &5480611813865553896
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215128113245881630}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.0035831332}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0071663}
+  m_EdgeRadius: 0

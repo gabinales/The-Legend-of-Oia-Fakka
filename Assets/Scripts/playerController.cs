@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class playerController : MonoBehaviour
 {   
+    // Patrick 23.06 --- booleana para interromper a Coroutine Move() quando toma dano
+    private bool isKnockback = false;
+
     // Patrick 15.06 --- Blocos seguráveis
     public GameObject blocoSeguravel;
     private bool segurandoBloco = false;
@@ -29,7 +32,6 @@ public class playerController : MonoBehaviour
     private Vector2 input;
 
     //Animação do sprite
-    //[SerializeField]
     private Animator animator;
     private int moveXHash = Animator.StringToHash("moveX");
     private int moveYHash = Animator.StringToHash("moveY");
@@ -73,7 +75,7 @@ public class playerController : MonoBehaviour
                 targetPos.x += input.x / 4;
                 targetPos.y += input.y / 4;
 
-                if(IsWalkable(targetPos)){
+                if(IsWalkable(targetPos)){ 
                     StartCoroutine(Move(targetPos));
                 }
             }
@@ -184,14 +186,24 @@ public class playerController : MonoBehaviour
     IEnumerator Move(Vector3 targetPos)
     { //Coroutine para mover o sprite.
         isMoving = true;
+        
         //enquanto a posicao nao for igual à targetPos...
         while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
         { //Garante que o while seja executado contanto que haja QUALQUER movimento (Epsilon lida com valores muito pequenos)
             transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
             yield return null;
         }
-        transform.position = targetPos;
+        while(isKnockback){
+          
+            yield return new WaitForSeconds(1f);
+            isKnockback = false;
+        }
+
+        //transform.position = targetPos;
         isMoving = false;
+    }
+    public void StopMoveCoroutine(){
+        isKnockback = true;
     }
 
     private bool IsWalkable(Vector3 targetPos)
@@ -207,28 +219,3 @@ public class playerController : MonoBehaviour
         return true;
     }
 }
-
-
-
-
-/*
-Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer | npcLayer | blocoEmpurravelLayer);
-        if (colisor != null)
-        { // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
-            Debug.Log(colisor.gameObject.layer);
-            Vector3 direction = targetPos - transform.position;
-            direction.Normalize();
-            Collider2D bloqueioAtras = Physics2D.OverlapCircle(colisor.gameObject.transform.position + direction, 0.2f, corposSolidosLayer | npcLayer | blocoEmpurravelLayer);
-            Debug.Log(bloqueioAtras);
-            Debug.DrawRay(targetPos, direction, Color.red, 0.4f);
-            if(colisor.gameObject.layer == 10 && bloqueioAtras == null){ //10 = blocoEmpurravel
-                colisor.gameObject.transform.position = colisor.gameObject.transform.position + direction;
-                return false;
-            }
-            else{
-                return false;
-            }
-        }
-        return true;
-
-        */

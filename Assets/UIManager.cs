@@ -8,11 +8,11 @@ public class UIManager : MonoBehaviour
     public PlayerStats playerStats;
     [SerializeField] private TMP_Text hpText;
 
-    private void OnEnable(){
-        playerStats.HpAlterado += AtualizaHpText;
+    private void OnEnable(){ // Executado quando o componente é habilitado
+        playerStats.HpAlterado += AtualizaHpText; // inscreve o método AtualizaHpText, que será executado somente quando que o evento HpAlterado for acionado
     }
-    private void OnDisable(){
-        playerStats.HpAlterado -= AtualizaHpText;
+    private void OnDisable(){ // Executado quando o componente é desabilitado
+        playerStats.HpAlterado -= AtualizaHpText; // desinscreve o método
     }
     
     void Start(){
