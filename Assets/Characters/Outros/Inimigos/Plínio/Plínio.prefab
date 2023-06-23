@@ -176,8 +176,8 @@ MonoBehaviour:
   hpMax: 0
   hpAtual: 0
   defesa: 9999
-  ataqueBase: 0
-  ataqueToque: 1
+  danoBase: 0
+  danoToque: 1
   nomeAdversario: "Pl\xEDnio"
   velocidade: 0
   audiosource: {fileID: 7463246224905962363}
@@ -185,6 +185,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4694603c317340b478278eb7a373da7d, type: 3}
   animator: {fileID: 0}
   estado: 1
+  player: {fileID: 5042882059564935194, guid: dff4d2c7802c60140a275762e33995be, type: 3}
 --- !u!95 &6151995685423880366
 Animator:
   serializedVersion: 5

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class playerController : MonoBehaviour
-{
+{   
     // Patrick 15.06 --- Blocos seguráveis
     public GameObject blocoSeguravel;
     private bool segurandoBloco = false;
@@ -106,7 +106,6 @@ public class playerController : MonoBehaviour
             else if (podePegar)
                 SeguraBloco();
         }
-
     }
     // Patrick 15.06 --- Botão de segurar (Z)
     void OnCollisionEnter2D(Collision2D other){
@@ -125,6 +124,17 @@ public class playerController : MonoBehaviour
     void SoltaBloco(){
         blocoSeguravel.transform.SetParent(null);
         segurandoBloco = false;
+    }
+
+    // Patrick 22.06 --- Andar em cima do item para coletá-lo
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.CompareTag("coletavel")){
+            IColetavel coletavel = collision.GetComponent<IColetavel>();
+            if(coletavel != null){
+                coletavel.Collect();
+            }
+            Debug.Log(coletavel);
+        }
     }
 
     public void Interacao()

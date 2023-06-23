@@ -115,6 +115,7 @@ MonoBehaviour:
   danoAtaque: 2
   AudioSource: {fileID: 0}
   espadaHit: {fileID: 0}
+  Fagulhas: {fileID: 0}
 --- !u!1 &5538927991818390600
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +233,7 @@ MonoBehaviour:
   danoAtaque: 2
   AudioSource: {fileID: 0}
   espadaHit: {fileID: 8300000, guid: ba3def7d2c4a3f34ebac428e726bf803, type: 3}
+  Fagulhas: {fileID: 0}
 --- !u!1 &5992540247847465957
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +351,7 @@ MonoBehaviour:
   danoAtaque: 2
   AudioSource: {fileID: 0}
   espadaHit: {fileID: 0}
+  Fagulhas: {fileID: 0}
 --- !u!1 &6426195531698547246
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +367,7 @@ GameObject:
   - component: {fileID: 6971089810393388414}
   - component: {fileID: 4518736022279452480}
   - component: {fileID: 6690629918226563236}
+  - component: {fileID: 5042882059564935194}
   m_Layer: 0
   m_Name: Svard
   m_TagString: Player
@@ -678,6 +682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocoSeguravel: {fileID: 0}
   espadaSFX: {fileID: 212677965327485792}
+  sfxClip: {fileID: 0}
   moveSpeed: 6
   corposSolidosLayer:
     serializedVersion: 2
@@ -691,6 +696,20 @@ MonoBehaviour:
   blocoEmpurravelLayer:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!114 &5042882059564935194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6426195531698547246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87eb2e1cb9afc61499e3bbcd72d22a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpMax: 10
+  hpAtual: 0
 --- !u!1 &7506972866963542699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,3 +1188,4 @@ MonoBehaviour:
   danoAtaque: 2
   AudioSource: {fileID: 0}
   espadaHit: {fileID: 0}
+  Fagulhas: {fileID: 0}

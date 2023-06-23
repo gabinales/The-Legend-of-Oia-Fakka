@@ -11,6 +11,7 @@ TagManager:
   - empurravel
   - switch
   - barreira
+  - coletavel
   layers:
   - Default
   - TransparentFX

@@ -7,8 +7,8 @@ public class AdversarioScript : MonoBehaviour
     public int hpMax;
     public int hpAtual;
     public int defesa;
-    public int ataqueBase; // descomentei
-    public int ataqueToque;
+    public int danoBase; // descomentei
+    public int danoToque;
     public string nomeAdversario;
     public float velocidade;
     public AudioSource audiosource;
