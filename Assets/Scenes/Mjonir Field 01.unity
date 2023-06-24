@@ -30453,8 +30453,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0033999681, y: 0.0021499991, z: 0}
-    m_Extent: {x: 1.0028, y: 1.00355, z: 0}
+    m_Center: {x: -0.007249981, y: 0.00034999847, z: 0}
+    m_Extent: {x: 1.00275, y: 1.00765, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -31466,6 +31466,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4926716810547104119, guid: 33abba4421cbe79419fbe6e72668adaa, type: 3}
+      propertyPath: pController
+      value: 
+      objectReference: {fileID: 6690629918375471029}
     - target: {fileID: 4926716810547104119, guid: 33abba4421cbe79419fbe6e72668adaa, type: 3}
       propertyPath: controladorDoJogador
       value: 

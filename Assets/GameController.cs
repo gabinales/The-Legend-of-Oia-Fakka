@@ -13,15 +13,19 @@ public enum GameState
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] playerController controladorDoJogador;
+    [SerializeField] playerController pController;
 
     // Para trocar entre os diferentes estados:
     GameState state;
 
     DamageHandler DamageHandler;
 
+    // Patrick 24.06 --- Estado Pausado
+    private bool isPaused = false;
+
     private void Start()
     {
+        Time.timeScale = 1f;
 
         DamageHandler = GetComponent<DamageHandler>();
 
@@ -40,21 +44,60 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.K)){
+            TogglePause();
+        }
+
+        if(isPaused){
+            return;
+        }
+
         if (state == GameState.MovimentacaoLivre)
         {
-            controladorDoJogador.HandleUpdate();
+            pController.HandleUpdate();
         }
         else if (state == GameState.Dialogo)
         {
-            DialogManager.Instance.HandleUpdate(); // Criar função para que o DialogManager possa ser utilizado
+            DialogManager.Instance.HandleUpdate(); // Cria função para que o DialogManager possa ser utilizado
         }
         else if (state == GameState.Loja)
         {
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        /*if (Input.GetKeyDown(KeyCode.Z))
         {
             DamageHandler.resetaDisplay(GameObject.Find("Cohen"));
+        }*/
+    }
+
+    private void TogglePause(){
+        isPaused = !isPaused;
+        Debug.Log("Jogo pausado");
+
+        if(isPaused == true){
+            Time.timeScale = 0.005f;
         }
+        if(isPaused == false){
+            Time.timeScale = 1f;
+        }
+        
+
+        /*if(isPaused){
+            if(state == GameState.MovimentacaoLivre){
+                pController.enabled = false;
+            }
+            if(state == GameState.Dialogo){
+                DialogManager.Instance.enabled = false;
+            }
+            // if(state == GameState.Loja ....)
+        }
+        else{
+            if(state == GameState.MovimentacaoLivre){
+                pController.enabled = true;
+            }
+            if(state == GameState.Dialogo){
+                DialogManager.Instance.enabled = true;
+            }
+        }*/
     }
 }
