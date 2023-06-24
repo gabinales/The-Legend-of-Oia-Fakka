@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AdversarioScript : MonoBehaviour, IAtacavel
+public class Enemy : MonoBehaviour, IAtacavel
 {
     public PlayerStats player;
     //public playerController pController;

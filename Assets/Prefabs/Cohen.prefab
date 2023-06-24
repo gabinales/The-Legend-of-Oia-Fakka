@@ -454,11 +454,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f729168c8600641abb5624356bc190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   hpMax: 4
   hpAtual: 0
   defesa: 0
-  ataqueBase: 0
-  ataqueToque: 0
+  danoBase: 0
+  danoToque: 0
+  investidaKnockback: 0
+  duracaoKnockback: 0
   nomeAdversario: Cohen
   velocidade: 2
   audiosource: {fileID: 7667996191768697265}
@@ -582,3 +585,4 @@ MonoBehaviour:
   prefabLoot: {fileID: 7405360897418698051, guid: 1fa37a0c61cb07644b56c1c974b30bad, type: 3}
   listaLoot:
   - {fileID: 11400000, guid: 7dd29b3870860d7439db0cffb0f2f430, type: 2}
+  - {fileID: 11400000, guid: 7b96a5d8d16c9e440afbe9268cd5be23, type: 2}

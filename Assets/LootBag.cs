@@ -5,14 +5,14 @@ using UnityEngine;
 public class LootBag : MonoBehaviour
 {
     public GameObject prefabLoot;
-    public List<Loot> listaLoot = new List<Loot>();
+    public List<ItemData> listaLoot = new List<ItemData>();
 
-    Loot ItemDropado(){ // Há uma lista de drops possíveis, mas só 1 é sorteado
+    ItemData ItemDropado(){ // Há uma lista de drops possíveis, mas só 1 é sorteado
         int x = Random.Range(1,101); // A chance de drop é calculada em porcentagem
         int maisRaro = 100;
         int indiceMaisRaro = 0;
-        List<Loot> itensPossiveis = new List<Loot>(); // Lista populada manualmente nos scriptable objects correspondentes
-        foreach(Loot item in listaLoot){
+        List<ItemData> itensPossiveis = new List<ItemData>(); // Lista populada manualmente nos scriptable objects correspondentes
+        foreach(ItemData item in listaLoot){
             if(x <= item.chanceDrop){
                 itensPossiveis.Add(item); // Quanto menor for a chance de drop, mais difícil a possibilidade
                 if(item.chanceDrop <= maisRaro){
@@ -23,13 +23,13 @@ public class LootBag : MonoBehaviour
         }
         /*
             Para dropar todos os itens possíveis:
-            List<Loot> ItensDropados(){
+            List<ItemData> ItensDropados(){
                 ...
                 return itensPossiveis;
             }
         */
         if(itensPossiveis.Count > 0){ // De todos os drops possíveis, retorna o mais raro
-            Loot itemDropado = itensPossiveis[indiceMaisRaro];
+            ItemData itemDropado = itensPossiveis[indiceMaisRaro];
             return itemDropado;
         }
         Debug.Log("Sem loot");
@@ -37,10 +37,14 @@ public class LootBag : MonoBehaviour
     }
 
     public void InstantiateLoot(Vector3 posicaoSpawn){ // Spawna o drop
-        Loot itemDropado = ItemDropado();
+        ItemData itemDropado = ItemDropado();
         if(itemDropado != null){
             GameObject lootGameObject = Instantiate(prefabLoot, posicaoSpawn, Quaternion.identity);
-            lootGameObject.GetComponent<SpriteRenderer>().sprite = itemDropado.spriteLoot; // Atualiza o sprite de acordo com o scriptable object
+            lootGameObject.name = itemDropado.nomeLoot;
+            //lootGameObject.GetComponent<SpriteRenderer>().sprite = itemDropado.spriteLoot; // Atualiza o sprite de acordo com o scriptable object
+            
+            Loot loot = lootGameObject.GetComponent<Loot>();
+            loot.Initialize(itemDropado);
 
             // Efeitos visuais:
             float dropForce = 0.5f;

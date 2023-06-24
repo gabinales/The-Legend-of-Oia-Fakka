@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cohen : AdversarioScript // Cohen contém todas as funções de Adversario.
+public class Cohen : Enemy // Cohen contém todas as funções de Adversario.
 {
    // public float HP;
 

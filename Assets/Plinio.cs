@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plinio : AdversarioScript, ISwitch
+public class Plinio : Enemy, ISwitch
 {
     //private Animator animator;
     public bool estado;

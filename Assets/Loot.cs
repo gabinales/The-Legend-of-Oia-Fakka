@@ -2,20 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
-public class Loot : ScriptableObject, IColetavel
+public class Loot : MonoBehaviour, IColetavel
 {
-    public Sprite spriteLoot;
-    public string nomeLoot;
-    public int chanceDrop;
+    public static event HandleLootCollected OnLootCollected;
+    public delegate void HandleLootCollected (ItemData itemData);
+    private ItemData lootData;
 
-    public Loot(string nomeLoot, int chanceDrop){
-        this.nomeLoot = nomeLoot;
-        this.chanceDrop = chanceDrop;
+    public void Collect(){
+        Destroy(gameObject);
+        OnLootCollected?.Invoke(lootData);
     }
 
-    // Patrick 22.06 --- Função Collect() do Loot
-    public void Collect(){
-        Debug.Log("Collect");
+    public void Initialize(ItemData itemData){
+        lootData = itemData;
+        GetComponent<SpriteRenderer>().sprite = itemData.spriteLoot;
     }
 }
