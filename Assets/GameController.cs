@@ -14,6 +14,7 @@ public enum GameState
 public class GameController : MonoBehaviour
 {
     [SerializeField] playerController pController;
+    public GameObject JanelaPause;
 
     // Para trocar entre os diferentes estados:
     GameState state;
@@ -75,13 +76,15 @@ public class GameController : MonoBehaviour
         Debug.Log("Jogo pausado");
 
         if(isPaused == true){
-            Time.timeScale = 0.005f;
+            JanelaPause.SetActive(true);
+            Time.timeScale = 0.005f; // QUASE para o tempo
         }
         if(isPaused == false){
+            JanelaPause.SetActive(false);
             Time.timeScale = 1f;
         }
         
-
+        // Alternativa: transicionar entre os diferentes gamestates
         /*if(isPaused){
             if(state == GameState.MovimentacaoLivre){
                 pController.enabled = false;

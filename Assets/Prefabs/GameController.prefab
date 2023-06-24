@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039b9d2df28bd2f4590d21ed215aea91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controladorDoJogador: {fileID: 0}
+  pController: {fileID: 919148202519791623, guid: d4c85120c11571f419c99add9992be4e, type: 3}
+  JanelaPause: {fileID: 4790139077052258452, guid: 0f6828e66aaaec148971ec9533d4e6fa, type: 3}
 --- !u!114 &1497883252546069953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,3 +75,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adfabfd6ac7dc7449cea422979ca77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpDisplay: {fileID: 0}
