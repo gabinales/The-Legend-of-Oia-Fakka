@@ -27,9 +27,11 @@ public class playerController : MonoBehaviour
 
     [Header("Movimento")]
     public float moveSpeed;
+    public Rigidbody2D playerRb;
     private bool isMoving = false;
     private bool isAttacking = false; // Para controlar o estado de ataque.
-    private Vector2 input;
+    private Vector2 moveDirection;
+    
 
     //Animação do sprite
     private Animator animator;
@@ -43,41 +45,39 @@ public class playerController : MonoBehaviour
     }
 
     //Detecção de colisão do sprite utilizando a layer
-    public LayerMask corposSolidosLayer;
+    private BoxCollider2D playerCollider;
+    private RaycastHit2D hit;
+
+    /*public LayerMask corposSolidosLayer;
     public LayerMask npcLayer;
     public LayerMask destrutiveisLayer;
-    public LayerMask blocoEmpurravelLayer;
+    public LayerMask blocoEmpurravelLayer;*/
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        playerCollider = GetComponent<BoxCollider2D>();
         //damageHandler = GetComponent<DamageHandler>();
     }
 
-    public void HandleUpdate()
+    public void HandleUpdate() // Tudo relacionado a inputs
     {
         //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando.
         if (!isMoving && !isAttacking)
         { //Move-se apenas se estiver parado e não estiver atacando.
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
+            moveDirection.x = Input.GetAxisRaw("Horizontal");
+            moveDirection.y = Input.GetAxisRaw("Vertical");
 
-            if (input.x != 0) input.y = 0; // Garante que o sprite movimente-se apenas em 4 direções.
-
-            if (input != Vector2.zero)
+            if (moveDirection.x != 0) moveDirection.y = 0; 
+            if (moveDirection != Vector2.zero)
             {
                 //Animação
                 animator.SetBool("isMoving", true);
-                animator.SetFloat(moveXHash, input.x); // Recomendação da Unity.
-                animator.SetFloat(moveYHash, input.y);
+                animator.SetFloat(moveXHash, moveDirection.x); // Recomendação da Unity.
+                animator.SetFloat(moveYHash, moveDirection.y);
 
-                var targetPos = transform.position;
-                targetPos.x += input.x / 4;
-                targetPos.y += input.y / 4;
+                moveDirection = Vector2.ClampMagnitude(moveDirection, 1f); // Limita a velocidade
 
-                if(IsWalkable(targetPos)){ 
-                    StartCoroutine(Move(targetPos));
-                }
             }
             else
             {
@@ -95,11 +95,6 @@ public class playerController : MonoBehaviour
             isAttacking = true;
             animator.SetTrigger("Atacando");
             TocaSwingSFX();
-            
-            /*espadaSFX.clip = espadaSwing;
-            espadaSFX.pitch = (Random.Range(0.7f, 2.5f));
-            espadaSFX.Play();*/
-            //Ataque();
         }
         // Patrick 15.06 --- Botão de segurar (Z)
         if(Input.GetKeyDown(KeyCode.Z)){
@@ -109,6 +104,30 @@ public class playerController : MonoBehaviour
                 SeguraBloco();
         }
     }
+    private void FixedUpdate(){ // Tudo relacionado à movimentação do Rigidbody2D
+        isMoving = true;
+        
+        // Calcula a posição alvo do movimento
+        Vector2 targetPosition = playerRb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
+        
+        // Verifica colisões nas camadas NPC e CorposSolidos
+        float playerWidth = playerCollider.bounds.size.x;
+        float playerHeight = playerCollider.bounds.size.y;
+        float castDistance = moveSpeed * Time.fixedDeltaTime + Mathf.Max(playerWidth, playerHeight);
+        RaycastHit2D hit = Physics2D.BoxCast(playerRb.position, playerCollider.bounds.size, 0f, moveDirection, castDistance, LayerMask.GetMask("CorposSolidos", "NPC"));
+        
+        // Desenha o raio na Scene
+        Debug.DrawRay(playerRb.position, moveDirection * castDistance, Color.red);
+
+        if(hit.collider == null){ // Não há colisão, pode mover o jogador
+            playerRb.MovePosition(playerRb.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
+        }
+
+        isMoving = false;
+    }
+
+
+
     // Patrick 15.06 --- Botão de segurar (Z)
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject == blocoSeguravel)
@@ -146,7 +165,7 @@ public class playerController : MonoBehaviour
 
         Debug.DrawLine(transform.position, posicaoInteracao, Color.red, 1f);
 
-        var collider = Physics2D.OverlapCircle(posicaoInteracao, 0.2f, npcLayer); // Checa se, ao fim da linha vermelha (posicaoInteracao) há um NPC.
+        /*var collider = Physics2D.OverlapCircle(posicaoInteracao, 0.2f, npcLayer); // Checa se, ao fim da linha vermelha (posicaoInteracao) há um NPC.
 
         if (collider != null)
         {
@@ -154,34 +173,8 @@ public class playerController : MonoBehaviour
             collider.GetComponent<iInteragivel>()?.Interacao(); // ? significa: Se é interagível, execute a função.
         }
         Debug.Log("não está interagindo com a layer NPC");
+        */
     }
-
-    /* public void Ataque()
-    {
-        var orientacaoJogador = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
-        //int targetLayer = LayerMask.GetMask("Destrutiveis");
-        int playerLayerToIgnore = LayerMask.NameToLayer("Default");
-        LayerMask layerMask = ~(1 << playerLayerToIgnore);
-        float raycastDistance = 1f;
-
-        //o target apenas é detectado na "targetLayer" "Destrutiveis"
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, orientacaoJogador, raycastDistance, layerMask);
-
-        Debug.DrawRay(transform.position, orientacaoJogador, Color.blue, raycastDistance);
-
-        //se detectou um target, faz um debug log. além dissose estiver armado, chama a função "Damage" do script DamageHandler.cs
-        if (raycastHit2D.collider != null)
-        {
-            GameObject objectHit = raycastHit2D.collider.gameObject;
-            Debug.Log(objectHit);
-
-            bool desarmado = animator.GetBool("Desarmado");
-            if (!desarmado)
-            {
-                damageHandler.Damage(objectHit);
-            }
-        }
-    } */
 
     IEnumerator Move(Vector3 targetPos)
     { //Coroutine para mover o sprite.
@@ -194,9 +187,6 @@ public class playerController : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
                 yield return null;
             }
-            else{
-
-            }
         }
         while(isKnockback){
             yield return new WaitForSeconds(1f);
@@ -208,18 +198,5 @@ public class playerController : MonoBehaviour
     }
     public void StopMoveCoroutine(){
         isKnockback = true;
-    }
-
-    private bool IsWalkable(Vector3 targetPos)
-    {
-        Collider2D colisor = Physics2D.OverlapCircle(targetPos, 0.2f, corposSolidosLayer); // Patrick 18.06 --- Tirei npcLayer
-        if (colisor != null)
-        { // Se o jogador tentar colidir com um CORPO SÓLIDO ou NPC, então NÃO ANDE.
-            Vector3 direction = targetPos - transform.position;
-            direction.Normalize();
-        
-            return false;
-        }
-        return true;
     }
 }
