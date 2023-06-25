@@ -17,12 +17,14 @@ public class GameController : MonoBehaviour
     public GameObject JanelaPause;
 
     // Para trocar entre os diferentes estados:
-    GameState state;
+    public GameState state;
 
     DamageHandler DamageHandler;
 
     // Patrick 24.06 --- Estado Pausado
     private bool isPaused = false;
+    private bool isTalking = false;
+
 
     private void Start()
     {
@@ -30,7 +32,7 @@ public class GameController : MonoBehaviour
 
         DamageHandler = GetComponent<DamageHandler>();
 
-        DialogManager.Instance.OnMostraDialogo += () =>
+        /* if(DialogManager.Instance.dialogoOcorrendo)
         {
             state = GameState.Dialogo; // Muda o estado do jogo para DIALOGO
         };
@@ -40,7 +42,7 @@ public class GameController : MonoBehaviour
             {
                 state = GameState.MovimentacaoLivre; // Retorna o jogo para o modo de movimentação livre
             }
-        };
+        }; */
     }
 
     private void Update()
@@ -56,19 +58,11 @@ public class GameController : MonoBehaviour
         if (state == GameState.MovimentacaoLivre)
         {
             pController.HandleUpdate();
-        }
-        else if (state == GameState.Dialogo)
-        {
-            DialogManager.Instance.HandleUpdate(); // Cria função para que o DialogManager possa ser utilizado
-        }
+        }        
+        
         else if (state == GameState.Loja)
         {
         }
-
-        /*if (Input.GetKeyDown(KeyCode.Z))
-        {
-            DamageHandler.resetaDisplay(GameObject.Find("Cohen"));
-        }*/
     }
 
     private void TogglePause(){
