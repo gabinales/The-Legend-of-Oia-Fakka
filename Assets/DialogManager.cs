@@ -4,60 +4,204 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using Ink.Runtime;
+using UnityEngine.EventSystems;
 
 public class DialogManager : MonoBehaviour
 {
+    public GameController gameController;
+
     [SerializeField] GameObject caixaDeDialogo;
-    [SerializeField] TextMeshProUGUI textoDialogo;
+    public TextMeshProUGUI textoDialogo;
+    public TextMeshProUGUI nome;
+
+    [Header("Escolhas UI")]
+    [SerializeField] private GameObject[] escolhas;
+
+    private TextMeshProUGUI[] escolhasText;
+    private Story currentStory;
+    public bool dialogoOcorrendo { get; private set; }
 
     [SerializeField] int letrasPorSegundo; // Velocidade com que o texto será exibido, letra por letra
 
-    public event Action OnMostraDialogo;
-    public event Action OnOcultaDialogo;
-    
-    public static DialogManager Instance{ //Expõe o DialogManager pra Unity. Qualquer objeto poderá usá-lo
+    public static DialogManager Instance
+    { //Expõe o DialogManager pra Unity. Qualquer objeto poderá usá-lo
         get;
         private set;
     }
 
-    private void Awake(){
-        Instance = this; 
+    private const string SPEAKER_TAG = "speaker";
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void Start()
+    {
+        dialogoOcorrendo = false;
+        escolhasText = new TextMeshProUGUI[escolhas.Length];
+        int index = 0;
+        foreach (GameObject escolha in escolhas)
+        {
+            escolhasText[index] = escolha.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+        }
     }
 
     Dialog dialogo;
-    int falaAtual = 0;
     bool escrevendo; // Vai verificar se está escrevendo o texto na Caixa de Diálogo. Necessário para garantir que o texto será terminado.
 
-    public void HandleUpdate(){
-        // Avisa ao sistema que o jogo está entrando e saindo do estado de Diálogo
-        if(Input.GetKeyDown(KeyCode.C) && !escrevendo){ // Se eu já pressionei o botão C, e aperto de novo...
-            ++falaAtual;
-            if(falaAtual < dialogo.Falas.Count){ // Se ainda há falas sobrando...
-                StartCoroutine(DigitaTexto(dialogo.Falas[falaAtual]));
-            }
-            else{
-                caixaDeDialogo.SetActive(false); // Oculta a Caixa de Diálogo
-                falaAtual = 0; // Reseta o diálogo.
-                OnOcultaDialogo?.Invoke();
+    public void Update()
+    {
+        if (!dialogoOcorrendo)
+        {
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && !escrevendo)
+        {
+            ContinueStory();
+        }
+    }
+
+    public void StartDialogue(TextAsset inkJSON)
+    {
+
+        gameController.state = GameState.Dialogo;
+        caixaDeDialogo.SetActive(true);
+        /* 
+                // Retrieve the last choice from NPC's memory (if available)
+                if (npcMemory.TryGetValue("lastChoice", out int lastChoice))
+                {}
+                 */
+        currentStory = new Story(inkJSON.text);
+        dialogoOcorrendo = true;
+        ContinueStory();
+        /* 
+                foreach (Button button in optionButtons)
+                {
+                    button.gameObject.SetActive(false);
+                } */
+
+    }
+
+    public void ContinueStory()
+    {
+        if (currentStory.canContinue)
+        {
+            string nextFala = currentStory.Continue();
+
+            StartCoroutine(DigitaTexto(nextFala));
+            MostraEscolhas();
+
+            HandleTags(currentStory.currentTags);
+
+        }
+        else
+        {
+            ExitDialogue();
+        }
+    }
+
+    private void HandleTags(List<string> currentTags)
+    {
+        //return array of length 2 where 1st string is the key and 2nd is thhe value
+        foreach (string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(':');
+
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            switch (tagKey)
+            {
+                case SPEAKER_TAG:  
+                    nome.text = tagValue;
+                    //setNome(tagValue);
+                    Debug.Log("speaker = " + tagValue);
+                    break;
             }
         }
     }
 
-    public IEnumerator MostraDialogo(Dialog dialogo){
-        OnMostraDialogo?.Invoke();
-        yield return new WaitForEndOfFrame();// Para evitar que possa ser pressionado mais de uma vez.
-        this.dialogo = dialogo;
-        caixaDeDialogo.SetActive(true); // Exibe a Caixa de Diálogo (gameObject)
-        StartCoroutine(DigitaTexto(dialogo.Falas[0]));
+    private void setNome()
+    {
+
     }
 
-    public IEnumerator DigitaTexto(string fala){ // Exibe a fala letra por letra
+    private void ExitDialogue()
+    {
+        dialogoOcorrendo = false;
+        caixaDeDialogo.SetActive(false);
+        textoDialogo.text = "";
+
+        gameController.state = GameState.MovimentacaoLivre;
+    }
+
+    /*     public void OnOptionSelected(int optionIndex)
+        {
+            inkStory.ChooseChoiceIndex(optionIndex);
+            ContinueStory();
+        } */
+
+    public IEnumerator DigitaTexto(string fala)
+    { // Exibe a fala letra por letra
         escrevendo = true;
         textoDialogo.text = ""; // 1. Primeiro apaga todo o texto
-        foreach (var letra in fala.ToCharArray()){ // 2. Reexibe o texto letra por letra
+
+        foreach (var letra in fala.ToCharArray())
+        { // 2. Reexibe o texto letra por letra
             textoDialogo.text += letra; // 3. Adiciona a letra ao texto já existente
             yield return new WaitForSeconds(1f / letrasPorSegundo); // 4. Delay
         }
         escrevendo = false;
     }
+
+    public void MostraEscolhas()
+    {
+        List<Choice> escolhasAtuais = currentStory.currentChoices;
+
+        if (escolhasAtuais.Count > escolhas.Length)
+        {
+            Debug.LogError("foram dadas mais escolhas (" + escolhasAtuais.Count + ") do que o UI pode suportar. ");
+        }
+
+        int index = 0;
+        //enable and initialize the choices up to the amount  of choices for this line of dialogue
+        foreach (Choice escolha in escolhasAtuais)
+        {
+            escolhas[index].gameObject.SetActive(true);
+            escolhasText[index].text = escolha.text;
+
+            index++;
+        }
+
+        for (int i = index; i < escolhas.Length; i++)
+        {
+            escolhas[i].gameObject.SetActive(false);
+        }
+
+        StartCoroutine(SelectFirstChoice());
+    }
+
+    private IEnumerator SelectFirstChoice()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.SetSelectedGameObject(escolhas[0].gameObject);
+    }
+
+    public void MakeChoice(int escolhaIndex)
+    {
+        currentStory.ChooseChoiceIndex(escolhaIndex);
+
+        /*      if (currentStory.variablesState.TryGetVariableWithName("lastChoice", out object lastChoiceObj))
+             {
+                 int lastChoice = (int)lastChoiceObj;
+                 npcMemory["lastChoice"] = lastChoice;
+             } */
+
+        ContinueStory();
+    }
+
 }
