@@ -7,6 +7,7 @@ public class ItemData : ScriptableObject
 {
     public Sprite spriteLoot;
     public string nomeLoot;
+    public string lootInfo;
     public int chanceDrop;
 
     public ItemData(string nomeLoot, int chanceDrop){

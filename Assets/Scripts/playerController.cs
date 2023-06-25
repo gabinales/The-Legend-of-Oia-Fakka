@@ -48,10 +48,10 @@ public class playerController : MonoBehaviour
     private BoxCollider2D playerCollider;
     private RaycastHit2D hit;
 
-    /*public LayerMask corposSolidosLayer;
+    public LayerMask corposSolidosLayer;
     public LayerMask npcLayer;
     public LayerMask destrutiveisLayer;
-    public LayerMask blocoEmpurravelLayer;*/
+    public LayerMask blocoEmpurravelLayer;
 
     private void Awake()
     {
@@ -92,9 +92,12 @@ public class playerController : MonoBehaviour
         //Botão de Ataque (X)
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.X))
         {
-            isAttacking = true;
-            animator.SetTrigger("Atacando");
-            TocaSwingSFX();
+            if(!isMoving){
+                isAttacking = true;
+                animator.SetTrigger("Atacando");
+                TocaSwingSFX();
+            }
+            
         }
         // Patrick 15.06 --- Botão de segurar (Z)
         if(Input.GetKeyDown(KeyCode.Z)){
@@ -105,7 +108,6 @@ public class playerController : MonoBehaviour
         }
     }
     private void FixedUpdate(){ // Tudo relacionado à movimentação do Rigidbody2D
-        isMoving = true;
         
         // Calcula a posição alvo do movimento
         Vector2 targetPosition = playerRb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
@@ -114,15 +116,15 @@ public class playerController : MonoBehaviour
         float playerWidth = playerCollider.bounds.size.x;
         float playerHeight = playerCollider.bounds.size.y;
         float castDistance = moveSpeed * Time.fixedDeltaTime + Mathf.Max(playerWidth, playerHeight);
-        RaycastHit2D hit = Physics2D.BoxCast(playerRb.position, playerCollider.bounds.size, 0f, moveDirection, castDistance, LayerMask.GetMask("CorposSolidos", "NPC"));
+        RaycastHit2D hit = Physics2D.BoxCast(playerRb.position, playerCollider.bounds.size, 0f, moveDirection, castDistance/4, LayerMask.GetMask("CorposSolidos", "NPC"));
         
         // Desenha o raio na Scene
         Debug.DrawRay(playerRb.position, moveDirection * castDistance, Color.red);
 
-        if(hit.collider == null){ // Não há colisão, pode mover o jogador
+        if(hit.collider == null && !isAttacking){ // Não há colisão, pode mover o jogador
             playerRb.MovePosition(playerRb.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
+            isMoving = true;
         }
-
         isMoving = false;
     }
 
@@ -165,7 +167,7 @@ public class playerController : MonoBehaviour
 
         Debug.DrawLine(transform.position, posicaoInteracao, Color.red, 1f);
 
-        /*var collider = Physics2D.OverlapCircle(posicaoInteracao, 0.2f, npcLayer); // Checa se, ao fim da linha vermelha (posicaoInteracao) há um NPC.
+        var collider = Physics2D.OverlapCircle(posicaoInteracao, 0.2f, npcLayer); // Checa se, ao fim da linha vermelha (posicaoInteracao) há um NPC.
 
         if (collider != null)
         {
@@ -173,30 +175,6 @@ public class playerController : MonoBehaviour
             collider.GetComponent<iInteragivel>()?.Interacao(); // ? significa: Se é interagível, execute a função.
         }
         Debug.Log("não está interagindo com a layer NPC");
-        */
-    }
-
-    IEnumerator Move(Vector3 targetPos)
-    { //Coroutine para mover o sprite.
-        isMoving = true;
         
-        //enquanto a posicao nao for igual à targetPos...
-        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
-        { //Garante que o while seja executado contanto que haja QUALQUER movimento (Epsilon lida com valores muito pequenos)
-            if(!isKnockback){
-                transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-                yield return null;
-            }
-        }
-        while(isKnockback){
-            yield return new WaitForSeconds(1f);
-            isKnockback = false;
-        }
-
-        //transform.position = targetPos;
-        isMoving = false;
-    }
-    public void StopMoveCoroutine(){
-        isKnockback = true;
     }
 }

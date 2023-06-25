@@ -12,9 +12,6 @@ public class PlayerStats : MonoBehaviour, IAtacavel
             return hp;
         }
         set{
-            if(value < hp){
-                FindObjectOfType<playerController>().StopMoveCoroutine();
-            }
             hp = value;
             OnHpAlterado(hp); // Aciona o evento e passa o parâmetro para os Listeners interessados (como o UIManager)
         }
