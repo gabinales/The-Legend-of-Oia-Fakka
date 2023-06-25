@@ -190,11 +190,15 @@ public class playerController : MonoBehaviour
         //enquanto a posicao nao for igual à targetPos...
         while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
         { //Garante que o while seja executado contanto que haja QUALQUER movimento (Epsilon lida com valores muito pequenos)
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-            yield return null;
+            if(!isKnockback){
+                transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+                yield return null;
+            }
+            else{
+
+            }
         }
         while(isKnockback){
-          
             yield return new WaitForSeconds(1f);
             isKnockback = false;
         }

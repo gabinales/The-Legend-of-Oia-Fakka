@@ -8,6 +8,9 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> inventory = new List<InventoryItem>();
     private Dictionary<ItemData, InventoryItem> itemDictionary = new Dictionary<ItemData, InventoryItem>(); // Esse dicionário vai mexer com o stackSize
 
+    public delegate void ItemChangedHandler();
+    public event ItemChangedHandler OnItemChanged; //evento para sinalizar que um item foi adicionado
+
     private void OnEnable(){
         Loot.OnLootCollected += Add;  // Define esse método como listener desse evento
     }
@@ -17,6 +20,11 @@ public class Inventory : MonoBehaviour
 
     // Métodos para adicionar e remover do inventário:
     public void Add(ItemData itemData){
+        if(inventory.Count >= 5){
+            Debug.Log("Chegou no limite de 5");
+            return;
+        }
+
         // Precisa checar se o item já está no dicionário, ou seja, se já existe outro no Inventário
         if(itemDictionary.TryGetValue(itemData, out InventoryItem item)){// tenta buscar e se encontrar, usa
             item.AddToStack();
@@ -28,6 +36,9 @@ public class Inventory : MonoBehaviour
             itemDictionary.Add(itemData, newItem); // adiciona no Dicionário
             Debug.Log($"Adicionou {itemData.nomeLoot} ao inventário pela primeira vez.");
         }
+
+        // Para disparar o evento OnItemChanged:
+        OnItemChanged?.Invoke();
     }
 
     public void Remove(ItemData itemData){
@@ -38,6 +49,7 @@ public class Inventory : MonoBehaviour
                 inventory.Remove(item);
                 itemDictionary.Remove(itemData);
             }
+            OnItemChanged?.Invoke();
         }
     }
 }
