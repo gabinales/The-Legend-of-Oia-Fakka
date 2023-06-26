@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: equipments_icons_0
+      name: equipments_attack-normal
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c45f447c5d846cf4682040ca727b0a8d
-      internalID: -1400592272
+      spriteID: c719c51728f8f494e8fb4f6a00e6ed52
+      internalID: -246452072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: equipments_icons_1
+      name: equipments_defense-normal
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,98 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58cb74d0111e3af4898dcd947f22f116
-      internalID: -1866941665
+      spriteID: cf8867ff8401252479d638d184ffe839
+      internalID: -1935641073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: equipments_icons_2
+      name: equipments_attack-selected
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf56266e66f0c84cb8d16fbff49abbb
+      internalID: -637524534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: equipments_defense-selected
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ff7eb940be643438cfde1551a004fa
+      internalID: -576773458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: equipments_attack-clicked
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c94fe5b98adcb42a4d3ce94e35528b
+      internalID: 1879313748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: equipments_defense-clicked
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95e39f2333b2cf4b821ba2b725aa209
+      internalID: 572484104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: equipments_boots-normal
       rect:
         serializedVersion: 2
         x: 0
@@ -166,8 +250,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61e47e01b323643479d092cc21dd1381
-      internalID: -672070036
+      spriteID: 7487a291710da714cbcbb1ba213a79a2
+      internalID: 512962226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: equipments_boots-selected
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007bfabc8365ea941abb60ee7bd3cbe0
+      internalID: 524919314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: equipments_boots-clicked
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcde5f6f65a180a48874453f9a90fc07
+      internalID: 1351731116
       vertices: []
       indices: 
       edges: []
@@ -183,9 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      equipments_icons_0: -1400592272
-      equipments_icons_1: -1866941665
-      equipments_icons_2: -672070036
+      equipments_attack-clicked: 1879313748
+      equipments_attack-normal: -246452072
+      equipments_attack-selected: -637524534
+      equipments_boots-clicked: 1351731116
+      equipments_boots-normal: 512962226
+      equipments_boots-selected: 524919314
+      equipments_defense-clicked: 572484104
+      equipments_defense-normal: -1935641073
+      equipments_defense-selected: -576773458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

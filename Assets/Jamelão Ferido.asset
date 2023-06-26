@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteLoot: {fileID: 1770651123, guid: 74ac847d09c93514fa7dcf8336d50d9b, type: 3}
   nomeLoot: "Jamel\xE3o Ferido"
+  lootInfo: "O mais ordin\xE1rio entre os jamel\xF5es. Sua ferida \xE9 ligeiramente
+    repugnante."
   chanceDrop: 25
