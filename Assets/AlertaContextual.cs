@@ -3,40 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum Tipo{
+    Conversa,
+    Interacao
+}
+
 public class AlertaContextual : MonoBehaviour
 {
-    public GameObject alerta;
+    public GameObject otherObject;
+    public GameObject alertaContextual;
 
-    private bool playerInRange;
+    public Tipo tipoDeAcao = new Tipo();
 
-    void Awake()
-    {
-        alerta.SetActive(false);
+    public Animator alertaContextualAnimator;
+
+
+    void Awake(){
+        alertaContextualAnimator = alertaContextual.GetComponent<Animator>();
+
     }
 
-    void Update()
-    {
-        if (playerInRange && !DialogManager.Instance.dialogoOcorrendo)
-        {
-            alerta.SetActive(true);
+    public void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.CompareTag("Player")){
+            alertaContextual.SetActive(true);
+
+            if(tipoDeAcao == Tipo.Conversa){
+                alertaContextualAnimator.SetBool("conversa", true);
+                alertaContextualAnimator.SetBool("interacao", false);
+            }
+            if(tipoDeAcao == Tipo.Interacao){
+                alertaContextualAnimator.SetBool("conversa", false);
+                alertaContextualAnimator.SetBool("interacao", true);
+            }
         }
-        else alerta.SetActive(false);
     }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerInRange = true;
-        }
-    }
-    public void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerInRange = false;
+    public void OnTriggerExit2D(Collider2D other){
+        if(other.gameObject.CompareTag("Player")){
+            alertaContextual.SetActive(false);
         }
     }
 }
-
-
