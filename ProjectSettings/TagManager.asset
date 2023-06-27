@@ -12,6 +12,7 @@ TagManager:
   - switch
   - barreira
   - coletavel
+  - cutscene
   layers:
   - Default
   - TransparentFX

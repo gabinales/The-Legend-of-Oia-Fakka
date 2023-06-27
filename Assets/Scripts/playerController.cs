@@ -158,6 +158,13 @@ public class playerController : MonoBehaviour
             }
             Debug.Log(coletavel);
         }
+        if(collision.CompareTag("cutscene")){
+            CutsceneTrigger cutsceneTrigger = collision.GetComponent<CutsceneTrigger>();
+            if(cutsceneTrigger != null){
+                Debug.Log("AAA");
+                //cutsceneTrigger.
+            }
+        }
     }
 
     public void Interacao()
