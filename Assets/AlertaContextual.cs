@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public enum Tipo{
     Conversa,
-    Interacao
+    Interacao,
+    Surpresa
 }
 
 public class AlertaContextual : MonoBehaviour
@@ -30,10 +31,17 @@ public class AlertaContextual : MonoBehaviour
             if(tipoDeAcao == Tipo.Conversa){
                 alertaContextualAnimator.SetBool("conversa", true);
                 alertaContextualAnimator.SetBool("interacao", false);
+                alertaContextualAnimator.SetBool("surpresa", false);
             }
             if(tipoDeAcao == Tipo.Interacao){
                 alertaContextualAnimator.SetBool("conversa", false);
                 alertaContextualAnimator.SetBool("interacao", true);
+                alertaContextualAnimator.SetBool("surpresa", false);
+            }
+            if(tipoDeAcao == Tipo.Surpresa){
+                alertaContextualAnimator.SetBool("conversa", false);
+                alertaContextualAnimator.SetBool("interacao", false);
+                alertaContextualAnimator.SetBool("surpresa", true);
             }
         }
     }
