@@ -1,26 +1,26 @@
-VAR lastChoice = 0
+INCLUDE globals.ink
 
 Ola Svard #speaker: Camponês
 
-->Choices
+{pokemon_name == "": ->Choices | ->ja_escoheu}
 
 === Choices ===
 o que tu diz?
  +[Charmander]
- ~lastChoice = 0
   ->chosen("Charmander")
 
  +[Bulbasaur]
- ~lastChoice = 1
  ->chosen("Bulbasaur")
 
  +[Squirtle]
- ~lastChoice = 2
- ->chosen("Squirtle")
+     ->chosen("Squirtle")
 
 === chosen(pokemon) ===
+~pokemon_name = pokemon
 Vc escolheu o {pokemon}. Nem fale mais comigo. Meu nome é Abu abdul al-Rahman #speaker: Abu abdul al-Rahman
 ok #speaker: Svard
 ->END
 
-
+=== ja_escoheu ===
+vc ja escolheu o {pokemon_name}
+->END

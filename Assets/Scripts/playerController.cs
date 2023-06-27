@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class playerController : MonoBehaviour
-{   
+{
     // Patrick 23.06 --- booleana para interromper a Coroutine Move() quando toma dano
     private bool isKnockback = false;
 
@@ -19,7 +19,8 @@ public class playerController : MonoBehaviour
     public AudioSource espadaSFX;
     public AudioClip sfxClip;
 
-    public void TocaSwingSFX(){
+    public void TocaSwingSFX()
+    {
         espadaSFX.pitch = (Random.Range(0.7f, 2.5f));
         espadaSFX.PlayOneShot(sfxClip);
     }
@@ -31,7 +32,7 @@ public class playerController : MonoBehaviour
     private bool isMoving = false;
     private bool isAttacking = false; // Para controlar o estado de ataque.
     private Vector2 moveDirection;
-    
+
 
     //Animação do sprite
     private Animator animator;
@@ -68,7 +69,7 @@ public class playerController : MonoBehaviour
             moveDirection.x = Input.GetAxisRaw("Horizontal");
             moveDirection.y = Input.GetAxisRaw("Vertical");
 
-            if (moveDirection.x != 0) moveDirection.y = 0; 
+            if (moveDirection.x != 0) moveDirection.y = 0;
             if (moveDirection != Vector2.zero)
             {
                 //Animação
@@ -87,41 +88,45 @@ public class playerController : MonoBehaviour
         //Botão de Interação (C)
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Interacao();
+            Interage();
         }
         //Botão de Ataque (X)
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.X))
         {
-            if(!isMoving){
+            if (!isMoving)
+            {
                 isAttacking = true;
                 animator.SetTrigger("Atacando");
                 TocaSwingSFX();
             }
-            
+
         }
         // Patrick 15.06 --- Botão de segurar (Z)
-        if(Input.GetKeyDown(KeyCode.Z)){
-            if(segurandoBloco)
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (segurandoBloco)
                 SoltaBloco();
             else if (podePegar)
                 SeguraBloco();
         }
     }
-    private void FixedUpdate(){ // Tudo relacionado à movimentação do Rigidbody2D
-        
+    private void FixedUpdate()
+    { // Tudo relacionado à movimentação do Rigidbody2D
+
         // Calcula a posição alvo do movimento
         Vector2 targetPosition = playerRb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
-        
+
         // Verifica colisões nas camadas NPC e CorposSolidos
         float playerWidth = playerCollider.bounds.size.x;
         float playerHeight = playerCollider.bounds.size.y;
         float castDistance = moveSpeed * Time.fixedDeltaTime + Mathf.Max(playerWidth, playerHeight);
-        RaycastHit2D hit = Physics2D.BoxCast(playerRb.position, playerCollider.bounds.size, 0f, moveDirection, castDistance/4, LayerMask.GetMask("CorposSolidos", "NPC"));
-        
+        RaycastHit2D hit = Physics2D.BoxCast(playerRb.position, playerCollider.bounds.size, 0f, moveDirection, castDistance / 4, LayerMask.GetMask("CorposSolidos", "NPC"));
+
         // Desenha o raio na Scene
         Debug.DrawRay(playerRb.position, moveDirection * castDistance, Color.red);
 
-        if(hit.collider == null && !isAttacking){ // Não há colisão, pode mover o jogador
+        if (hit.collider == null && !isAttacking)
+        { // Não há colisão, pode mover o jogador
             playerRb.MovePosition(playerRb.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
             isMoving = true;
         }
@@ -131,36 +136,43 @@ public class playerController : MonoBehaviour
 
 
     // Patrick 15.06 --- Botão de segurar (Z)
-    void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject == blocoSeguravel)
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject == blocoSeguravel)
             podePegar = true;
     }
-    void OnCollisionExit2D(Collision2D other){
-        if(other.gameObject == blocoSeguravel)
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject == blocoSeguravel)
             podePegar = false;
     }
 
-    void SeguraBloco(){
+    void SeguraBloco()
+    {
         blocoSeguravel.transform.SetParent(transform);
         segurandoBloco = true;
     }
-    void SoltaBloco(){
+    void SoltaBloco()
+    {
         blocoSeguravel.transform.SetParent(null);
         segurandoBloco = false;
     }
 
     // Patrick 22.06 --- Andar em cima do item para coletá-lo
-    private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.CompareTag("coletavel")){
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("coletavel"))
+        {
             IColetavel coletavel = collision.GetComponent<IColetavel>();
-            if(coletavel != null){
+            if (coletavel != null)
+            {
                 coletavel.Collect();
             }
             Debug.Log(coletavel);
         }
     }
 
-    public void Interacao()
+    public void Interage()
     {
         var orientacaoJogador = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
         var posicaoInteracao = transform.position + orientacaoJogador;
@@ -175,6 +187,6 @@ public class playerController : MonoBehaviour
             collider.GetComponent<iInteragivel>()?.Interacao(); // ? significa: Se é interagível, execute a função.
         }
         Debug.Log("não está interagindo com a layer NPC");
-        
+
     }
 }

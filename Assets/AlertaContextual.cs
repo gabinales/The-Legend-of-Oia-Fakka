@@ -16,6 +16,7 @@ public class AlertaContextual : MonoBehaviour
 
     void Update()
     {
+        //APENAS LIDA COM O INDICADOR "?" EM CIMA DELE
         if (playerInRange && !DialogManager.Instance.dialogoOcorrendo)
         {
             alerta.SetActive(true);
@@ -23,6 +24,7 @@ public class AlertaContextual : MonoBehaviour
         else alerta.SetActive(false);
     }
 
+    //DETECTA PROXIMIDADE
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))

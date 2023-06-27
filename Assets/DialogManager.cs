@@ -6,10 +6,15 @@ using TMPro;
 using System;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using Ink.UnityIntegration;
 
 public class DialogManager : MonoBehaviour
 {
+    [Header("Globals Ink File")]
+    [SerializeField] private InkFile globalsInkFile;
+
     public GameController gameController;
+    public DialogVariables dialogVariables;
 
     [SerializeField] GameObject caixaDeDialogo;
     public TextMeshProUGUI textoDialogo;
@@ -35,6 +40,7 @@ public class DialogManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        dialogVariables = new DialogVariables(globalsInkFile.filePath);
     }
 
     private void Start()
@@ -64,25 +70,29 @@ public class DialogManager : MonoBehaviour
         }
     }
 
+    //chamado por Interaçao() de iInteragiveis
     public void StartDialogue(TextAsset inkJSON)
     {
-
         gameController.state = GameState.Dialogo;
         caixaDeDialogo.SetActive(true);
-        /* 
-                // Retrieve the last choice from NPC's memory (if available)
-                if (npcMemory.TryGetValue("lastChoice", out int lastChoice))
-                {}
-                 */
         currentStory = new Story(inkJSON.text);
         dialogoOcorrendo = true;
-        ContinueStory();
-        /* 
-                foreach (Button button in optionButtons)
-                {
-                    button.gameObject.SetActive(false);
-                } */
 
+        //adiciona um listener para mudanças em variaveis de dialogo
+        dialogVariables.StartListening(currentStory);
+        
+        //continua o dialogo (nesse caso, começa)
+        ContinueStory();
+    }
+
+    //func que retorna valor de variaveis 
+    public Ink.Runtime.Object GetVariable(string variableName){
+        Ink.Runtime.Object variableValue = null;
+        dialogVariables.variables.TryGetValue(variableName, out variableValue);
+        if(variableValue == null){
+            Debug.Log("variavel Ink nao encontrada: " + variableName);
+        }
+        return variableValue;
     }
 
     public void ContinueStory()
@@ -115,18 +125,11 @@ public class DialogManager : MonoBehaviour
 
             switch (tagKey)
             {
-                case SPEAKER_TAG:  
+                case SPEAKER_TAG:
                     nome.text = tagValue;
-                    //setNome(tagValue);
-                    Debug.Log("speaker = " + tagValue);
                     break;
             }
         }
-    }
-
-    private void setNome()
-    {
-
     }
 
     private void ExitDialogue()
@@ -135,14 +138,10 @@ public class DialogManager : MonoBehaviour
         caixaDeDialogo.SetActive(false);
         textoDialogo.text = "";
 
+        dialogVariables.StopListening(currentStory);
+
         gameController.state = GameState.MovimentacaoLivre;
     }
-
-    /*     public void OnOptionSelected(int optionIndex)
-        {
-            inkStory.ChooseChoiceIndex(optionIndex);
-            ContinueStory();
-        } */
 
     public IEnumerator DigitaTexto(string fala)
     { // Exibe a fala letra por letra
@@ -184,6 +183,7 @@ public class DialogManager : MonoBehaviour
         StartCoroutine(SelectFirstChoice());
     }
 
+    //apenas seta como padrao a primeira escolha como selecionada
     private IEnumerator SelectFirstChoice()
     {
         EventSystem.current.SetSelectedGameObject(null);
@@ -194,13 +194,6 @@ public class DialogManager : MonoBehaviour
     public void MakeChoice(int escolhaIndex)
     {
         currentStory.ChooseChoiceIndex(escolhaIndex);
-
-        /*      if (currentStory.variablesState.TryGetVariableWithName("lastChoice", out object lastChoiceObj))
-             {
-                 int lastChoice = (int)lastChoiceObj;
-                 npcMemory["lastChoice"] = lastChoice;
-             } */
-
         ContinueStory();
     }
 
