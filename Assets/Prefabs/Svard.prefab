@@ -20547,6 +20547,7 @@ MonoBehaviour:
   espadaSFX: {fileID: 1128055064071636347}
   sfxClip: {fileID: 8300000, guid: dcf3293d805eb9b41aba0e5924fca40d, type: 3}
   moveSpeed: 6
+  playerRb: {fileID: 0}
   corposSolidosLayer:
     serializedVersion: 2
     m_Bits: 128

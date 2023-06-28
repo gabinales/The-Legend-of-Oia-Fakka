@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public class playerController : MonoBehaviour
 {
@@ -159,6 +160,7 @@ public class playerController : MonoBehaviour
     }
 
     // Patrick 22.06 --- Andar em cima do item para coletá-lo
+    // Patrick 28.06 --- Colisão com os triggers de cutscenes
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("coletavel"))
@@ -171,13 +173,33 @@ public class playerController : MonoBehaviour
             Debug.Log(coletavel);
         }
         if(collision.CompareTag("cutscene")){
-            CutsceneTrigger cutsceneTrigger = collision.GetComponent<CutsceneTrigger>();
+            CutsceneTrigger cutsceneTrigger = collision.GetComponentInParent<CutsceneTrigger>();
             if(cutsceneTrigger != null){
-                Debug.Log("AAA");
-                //cutsceneTrigger.
+                Transform playerTransform = transform;
+                Vector2 closestPoint = collision.ClosestPoint(playerTransform.position); // Retorna o ponto no perímetro deste Collider mais próximo à posição especificada.
+
+                // Verificar qual filho possui posição mais próxima ao ponto de colisão
+                Transform collidedTrigger = GetClosestTriggerTransform(closestPoint, cutsceneTrigger.transform);
+                if(collidedTrigger != null){
+                    cutsceneTrigger.StartCutscene(collidedTrigger);
+                }
             }
         }
     }
+    private Transform GetClosestTriggerTransform(Vector2 point, Transform parent){ // Retorna o Transform do filho mais próximo em relação a um ponto específico.
+        Transform closestChild = null;
+        float closestDistance = Mathf.Infinity; // Ao iniciar a variável com Mathf.Infinity, garante-se que qualquer valor real de distância seja menor do que closestDistance, permitindo que seja substituído no decorrer do código.
+
+        foreach(Transform child in parent){
+            float distance = Vector2.Distance(child.position, point);
+            if(distance < closestDistance){
+                closestChild = child;
+                closestDistance = distance;
+            }
+        }
+        return closestChild;
+    }
+    // 
 
     public void Interage()
     {

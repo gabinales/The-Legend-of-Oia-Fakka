@@ -21,8 +21,8 @@ public class AlertaContextual : MonoBehaviour
 
     void Awake(){
         alertaContextualAnimator = alertaContextual.GetComponent<Animator>();
-
     }
+
 
     public void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("Player")){
