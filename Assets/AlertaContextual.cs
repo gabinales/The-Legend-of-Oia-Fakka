@@ -3,42 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum Tipo{
+    Conversa,
+    Interacao,
+    Surpresa
+}
+
 public class AlertaContextual : MonoBehaviour
 {
-    public GameObject alerta;
+    public GameObject otherObject;
+    public GameObject alertaContextual;
 
-    private bool playerInRange;
+    public Tipo tipoDeAcao = new Tipo();
 
-    void Awake()
-    {
-        alerta.SetActive(false);
+    public Animator alertaContextualAnimator;
+
+
+    void Awake(){
+        alertaContextualAnimator = alertaContextual.GetComponent<Animator>();
+
     }
 
-    void Update()
-    {
-        //APENAS LIDA COM O INDICADOR "?" EM CIMA DELE
-        if (playerInRange && !DialogManager.Instance.dialogoOcorrendo)
-        {
-            alerta.SetActive(true);
+    public void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.CompareTag("Player")){
+            alertaContextual.SetActive(true);
+
+            if(tipoDeAcao == Tipo.Conversa){
+                alertaContextualAnimator.SetBool("conversa", true);
+                alertaContextualAnimator.SetBool("interacao", false);
+                alertaContextualAnimator.SetBool("surpresa", false);
+            }
+            if(tipoDeAcao == Tipo.Interacao){
+                alertaContextualAnimator.SetBool("conversa", false);
+                alertaContextualAnimator.SetBool("interacao", true);
+                alertaContextualAnimator.SetBool("surpresa", false);
+            }
+            if(tipoDeAcao == Tipo.Surpresa){
+                alertaContextualAnimator.SetBool("conversa", false);
+                alertaContextualAnimator.SetBool("interacao", false);
+                alertaContextualAnimator.SetBool("surpresa", true);
+            }
         }
-        else alerta.SetActive(false);
     }
-
-    //DETECTA PROXIMIDADE
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerInRange = true;
-        }
-    }
-    public void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerInRange = false;
+    public void OnTriggerExit2D(Collider2D other){
+        if(other.gameObject.CompareTag("Player")){
+            alertaContextual.SetActive(false);
         }
     }
 }
-
-

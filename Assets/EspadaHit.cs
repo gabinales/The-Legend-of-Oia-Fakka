@@ -14,7 +14,7 @@ public class EspadaHit : MonoBehaviour
     public AudioSource AudioSource;
     public AudioClip espadaHit;
 
-    // VFX dp hit da Espada
+    // VFX do hit da Espada
     public GameObject Fagulhas;
 
     private void Awake()
@@ -47,7 +47,7 @@ public class EspadaHit : MonoBehaviour
         if (other.CompareTag("destrutivel"))
         {
             Animator animator = other.GetComponent<Animator>();
-            animator.SetBool("cortada", true);
+            animator.SetBool("destroy", true);
         }
         if(other.CompareTag("switch")){
             ISwitch switchObj = other.GetComponent<ISwitch>();

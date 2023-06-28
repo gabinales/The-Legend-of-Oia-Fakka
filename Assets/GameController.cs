@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 // O controlador decide entre os estados CORRENDO e FALANDO, etc.
 public enum GameState
@@ -12,18 +13,7 @@ public enum GameState
 }
 
 public class GameController : MonoBehaviour
-{
-    public Animator[] itemAnimators; // Array de Animators para animar os itens
-    
-    public GameObject[] pauseMenuEquipmentItems; // Array de objetos da janela de equipamentos (3)
-    public GameObject[] pauseMenuInventoryItems; // Array de objetos da janela de itens (5)
-    public GameObject[] pauseMenuOptionsItems; // Array de objetos da janela de opções (2)
-    
-    public GameObject[][] pauseMenuArrays; // Array multidimensional que armazena os três arrays
-
-    private int currentArrayIndex = 0;
-    private int selectedItemIndex = 0;
-    
+{    
     [SerializeField] playerController pController;
     public GameObject JanelaPause;
 
@@ -42,12 +32,6 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1f;
 
         DamageHandler = GetComponent<DamageHandler>();
-
-        pauseMenuArrays = new GameObject[][] {
-            pauseMenuEquipmentItems,
-            pauseMenuInventoryItems,
-            pauseMenuOptionsItems
-        };
     }
 
     private void Update()
@@ -57,33 +41,6 @@ public class GameController : MonoBehaviour
         }
 
         if(isPaused){
-            if(Input.GetKeyDown(KeyCode.UpArrow)){
-                currentArrayIndex = (currentArrayIndex - 1 + pauseMenuArrays.Length) % pauseMenuArrays.Length;
-                selectedItemIndex = Mathf.Clamp(selectedItemIndex, 0, pauseMenuArrays[currentArrayIndex].Length - 1);
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow)){
-                currentArrayIndex = (currentArrayIndex + 1) % pauseMenuArrays.Length;
-                selectedItemIndex = Mathf.Clamp(selectedItemIndex, 0, pauseMenuArrays[currentArrayIndex].Length - 1);
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow)){
-                selectedItemIndex = (selectedItemIndex - 1 + pauseMenuArrays[currentArrayIndex].Length) % pauseMenuArrays[currentArrayIndex].Length;
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow)){
-                selectedItemIndex = (selectedItemIndex + 1) % pauseMenuArrays[currentArrayIndex].Length;
-            }
-
-            // Destacar o item selecionado
-            for (int i = 0; i < pauseMenuArrays.Length; i++){
-                GameObject[] currentArray = pauseMenuArrays[i];
-                for (int j = 0; j < currentArray.Length; j++){
-                    if (i == currentArrayIndex && j == selectedItemIndex){
-                        currentArray[j].GetComponent<RectTransform>().sizeDelta = new Vector2(100f, 120f);
-                    }
-                    else{
-                        currentArray[j].GetComponent<RectTransform>().sizeDelta = new Vector2(100f, 100f);
-                    }
-                }
-            }
             return; // Evita a execução do código abaixo se estiver pausado
         }
 
@@ -91,10 +48,6 @@ public class GameController : MonoBehaviour
         {
             pController.HandleUpdate();
         }        
-        
-        else if (state == GameState.Loja)
-        {
-        }
     }
 
     private void TogglePause(){
@@ -110,4 +63,7 @@ public class GameController : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+
+    // Atualizar o conteúdo da janela de Info do item
+
 }

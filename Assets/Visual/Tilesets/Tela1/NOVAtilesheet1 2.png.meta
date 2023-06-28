@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: abd0e1601d147594191e62bd0fc6eacb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilesheet1_lapide1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -5, y: -3}
+        - {x: -5, y: -8}
+        - {x: 5, y: -8}
+        - {x: 5, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e66e43313f9d7d4f8af9b73bbcbe097
+      internalID: 1580389500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      NOVAtilesheet1 2_0: -79116606
+      NOVAtilesheet1 2_1: 377641289
+      NOVAtilesheet1 2_10: -1283614512
+      NOVAtilesheet1 2_11: -1606714238
+      NOVAtilesheet1 2_12: -949964101
+      NOVAtilesheet1 2_13: -307183558
+      NOVAtilesheet1 2_14: -403637059
+      NOVAtilesheet1 2_15: 1206797968
+      NOVAtilesheet1 2_16: -1499180675
+      NOVAtilesheet1 2_17: 1985974030
+      NOVAtilesheet1 2_18: 375842644
+      NOVAtilesheet1 2_19: -275938928
+      NOVAtilesheet1 2_2: -206643606
+      NOVAtilesheet1 2_20: 135544132
+      NOVAtilesheet1 2_21: -1463568419
+      NOVAtilesheet1 2_22: -1393642955
+      NOVAtilesheet1 2_23: -1168712877
+      NOVAtilesheet1 2_24: 1757448914
+      NOVAtilesheet1 2_25: -1367002982
+      NOVAtilesheet1 2_26: 1337780665
+      NOVAtilesheet1 2_28: -659867357
+      NOVAtilesheet1 2_29: -153583378
+      NOVAtilesheet1 2_3: -549922767
+      NOVAtilesheet1 2_30: 1183726457
+      NOVAtilesheet1 2_31: -554088631
+      NOVAtilesheet1 2_32: -351491552
+      NOVAtilesheet1 2_33: 233326155
+      NOVAtilesheet1 2_34: 10818003
+      NOVAtilesheet1 2_35: -822869567
+      NOVAtilesheet1 2_36: 1300577363
+      NOVAtilesheet1 2_37: 1149995140
+      NOVAtilesheet1 2_38: -1490690285
+      NOVAtilesheet1 2_39: 614634582
+      NOVAtilesheet1 2_4: -1585601052
+      NOVAtilesheet1 2_40: 485652464
+      NOVAtilesheet1 2_41: 642240955
+      NOVAtilesheet1 2_42: -1291059617
+      NOVAtilesheet1 2_43: 593737386
+      NOVAtilesheet1 2_5: -1325366116
+      NOVAtilesheet1 2_6: -1970554662
+      NOVAtilesheet1 2_7: 895393206
+      NOVAtilesheet1 2_8: 1785814116
+      NOVAtilesheet1 2_9: 854897976
+      tilesheet1_lapide1: 1580389500
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

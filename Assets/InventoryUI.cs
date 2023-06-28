@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class InventoryUI : MonoBehaviour
 {
     public Transform itemSlotContainer;
+    public GameObject itemDataPanel; // Ativado ou desativado de acordo com a seleção
     public Image[] itemImages;
     public TextMeshProUGUI[] itemStackSizes;
-    //public Text[] itemStackSizes;
+
+    public Image spriteImage;
+    public TextMeshProUGUI nameLabel;
+    public TextMeshProUGUI infoLabel;
 
     private Inventory inventory;
+    private int selectedItemIndex = -1;
 
     private void Start(){
         inventory = GetComponent<Inventory>();
@@ -29,11 +35,40 @@ public class InventoryUI : MonoBehaviour
                 itemImages[i].gameObject.SetActive(true);
                 itemStackSizes[i].text = item.stackSize.ToString();
                 itemStackSizes[i].gameObject.SetActive(true);
+
+                int index = i; // Armazena o valor atual de 'i' em uma variável local para que possa ser acessada corretamente dentro dos eventos
+
+                // Adiciona um evento de passagem do mouse (ponteiro sobre o item)
+                itemImages[i].GetComponent<Button>().onClick.AddListener(() => SelectItem(index));
             }
             else{
                 itemImages[i].gameObject.SetActive(false);
                 itemStackSizes[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    public void SelectItem(int index){
+        if (index >= 0 && index < inventory.inventory.Count){
+            selectedItemIndex = index;
+            ItemData selectedItemData = inventory.inventory[selectedItemIndex].itemData;
+            UpdateItemPanel(selectedItemData);
+            itemDataPanel.SetActive(true);
+        }
+        else{
+            selectedItemIndex = -1;
+            ClearItemPanel();
+        }
+    }
+    private void UpdateItemPanel(ItemData itemData){
+        spriteImage.sprite = itemData.spriteLoot;
+        nameLabel.text = itemData.nomeLoot;
+        infoLabel.text = itemData.lootInfo;
+    }
+    private void ClearItemPanel(){
+        spriteImage.sprite = null;
+        nameLabel.text = "";
+        infoLabel.text = "";
+        itemDataPanel.SetActive(false);
     }
 }
