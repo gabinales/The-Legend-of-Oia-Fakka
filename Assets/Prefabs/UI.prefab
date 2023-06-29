@@ -154,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2788237193134864332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -253,6 +253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 0}
   hpText: {fileID: 6348052416570980850}
+  playerStatsPanel: {fileID: 0}
+  thresholdInatividade: 15
 --- !u!1 &4256602851448608453
 GameObject:
   m_ObjectHideFlags: 0

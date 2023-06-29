@@ -15,4 +15,4 @@ MonoBehaviour:
   spriteLoot: {fileID: -2019198859, guid: 44f118602ebf33e4cb13bab7261124e6, type: 3}
   nomeLoot: Chorumelo Esguelhudo
   lootInfo: "Seu olhar sinistro parece alertar-nos de algo. Assuma os riscos ao com\xEA-lo."
-  chanceDrop: 50
+  chanceDrop: 5

@@ -12,7 +12,7 @@ public class playerController : MonoBehaviour
     // Patrick 15.06 --- Blocos seguráveis
     public GameObject blocoSeguravel;
     private bool segurandoBloco = false;
-    private bool podePegar = false;
+    private bool podeSegurar = false;
     //
 
     // Patrick 17.06 --- SFX da Espada
@@ -107,7 +107,7 @@ public class playerController : MonoBehaviour
         {
             if (segurandoBloco)
                 SoltaBloco();
-            else if (podePegar)
+            else if (podeSegurar)
                 SeguraBloco();
         }
     }
@@ -134,18 +134,16 @@ public class playerController : MonoBehaviour
         isMoving = false;
     }
 
-
-
     // Patrick 15.06 --- Botão de segurar (Z)
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject == blocoSeguravel)
-            podePegar = true;
+            podeSegurar = true;
     }
     void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject == blocoSeguravel)
-            podePegar = false;
+            podeSegurar = false;
     }
 
     void SeguraBloco()
@@ -161,17 +159,17 @@ public class playerController : MonoBehaviour
 
     // Patrick 22.06 --- Andar em cima do item para coletá-lo
     // Patrick 28.06 --- Colisão com os triggers de cutscenes
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("coletavel"))
         {
             IColetavel coletavel = collision.GetComponent<IColetavel>();
-            if (coletavel != null)
-            {
+            if(coletavel != null && Input.GetKeyDown(KeyCode.V)){
                 coletavel.Collect();
             }
-            Debug.Log(coletavel);
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("cutscene")){
             CutsceneTrigger cutsceneTrigger = collision.GetComponentInParent<CutsceneTrigger>();
             if(cutsceneTrigger != null){
@@ -186,6 +184,7 @@ public class playerController : MonoBehaviour
             }
         }
     }
+
     private Transform GetClosestTriggerTransform(Vector2 point, Transform parent){ // Retorna o Transform do filho mais próximo em relação a um ponto específico.
         Transform closestChild = null;
         float closestDistance = Mathf.Infinity; // Ao iniciar a variável com Mathf.Infinity, garante-se que qualquer valor real de distância seja menor do que closestDistance, permitindo que seja substituído no decorrer do código.

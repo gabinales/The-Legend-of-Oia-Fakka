@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8877382528367486541}
   - component: {fileID: 7411790373814793311}
   - component: {fileID: 6276008727480695945}
+  - component: {fileID: 2857019542937508560}
   m_Layer: 0
   m_Name: LootPrefab
   m_TagString: coletavel
@@ -171,3 +172,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75aee251688f91a45b90c66c81ef434d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2857019542937508560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405360897418698051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d9b42b6bea4234d820f819d6c29473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherObject: {fileID: 0}
+  alertaContextual: {fileID: 0}
+  tipoDeAcao: 3
+  alertaContextualAnimator: {fileID: 0}

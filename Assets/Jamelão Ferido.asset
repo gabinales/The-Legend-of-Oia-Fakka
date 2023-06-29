@@ -16,4 +16,4 @@ MonoBehaviour:
   nomeLoot: "Jamel\xE3o Ferido"
   lootInfo: "O mais ordin\xE1rio entre os jamel\xF5es. Sua ferida \xE9 ligeiramente
     repugnante."
-  chanceDrop: 25
+  chanceDrop: 5

@@ -13,6 +13,7 @@ TagManager:
   - barreira
   - coletavel
   - cutscene
+  - alertaContextual
   layers:
   - Default
   - TransparentFX

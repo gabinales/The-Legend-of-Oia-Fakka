@@ -4,23 +4,31 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public enum Tipo{
-    Conversa,
+    Conversa, // Interações sociais
     Interacao,
-    Surpresa
+    Surpresa,
+    Pegar // Interações com itens
 }
 
 public class AlertaContextual : MonoBehaviour
 {
-    public GameObject otherObject; // Jogador
-    public GameObject alertaContextual;
+    private GameObject otherObject; // Jogador
+    private GameObject alertaContextual;
 
     public Tipo tipoDeAcao = new Tipo();
 
-    public Animator alertaContextualAnimator;
+    private Animator alertaContextualAnimator;
 
 
     void Awake(){
-        alertaContextualAnimator = alertaContextual.GetComponent<Animator>();
+        otherObject = GameObject.FindGameObjectWithTag("Player");
+        if(otherObject != null){
+            alertaContextual = otherObject.transform.Find("AlertaContextual").gameObject;
+
+            if(alertaContextual != null){
+                alertaContextualAnimator = alertaContextual.GetComponent<Animator>();
+            }
+        }
     }
 
 
@@ -32,22 +40,36 @@ public class AlertaContextual : MonoBehaviour
                 alertaContextualAnimator.SetBool("conversa", true);
                 alertaContextualAnimator.SetBool("interacao", false);
                 alertaContextualAnimator.SetBool("surpresa", false);
+                alertaContextualAnimator.SetBool("pegar", false);
             }
             if(tipoDeAcao == Tipo.Interacao){
                 alertaContextualAnimator.SetBool("conversa", false);
                 alertaContextualAnimator.SetBool("interacao", true);
                 alertaContextualAnimator.SetBool("surpresa", false);
+                alertaContextualAnimator.SetBool("pegar", false);
             }
             if(tipoDeAcao == Tipo.Surpresa){
                 alertaContextualAnimator.SetBool("conversa", false);
                 alertaContextualAnimator.SetBool("interacao", false);
                 alertaContextualAnimator.SetBool("surpresa", true);
+                alertaContextualAnimator.SetBool("pegar", false);
+            }
+            if(tipoDeAcao == Tipo.Pegar){
+                alertaContextualAnimator.SetBool("conversa", false);
+                alertaContextualAnimator.SetBool("interacao", false);
+                alertaContextualAnimator.SetBool("surpresa", false);
+                alertaContextualAnimator.SetBool("pegar", true);
             }
         }
     }
     public void OnTriggerExit2D(Collider2D other){
         if(other.gameObject.CompareTag("Player")){
             alertaContextual.SetActive(false);
+
+            alertaContextualAnimator.SetBool("conversa", false);
+            alertaContextualAnimator.SetBool("interacao", false);
+            alertaContextualAnimator.SetBool("surpresa", false);
+            alertaContextualAnimator.SetBool("pegar", true);
         }
     }
 }
