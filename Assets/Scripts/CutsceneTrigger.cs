@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 
 public class CutsceneTrigger : MonoBehaviour
 {
+    public Animator alertaContextualAnimator;
     public PlayableDirector director;
     public CutsceneData[] cutscenes; // Lista de cutscenes associadas à Tela
     public playerController pController; // Para interromper ou não o fluxo de controle do personagem
@@ -22,6 +23,7 @@ public class CutsceneTrigger : MonoBehaviour
         }
     }
     private IEnumerator ReproduzirCutscene(CutsceneData cutsceneData){
+
         // Reproduzir a cutscene selecionada:
         director.playableAsset = cutsceneData.cutscene;
         director.Play();

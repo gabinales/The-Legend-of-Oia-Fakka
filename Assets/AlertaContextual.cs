@@ -11,7 +11,7 @@ public enum Tipo{
 
 public class AlertaContextual : MonoBehaviour
 {
-    public GameObject otherObject;
+    public GameObject otherObject; // Jogador
     public GameObject alertaContextual;
 
     public Tipo tipoDeAcao = new Tipo();
