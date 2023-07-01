@@ -70,6 +70,16 @@ public class DialogManager : MonoBehaviour
         }
     }
 
+    // Para alterar uma variável em globals.ink:
+    public void SetVariableState(string variableName, Ink.Runtime.Object variableValue){
+        if(dialogVariables.variables.ContainsKey(variableName)){
+            dialogVariables.variables[variableName] = variableValue;
+        }
+        else{
+            Debug.Log("Tentou alterar o valor de uma variável não declarada em globals.ink: " + variableName);
+        }
+    }
+
     //chamado por Interaçao() de iInteragiveis
     public void StartDialogue(TextAsset inkJSON)
     {
