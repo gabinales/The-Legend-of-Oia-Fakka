@@ -14,6 +14,7 @@ public enum GameState
 
 public class GameController : MonoBehaviour
 {    
+    
     [SerializeField] playerController pController;
     public GameObject JanelaPause;
 
@@ -32,6 +33,14 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1f;
 
         DamageHandler = GetComponent<DamageHandler>();
+    }
+    private void Awake(){
+        /*
+        if(instance != null){
+            Debug.LogError("Mais de um Game Controller na cena");
+        }
+        instance = this;
+        */
     }
 
     private void Update()
@@ -63,7 +72,4 @@ public class GameController : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-
-    // Atualizar o conteúdo da janela de Info do item
-
 }

@@ -10,7 +10,7 @@ public class Loot : MonoBehaviour, IColetavel
 
     public void Collect(){
         Destroy(gameObject);
-        OnLootCollected?.Invoke(lootData);
+        OnLootCollected?.Invoke(lootData); // Avisa às classes interessadas, como Inventory.
     }
 
     public void Initialize(ItemData itemData){
@@ -18,3 +18,5 @@ public class Loot : MonoBehaviour, IColetavel
         GetComponent<SpriteRenderer>().sprite = itemData.spriteLoot;
     }
 }
+
+

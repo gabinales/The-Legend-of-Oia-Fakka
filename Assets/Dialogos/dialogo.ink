@@ -2,40 +2,76 @@ INCLUDE globals.ink
 
 ->main
 === main ===
-{Galho_Comum == 0: -> sem_galhos}
-{Galho_Comum == 1: -> um_galho}
-{Galho_Comum == 2: -> dois_galhos}
-{Galho_Comum == 3: -> tres_galhos}
-{Galho_Comum > 3: -> muitos_galhos}
+{not TalkedToZoroastros: -> primeira_conversa}
+{TalkedToZoroastros}{ZoroastrosQuestInProgress} -> quest_em_andamento
+{TalkedToZoroastros}{ZoroastrosQuestCompleted} -> quest_finalizada
 
-
-
-=== sem_galhos ===
-    NÃO TEM GALHOS!!!!
-    +[Adicionar galho]
-    ~Galho_Comum++
-    ->main
-
-=== um_galho ===
-    TEM UM GALHO ! #speaker: Mr. Orange
-    -> END
-
-=== dois_galhos ===
-    TEM DOIS GALHOS !! #speaker: Mr. Orange
-    -> END
+=== primeira_conversa ===
+    {ArmaAtual == "Nenhuma": -> svard_desarmado}
+    {ArmaAtual != "Nenhuma": -> svard_armado}
     
-=== tres_galhos ===
-    TEM TRÊS GALHOS !!! #speaker: Mr. Orange
-    -> END
+    = svard_resposta_1
+        Meu destino é a Cidade das Moscas, onde uma importante missão me aguarda. #speaker: Svard
+        Por acaso estamos perto?  #speaker: Svard
+        Ei... Cidade das Moscas? Eu nunca ouvi falar de um lugar assim. #speaker: Coveiro
+        Garoto, vem cá, você parece ter coragem. Um lugar com este nome não deve ser coisa boa. #speaker: Coveiro
+        Se você aceitar o meu desafio, talvez eu deixe você ficar com essa espada. #speaker: Coveiro
+        Ué, que cara é essa? Por acaso achou que ela não tinha dono? Pois o dono sou eu! #speaker: Coveiro
+        Mas não se preocupe, eu estava mesmo pensando em me desfazer dela. #speaker: Coveiro
+        Só preciso que você me faça um favorzinho, ok? #speaker: Coveiro
+        ** Tudo bem. De que tipo de favor estamos falando? #speaker: Svard
+            A-ha! Vamos lá, você vai se divertir... #speaker: Coveiro
+            É o seguinte: o patrão anda instatisfeito com o andamento dos serviços por aqui. #speaker: Coveiro
+            O desafio é simples. Se você me ajudar a aparar as ervas daninhas que crescem em todo o cemitério, <>
+            a espada é sua. #speaker: Coveiro
+            De acordo? #speaker: Coveiro
+            *** Ok! #speaker: Svard
+                Não deixe uminha, meu garoto! E divirta-se! #speaker: Coveiro
+                ->DONE
+            *** Ok... #speaker: Svard
+                Pense pelo lado positivo: você está ajudando um pobre coveiro a manter o seu emprego! #speaker: Coveiro
+                ->DONE
+        ** Se não temos outra escolha... #speaker: Svard
+            Ânimo, garoto! Garanto que você vai se divertir. #speaker: Coveiro
+            Está vendo essa vegetação selvagem que cresce em todo o cemitério? #speaker: Coveiro
+            O patrão me pediu para acabar com ela. Se você me ajudar, a espada é sua. #speaker: Coveiro
+            Temos um acordo? #speaker: Coveiro
+            *** Ok! #speaker: Svard
+                Obrigado! Volte aqui quando terminar. E divirta-se! #speaker: Coveiro
+                ->DONE
+            *** Ok... #speaker: Svard
+                ->DONE
+                Até mais, e divirta-se! #speaker: Coveiro
+    = svard_resposta_2
+        A-ha! Eu gosto dessa empolgação. #speaker: Coveiro
+        O desafio é simples: se você cortar todas as ervas daninhas que crescem no cemitério, coisas boas acontecerão. #speaker: Coveiro
+        Mas não se esqueça de vir falar comigo quando terminar de cortar tudo! #speaker: Coveiro
+        ** Ok! #speaker: Svard
+            Divirta-se! #speaker: Coveiro
+            ->DONE
+        ** Ok... #speaker: Svard
+            ->DONE
+                
+=== svard_desarmado ===
+    Ora, se não é só um moleque! Pensei que tinha visto um fantasma! #speaker: Coveiro
+    (Ou pior: por um instante, pensei que fosse o patrão...) #speaker: Coveiro
+    Garoto, venha cá. Se estiver de bobeira, que tal um desafio para passar o tempo? #speaker: Coveiro
+    * Senhor, desculpe-me, mas não há tempo para desafios. #speaker: Svard
+        -> svard_resposta_1
     
-=== muitos_galhos ===
-    AGORA ENFIA NO CU !!!! #speaker: Mr. Cu
-    -> END
+    ->END
+
+=== svard_armado ===
+    Ei, garoto, cuidado com esse negócio! (Deus, esse moleque é fogo-na-roupa!) #speaker: Coveiro
+    Fique calmo, vamos bater um papo. #speaker: Coveiro
+    Você gosta de espadas, certo? Que tal um desafio, hein? #speaker: Coveiro
+    * Senhor, desculpe-me, mas não há tempo para desafios. #speaker: Svard
+        -> svard_resposta_1
+    * Que tipo de desafio? #speaker: Svard
+        -> svard_resposta_2
+    ->END
     
-
-
-
-
+=== quest_em_andamento ===
 
 
 

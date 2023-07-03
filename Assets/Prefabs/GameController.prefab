@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4926716810547104119}
   - component: {fileID: 1497883252546069953}
   - component: {fileID: 1449402897289758495}
+  - component: {fileID: 4581553939180434787}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pController: {fileID: 919148202519791623, guid: d4c85120c11571f419c99add9992be4e, type: 3}
   JanelaPause: {fileID: 4790139077052258452, guid: 0f6828e66aaaec148971ec9533d4e6fa, type: 3}
+  state: 0
 --- !u!114 &1497883252546069953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,8 +62,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a84ee5ba966d84c97c49230a70bb24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalsInkFile:
+    compileAutomatically: 0
+    inkAsset: {fileID: 0}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 0}
+    unhandledCompileErrors: []
+    errors: []
+    warnings: []
+    todos: []
+    parents: []
+    masterInkAssets: []
+    masterInkAsset: {fileID: 0}
+    includePaths: []
+    includes: []
+  gameController: {fileID: 0}
   caixaDeDialogo: {fileID: 0}
   textoDialogo: {fileID: 0}
+  nome: {fileID: 0}
+  escolhas: []
   letrasPorSegundo: 120
 --- !u!114 &1449402897289758495
 MonoBehaviour:
@@ -76,3 +95,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpDisplay: {fileID: 0}
+--- !u!114 &4581553939180434787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5714191200594150876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5ab526fe04b714a8df7789a8336840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

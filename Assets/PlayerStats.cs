@@ -2,10 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum Arma{
+    Nenhuma,
+    Grassblade
+}
+
+// Escudo 
+// ...
+// Bota
+// ...
+
 public class PlayerStats : MonoBehaviour, IAtacavel
-{
+{   
     private int hp;
     private int hpMax = 10;
+    private Arma armaAtual = Arma.Nenhuma; // Começa o jogo desarmado.
+    private Animator animator;
 
     public int Hp{
         get{
@@ -24,14 +37,25 @@ public class PlayerStats : MonoBehaviour, IAtacavel
             hpMax = value;
         }
     }
+    public Arma ArmaAtual{
+        get{
+            return armaAtual;
+        }
+        set{
+            armaAtual = value;
+            animator.SetBool("Desarmado", armaAtual == Arma.Nenhuma); // Sempre que a propriedade Arma for alterada, o parâmetro "Desarmado" do Animator será atualizado para true quando a arma atual for "Nenhuma" e false para qualquer outro valor.
+        }
+    }
 
     public event System.Action<int> HpAlterado; // Torna este evento público para qualquer classe que tenha uma referência de PlayerStats
 
     public void InitDefaults(){
         Hp = HpMax;
+        ArmaAtual = Arma.Nenhuma;
     }
 
     private void Awake(){
+        animator = GetComponent<Animator>();
         InitDefaults();
     }
 

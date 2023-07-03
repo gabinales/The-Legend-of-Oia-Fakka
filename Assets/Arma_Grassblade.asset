@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4780a8a6d2047604bad762b6587d2ae4, type: 3}
+  m_Name: Arma_Grassblade
+  m_EditorClassIdentifier: 
+  spriteLoot: {fileID: -1164489666, guid: 14a85be154d3f664cb3025eabfd950a0, type: 3}
+  nomeLoot: Grassblade
+  lootInfo: "O metal desta estranha espada \xE9 ligeiramente urticante ao toque."
+  chanceDrop: 0
