@@ -11,7 +11,7 @@ VAR ArmaAtual = "Nenhuma" // Poderia ser: Grassblade, etc.
     // Zoroastros
 VAR TalkedToZoroastros = false
 VAR ZoroastrosQuestInProgress = false
-VAR ZoroastrosQuestCompleted = false
+VAR ZoroastrosQuestCanBeFinished = false
 
 // Etc.
 VAR pokemon_name = ""
