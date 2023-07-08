@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ink.Runtime;
 
 public class CutTheGrassQuestStep : QuestStep
 {
@@ -35,8 +36,11 @@ public class CutTheGrassQuestStep : QuestStep
         int count = HowManyGrassLeft(grassPrefab);
         Debug.Log("Ainda existem "+ count + " gramas no mapa.");
         UpdateState(count);
-        if(count >= 100){
+        if(count <= 170){
             Debug.Log("Já cortou muita grama! FinishQuestStep();");
+             // Altera o valor da variável ZoroastrosDialogState no globals.ink:
+            Ink.Runtime.Object obj = new Ink.Runtime.StringValue("Pode terminar");
+            DialogManager.Instance.SetVariableState("ZoroastrosDialogState", obj);
             FinishQuestStep();
         }
     }

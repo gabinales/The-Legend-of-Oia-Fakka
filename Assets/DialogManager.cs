@@ -74,6 +74,7 @@ public class DialogManager : MonoBehaviour
     public void SetVariableState(string variableName, Ink.Runtime.Object variableValue){
         if(dialogVariables.variables.ContainsKey(variableName)){
             dialogVariables.variables[variableName] = variableValue;
+            Debug.Log("Alterou o valor da variável global " + variableName + " para " + variableValue);
         }
         else{
             Debug.Log("Tentou alterar o valor de uma variável não declarada em globals.ink: " + variableName);
@@ -90,6 +91,31 @@ public class DialogManager : MonoBehaviour
 
         //adiciona um listener para mudanças em variaveis de dialogo
         dialogVariables.StartListening(currentStory);
+
+        // Para chamar direto no Ink:
+        currentStory.BindExternalFunction("StartQuest", (string id) =>{
+            GameEventsManager.instance.questEvents.StartQuest(id);
+        });
+        currentStory.BindExternalFunction("AdvanceQuest", (string id) =>{
+            GameEventsManager.instance.questEvents.AdvanceQuest(id);
+        });
+        currentStory.BindExternalFunction("FinishQuest", (string id) =>{
+            GameEventsManager.instance.questEvents.FinishQuest(id);
+        });
+
+        /*currentStory.BindExternalFunction("ChangeDialogState", (string npcName, string dialogState) =>{
+            Debug.Log("Mudou o estado da conversa com o npc " + npcName + " para " + dialogState);
+            string state = npcName + "DialogState"; // Ex.: ZoroastrosDialogState
+            Ink.Runtime.Object obj = new Ink.Runtime.StringValue(dialogState);
+            DialogManager.Instance.SetVariableState(state, obj);
+        });*/
+
+        currentStory.BindExternalFunction("ChangeInkVariable", (string variableName, string newValue) =>{
+            Debug.Log("Mudou o valor da variável global " + variableName + " para " + newValue);
+
+            Ink.Runtime.Object obj = new Ink.Runtime.StringValue(newValue);
+            DialogManager.Instance.SetVariableState(variableName, obj);
+        });
         
         //continua o dialogo (nesse caso, começa)
         ContinueStory();
@@ -149,6 +175,9 @@ public class DialogManager : MonoBehaviour
         textoDialogo.text = "";
 
         dialogVariables.StopListening(currentStory);
+
+        // Para usar no Ink (deixar de usar, no caso)
+        currentStory.UnbindExternalFunction("StartQuest");
 
         gameController.state = GameState.MovimentacaoLivre;
     }

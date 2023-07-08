@@ -9,9 +9,11 @@ VAR ArmaAtual = "Nenhuma" // Poderia ser: Grassblade, etc.
 
 // NPC
     // Zoroastros
-VAR TalkedToZoroastros = false
-VAR ZoroastrosQuestInProgress = false
-VAR ZoroastrosQuestCanBeFinished = false
+VAR TalkedToZoroastros = "Não"
+
+VAR CutsceneGrassblade = "Não viu cutscene"
+
+VAR ZoroastrosDialogState = "Não interagiu"
 
 // Etc.
 VAR pokemon_name = ""

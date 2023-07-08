@@ -22293,6 +22293,8 @@ MonoBehaviour:
   questInfoForPoint: {fileID: 11400000, guid: 5734bec1d0dee124d8e40b27f0c99f61, type: 2}
   startPoint: 0
   finishPoint: 1
+  inkJSON: {fileID: 4900000, guid: 895bec6ed12370f4790b034027db8116, type: 3}
+  withChat: 1
 --- !u!1001 &847131796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27918,9 +27920,9 @@ GameObject:
   - component: {fileID: 1410691186}
   - component: {fileID: 1410691185}
   - component: {fileID: 1410691184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grassblade
-  m_TagString: coletavel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27937,8 +27939,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d345e54f89d4604a87c8d01162cd1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 6690629918375471038}
+  questInfoForPoint: {fileID: 11400000, guid: 5734bec1d0dee124d8e40b27f0c99f61, type: 2}
+  startPoint: 0
+  finishPoint: 0
   inkJSON: {fileID: 4900000, guid: 895bec6ed12370f4790b034027db8116, type: 3}
+  withChat: 1
+  playerStats: {fileID: 6690629918375471038}
   director: {fileID: 847547306}
   cutscene: {fileID: 11400000, guid: d944e85835b445b4da1c2f4a6ddef35e, type: 2}
 --- !u!61 &1410691185
@@ -39337,8 +39343,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0010999739, y: 0.0018000007, z: 0}
-    m_Extent: {x: 0.9993, y: 1.0044, z: 0}
+    m_Center: {x: -0.00485, y: 0.00030001998, z: 0}
+    m_Extent: {x: 1.00375, y: 0.997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
