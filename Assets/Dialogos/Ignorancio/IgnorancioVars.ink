@@ -1,0 +1,1 @@
+VAR quest_active = 0
