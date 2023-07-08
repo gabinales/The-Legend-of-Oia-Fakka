@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour
                 light2D.intensity = 0.8f;
                 break;
             case 2:
-                light2D.intensity = 0.1f;
+                light2D.intensity = 0.3f;
                 light2D.color = Color.blue;
                 break;
             default:

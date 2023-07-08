@@ -1,1 +1,1 @@
-VAR quest_active = 0
+//VAR quest_active = 0
