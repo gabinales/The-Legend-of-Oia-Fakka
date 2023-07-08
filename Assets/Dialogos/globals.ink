@@ -1,4 +1,3 @@
-
 // Itens
 VAR Galho_Comum = 0
 
@@ -6,13 +5,15 @@ VAR Galho_Comum = 0
 // Game
 VAR SPAWN = 0
 VAR ArmaAtual = "Nenhuma" // Poderia ser: Grassblade, etc.
+VAR HoraDoDia = 0
 
 // NPC
     // Zoroastros
-VAR TalkedToZoroastros = false
-VAR ZoroastrosQuestInProgress = false
-VAR ZoroastrosQuestCanBeFinished = false
+VAR TalkedToZoroastros = "Não"
+
+VAR CutsceneGrassblade = "Não viu cutscene"
+
+VAR ZoroastrosDialogState = "Não interagiu"
 
 // Etc.
 VAR pokemon_name = ""
-

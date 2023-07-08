@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 /*
     Informações relativas à Quest que deverão permanecer guardadas quando o jogo fechar.
 */

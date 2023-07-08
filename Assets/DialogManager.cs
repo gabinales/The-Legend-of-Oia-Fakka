@@ -71,11 +71,15 @@ public class DialogManager : MonoBehaviour
     }
 
     // Para alterar uma variável em globals.ink:
-    public void SetVariableState(string variableName, Ink.Runtime.Object variableValue){
-        if(dialogVariables.variables.ContainsKey(variableName)){
+    public void SetVariableState(string variableName, Ink.Runtime.Object variableValue)
+    {
+        if (dialogVariables.variables.ContainsKey(variableName))
+        {
             dialogVariables.variables[variableName] = variableValue;
+            Debug.Log("Alterou o valor da variável global " + variableName + " para " + variableValue);
         }
-        else{
+        else
+        {
             Debug.Log("Tentou alterar o valor de uma variável não declarada em globals.ink: " + variableName);
         }
     }
@@ -90,16 +94,43 @@ public class DialogManager : MonoBehaviour
 
         //adiciona um listener para mudanças em variaveis de dialogo
         dialogVariables.StartListening(currentStory);
-        
+
+        // Para chamar direto no Ink:
+        currentStory.BindExternalFunction("StartQuest", (string id) =>
+        {
+            GameEventsManager.instance.questEvents.StartQuest(id);
+        });
+        currentStory.BindExternalFunction("AdvanceQuest", (string id) =>
+        {
+            GameEventsManager.instance.questEvents.AdvanceQuest(id);
+        });
+        currentStory.BindExternalFunction("FinishQuest", (string id) =>
+        {
+            GameEventsManager.instance.questEvents.FinishQuest(id);
+        });
+        currentStory.BindExternalFunction("ChangeInkVariable", (string variableName, string newValue) =>
+        {
+            Debug.Log("Mudou o valor da variável global " + variableName + " para " + newValue);
+
+            Ink.Runtime.Object obj = new Ink.Runtime.StringValue(newValue);
+            DialogManager.Instance.SetVariableState(variableName, obj);
+        });
+        currentStory.BindExternalFunction("MudaHora", (int id) =>
+                {
+                    gameController.timeOfDay = id;
+                });
+
         //continua o dialogo (nesse caso, começa)
         ContinueStory();
     }
 
     //func que retorna valor de variaveis 
-    public Ink.Runtime.Object GetVariable(string variableName){
+    public Ink.Runtime.Object GetVariable(string variableName)
+    {
         Ink.Runtime.Object variableValue = null;
         dialogVariables.variables.TryGetValue(variableName, out variableValue);
-        if(variableValue == null){
+        if (variableValue == null)
+        {
             Debug.Log("variavel Ink nao encontrada: " + variableName);
         }
         return variableValue;
@@ -149,6 +180,9 @@ public class DialogManager : MonoBehaviour
         textoDialogo.text = "";
 
         dialogVariables.StopListening(currentStory);
+
+        // Para usar no Ink (deixar de usar, no caso)
+        currentStory.UnbindExternalFunction("StartQuest");
 
         gameController.state = GameState.MovimentacaoLivre;
     }

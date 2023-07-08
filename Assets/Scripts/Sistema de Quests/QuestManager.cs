@@ -93,6 +93,7 @@ public class QuestManager : MonoBehaviour
         // Se não há mais etapas, a quest pode terminar
         else{
             ChangeQuestState(quest.info.id, QuestState.CAN_FINISH);
+            //
         }
         Debug.Log("Advance Quest: " + id);
     }
