@@ -1,7 +1,10 @@
 INCLUDE ../globals.ink
+EXTERNAL StartQuest(id)
+EXTERNAL FinishQuest(id)
 
-
-{questActive == 0: ->Dialogo1 | ->QuestEmAndamento}
+{questActive == 0: ->Dialogo1}
+{questActive == 1: ->QuestEmAndamento}
+{questActive == 2: ->Terminou}
 
 === Dialogo1 ===
 oOooOoOoo...
@@ -22,11 +25,17 @@ Ooõoòo0oºOo.o0ó...
  você pode me ouvir? #speaker: ???
  ~SPAWN = 1
  ~questActive = 1
- Me chamo Ignorâncio e agora você está em uma quest. #speaker: Ignorancio
+ ~StartQuest("RufarDosTambores")
+ Me chamo Ignorâncio e agora você está em uma quest. Ache meu Vinil. #speaker: Ignorancio
  ->END
  
  === QuestEmAndamento ===
  e entao, como vai a busca?
  ->END
+ 
+ === Terminou ===
+  ~FinishQuest("RufarDosTambores")
+ boa!!!
+->END
  
 

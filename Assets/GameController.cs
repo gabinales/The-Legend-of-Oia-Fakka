@@ -65,7 +65,7 @@ public class GameController : MonoBehaviour
                 break;
             case 2:
                 light2D.intensity = 0.3f;
-                light2D.color = Color.blue;
+                //light2D.color = Color.blue;
                 break;
             default:
                 Debug.Log("time of day fora do range");
