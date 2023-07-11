@@ -1,0 +1,110 @@
+[33m4800caf[m[33m ([m[1;36mHEAD -> [m[1;32mataque[m[33m)[m HEAD@{0}: reset: moving to 4800caf
+[33m526b596[m HEAD@{1}: commit: ou
+[33m4800caf[m[33m ([m[1;36mHEAD -> [m[1;32mataque[m[33m)[m HEAD@{2}: reset: moving to 4800caf
+[33m5baf48d[m HEAD@{3}: reset: moving to HEAD
+[33m5baf48d[m HEAD@{4}: reset: moving to 5baf48d9e5aa6b16c18429f6a9b66b14b1285e26
+[33m49766f5[m[33m ([m[1;31morigin/ataque[m[33m)[m HEAD@{5}: commit (merge): Merge branch 'ataque' of https://github.com/gabinales/The-Legend-of-Oia-Fakka into ataque
+[33m4800caf[m[33m ([m[1;36mHEAD -> [m[1;32mataque[m[33m)[m HEAD@{6}: commit: A
+[33med999dc[m HEAD@{7}: reset: moving to ed999dc627211f2ef1834162d3b53e6627cf6f0b
+[33med999dc[m HEAD@{8}: reset: moving to ed999dc627211f2ef1834162d3b53e6627cf6f0b
+[33med999dc[m HEAD@{9}: reset: moving to ed999dc627211f2ef1834162d3b53e6627cf6f0b
+[33mee8b569[m HEAD@{10}: reset: moving to HEAD
+[33mee8b569[m HEAD@{11}: commit (merge): Merge branch 'ataque' of https://github.com/gabinales/The-Legend-of-Oia-Fakka into ataque
+[33med999dc[m HEAD@{12}: reset: moving to HEAD
+[33med999dc[m HEAD@{13}: commit: a
+[33mcc925b4[m HEAD@{14}: commit: fodaseee
+[33mce55d36[m HEAD@{15}: commit: fix cama
+[33m359f6e1[m HEAD@{16}: commit (merge): cama, timeofday no gamecontroller
+[33m5a7be2a[m HEAD@{17}: commit: aa
+[33m7bb90c9[m HEAD@{18}: reset: moving to origin/ataque
+[33m832486e[m HEAD@{19}: reset: moving to HEAD
+[33m832486e[m HEAD@{20}: pull: Fast-forward
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{21}: checkout: moving from gincana-do-barão-dantene to ataque
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{22}: reset: moving to HEAD
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{23}: reset: moving to HEAD
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{24}: checkout: moving from ataque to gincana-do-barão-dantene
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{25}: checkout: moving from ataque to ataque
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{26}: reset: moving to HEAD
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{27}: checkout: moving from gincana-do-barão-dantene to ataque
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{28}: reset: moving to 7151f75bc2d572e6e4c3900106ad91d9b439dda4
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{29}: checkout: moving from ataque to gincana-do-barão-dantene
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{30}: merge gincana-do-barão-dantene: Fast-forward
+[33md7389f8[m HEAD@{31}: checkout: moving from gincana-do-barão-dantene to ataque
+[33m7151f75[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m HEAD@{32}: commit: dialogo ignorancio
+[33mbbb40f4[m HEAD@{33}: pull: Fast-forward
+[33m97a7a92[m[33m ([m[1;31morigin/dialogo[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdialogo[m[33m)[m HEAD@{34}: reset: moving to HEAD
+[33m97a7a92[m[33m ([m[1;31morigin/dialogo[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdialogo[m[33m)[m HEAD@{35}: checkout: moving from master to gincana-do-barão-dantene
+[33m97a7a92[m[33m ([m[1;31morigin/dialogo[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdialogo[m[33m)[m HEAD@{36}: checkout: moving from gincana-do-barão-dantene to master
+[33m97a7a92[m[33m ([m[1;31morigin/dialogo[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdialogo[m[33m)[m HEAD@{37}: checkout: moving from dialogo to gincana-do-barão-dantene
+[33m97a7a92[m[33m ([m[1;31morigin/dialogo[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdialogo[m[33m)[m HEAD@{38}: checkout: moving from master to dialogo
+[33m97a7a92[m[33m ([m[1;31morigin/dialogo[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdialogo[m[33m)[m HEAD@{39}: merge gincana-do-barão-dantene: Fast-forward
+[33m681492c[m HEAD@{40}: checkout: moving from gincana-do-barão-dantene to master
+[33m97a7a92[m[33m ([m[1;31morigin/dialogo[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdialogo[m[33m)[m HEAD@{41}: commit: dialogo sistemas
+[33mc093102[m HEAD@{42}: pull: Fast-forward
+[33me573e1e[m HEAD@{43}: pull: Fast-forward
+[33m956bef7[m HEAD@{44}: pull: Fast-forward
+[33mb2d7daf[m HEAD@{45}: checkout: moving from master to gincana-do-barão-dantene
+[33m681492c[m HEAD@{46}: checkout: moving from gincana-do-barão-dantene to master
+[33mb2d7daf[m HEAD@{47}: pull: Fast-forward
+[33mc14dbc9[m HEAD@{48}: pull: Fast-forward
+[33m0352cb1[m HEAD@{49}: pull: Fast-forward
+[33m7cbdb40[m HEAD@{50}: checkout: moving from master to gincana-do-barão-dantene
+[33m681492c[m HEAD@{51}: checkout: moving from gincana-do-barão-dantene to master
+[33m7cbdb40[m HEAD@{52}: reset: moving to HEAD
+[33m7cbdb40[m HEAD@{53}: pull: Fast-forward
+[33m0101191[m HEAD@{54}: commit: popup de dano funcionando
+[33md0b5dbc[m HEAD@{55}: checkout: moving from master to gincana-do-barão-dantene
+[33m681492c[m HEAD@{56}: commit: musik
+[33macddbd1[m HEAD@{57}: checkout: moving from acddbd1a0c6b7ba1ddfd9b2ddf18700e6b50dea7 to master
+[33macddbd1[m HEAD@{58}: checkout: moving from master to acddbd1a0c6b7ba1ddfd9b2ddf18700e6b50dea7
+[33macddbd1[m HEAD@{59}: checkout: moving from master2beta to master
+[33m6ed6232[m[33m ([m[1;32mmaster2beta[m[33m)[m HEAD@{60}: checkout: moving from master to master2beta
+[33macddbd1[m HEAD@{61}: commit (merge): hp display no momento esta com reset manual apertando a letra "z". esse comando está no script game controller no objeto game controller.
+[33m97cc8d2[m HEAD@{62}: checkout: moving from master2beta to master
+[33m6ed6232[m[33m ([m[1;32mmaster2beta[m[33m)[m HEAD@{63}: checkout: moving from master to master2beta
+[33m97cc8d2[m HEAD@{64}: checkout: moving from damageHandler-unificado to master
+[33m4c9190e[m HEAD@{65}: checkout: moving from master to damageHandler-unificado
+[33m97cc8d2[m HEAD@{66}: checkout: moving from damageHandler-unificado to master
+[33m4c9190e[m HEAD@{67}: reset: moving to HEAD
+[33m4c9190e[m HEAD@{68}: checkout: moving from damageHandler-unificado to damageHandler-unificado
+[33m4c9190e[m HEAD@{69}: checkout: moving from master to damageHandler-unificado
+[33m97cc8d2[m HEAD@{70}: reset: moving to HEAD
+[33m97cc8d2[m HEAD@{71}: reset: moving to HEAD
+[33m97cc8d2[m HEAD@{72}: reset: moving to HEAD
+[33m97cc8d2[m HEAD@{73}: reset: moving to HEAD
+[33m97cc8d2[m HEAD@{74}: commit: revert caso de merrda
+[33m80ed0f2[m HEAD@{75}: commit: tentativa de display hp
+[33m53cae0a[m HEAD@{76}: commit: tentativa de display hp
+[33m526fd05[m HEAD@{77}: pull: Fast-forward
+[33me28dce1[m HEAD@{78}: pull: Fast-forward
+[33m563f96c[m HEAD@{79}: commit: tag weapon
+[33m1121a54[m HEAD@{80}: commit: HP do cohen
+[33m68dea9b[m HEAD@{81}: pull: Fast-forward
+[33m67251c9[m HEAD@{82}: pull: Fast-forward
+[33m314bad4[m HEAD@{83}: pull: Fast-forward
+[33m3e4b55e[m HEAD@{84}: commit: mais progresso no minigame
+[33m2ce0285[m HEAD@{85}: pull: Merge made by the 'ort' strategy.
+[33m6ed6232[m[33m ([m[1;32mmaster2beta[m[33m)[m HEAD@{86}: reset: moving to 6ed6232b595925df847a9511540491f712b8486d
+[33m896bd5c[m HEAD@{87}: merge refs/remotes/origin/master: Merge made by the 'ort' strategy.
+[33m6ed6232[m[33m ([m[1;32mmaster2beta[m[33m)[m HEAD@{88}: merge master2beta: Fast-forward
+[33m4476869[m HEAD@{89}: checkout: moving from master2beta to master
+[33m6ed6232[m[33m ([m[1;32mmaster2beta[m[33m)[m HEAD@{90}: reset: moving to 6ed6232b595925df847a9511540491f712b8486d
+[33m6ed6232[m[33m ([m[1;32mmaster2beta[m[33m)[m HEAD@{91}: commit: alo diabo
+[33mdc216b0[m HEAD@{92}: commit: testezinho
+[33m4476869[m HEAD@{93}: reset: moving to master@{10 minutes ago}
+[33m4476869[m HEAD@{94}: checkout: moving from ataque to master2beta
+[33md7389f8[m HEAD@{95}: checkout: moving from master2beta to ataque
+[33m4476869[m HEAD@{96}: checkout: moving from master to master2beta
+[33m4476869[m HEAD@{97}: merge master2beta: Fast-forward
+[33m4de6bed[m HEAD@{98}: checkout: moving from master2beta to master
+[33m4476869[m HEAD@{99}: reset: moving to 44768692775882098b111f7da03e90ec6920b4eb
+[33m4476869[m HEAD@{100}: reset: moving to HEAD
+[33m4476869[m HEAD@{101}: commit: MIMIMIMIMIMI
+[33me522c3c[m HEAD@{102}: pull: Fast-forward
+[33m127020c[m HEAD@{103}: pull: Fast-forward
+[33m5cb513c[m HEAD@{104}: pull: Fast-forward
+[33m38c4749[m HEAD@{105}: pull: Fast-forward
+[33m1295c00[m HEAD@{106}: commit: aa
+[33m49cfd4a[m HEAD@{107}: commit: aaa
+[33m93a21e9[m HEAD@{108}: checkout: moving from 93a21e9477ab4979c3740a343bbeca08f617cdea to master2beta
+[33m93a21e9[m HEAD@{109}: checkout: moving from master to origin/master2beta

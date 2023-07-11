@@ -27286,6 +27286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: d47d1ec294d17f34bbab411e39da6a15, type: 3}
+  GameController: {fileID: 2129541688}
 --- !u!114 &1292655363
 MonoBehaviour:
   m_ObjectHideFlags: 0
