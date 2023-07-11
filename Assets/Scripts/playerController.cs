@@ -118,8 +118,8 @@ public class playerController : MonoBehaviour
         Vector2 targetPosition = playerRb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
 
         // Verifica colisões nas camadas NPC e CorposSolidos
-        float playerWidth = playerCollider.bounds.size.x;
-        float playerHeight = playerCollider.bounds.size.y;
+        float playerWidth = playerCollider.bounds.size.x / 2;
+        float playerHeight = playerCollider.bounds.size.y / 2;
         float castDistance = moveSpeed * Time.fixedDeltaTime + Mathf.Max(playerWidth, playerHeight);
         RaycastHit2D hit = Physics2D.BoxCast(playerRb.position, playerCollider.bounds.size, 0f, moveDirection, castDistance / 4, LayerMask.GetMask("CorposSolidos", "NPC"));
 

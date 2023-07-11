@@ -4,49 +4,57 @@ using UnityEngine;
 
 public class FadingRoof : MonoBehaviour
 {
-    public float fadeDuration = 0.5f;
-    private bool isFading;
+    private float fadeDuration = 0.1f; // Duração do efeito de fade (em segundos)
+    private bool isFading; // Indica se o fade está ocorrendo
     private SpriteRenderer roofRenderer;
     private Color startColor;
+    private Color targetColor;
 
-    private void Start(){
+    private void Start()
+    {
         roofRenderer = GetComponent<SpriteRenderer>();
         startColor = roofRenderer.color;
+        targetColor = new Color(startColor.r, startColor.g, startColor.b, 0f);
     }
 
-    private void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player")){
-            if(!isFading){
-                StartCoroutine(FadeRoof(true));
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (!isFading)
+            {
+                StartCoroutine(FadeRoof(targetColor));
             }
         }
     }
-    private void OnTriggerExit2D(Collider2D other){
-        if(other.CompareTag("Player")){
-            if(isFading){
-                StartCoroutine(FadeRoof(false));
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (!isFading)
+            {
+                StartCoroutine(FadeRoof(startColor));
             }
         }
     }
-    private IEnumerator FadeRoof(bool fadeOut){
+
+    private IEnumerator FadeRoof(Color target)
+    {
         isFading = true;
         float fadeTimer = 0f;
-        Color targetColor = fadeOut ? new Color(startColor.r, startColor.g, startColor.b, 0f) : startColor;
-        /*
-            Se fadeOut for 'true', vai pegar os mesmos valores rgb da startColor e modificar somente
-            a transparência (alpha) pra 0f. Se for 'false', vai pegar todos os valores originais de
-            startColor, incluindo o alpha.
-        */
+        Color currentColor = roofRenderer.color;
 
-
-        while(fadeTimer < fadeDuration){
+        while (fadeTimer < fadeDuration)
+        {
             fadeTimer += Time.deltaTime;
             float t = fadeTimer / fadeDuration;
-            roofRenderer.color = Color.Lerp(startColor, targetColor, t); // interpolação linear
+            roofRenderer.color = Color.Lerp(currentColor, target, t);
             yield return null;
         }
 
-        roofRenderer.color = targetColor;
+        roofRenderer.color = target;
+
         isFading = false;
     }
 }
