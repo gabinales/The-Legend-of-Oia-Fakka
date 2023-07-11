@@ -25,6 +25,7 @@ public class IgnorancioQuestStep : QuestStep
         {
             if (item.itemData.nomeLoot == itemBusca)
             {
+                DialogManager.Instance.SetVariableState("questActive", new Ink.Runtime.IntValue(2));
                 FinishQuestStep();
             }
         }

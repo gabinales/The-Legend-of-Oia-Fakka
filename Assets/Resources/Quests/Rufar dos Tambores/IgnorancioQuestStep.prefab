@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4416786882177438145
 MonoBehaviour:
@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b412fba1371f4e4e8c03b04e63c06d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemBusca: Galho Comum
+  itemBusca: T3chnoV1kingZ LP
