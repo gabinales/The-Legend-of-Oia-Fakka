@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 
-
 public class Cama : MonoBehaviour, iInteragivel
 {
     [SerializeField] private GameObject gameController;

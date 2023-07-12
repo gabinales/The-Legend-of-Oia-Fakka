@@ -7,7 +7,8 @@ public enum Tipo{
     Conversa, // Interações sociais
     Interacao,
     Surpresa,
-    Pegar // Interações com itens
+    Pegar, // Interações com itens
+    Dormir
 }
 
 public class AlertaContextual : MonoBehaviour
@@ -41,24 +42,35 @@ public class AlertaContextual : MonoBehaviour
                 alertaContextualAnimator.SetBool("interacao", false);
                 alertaContextualAnimator.SetBool("surpresa", false);
                 alertaContextualAnimator.SetBool("pegar", false);
+                alertaContextualAnimator.SetBool("dormir", false);
             }
             if(tipoDeAcao == Tipo.Interacao){
                 alertaContextualAnimator.SetBool("conversa", false);
                 alertaContextualAnimator.SetBool("interacao", true);
                 alertaContextualAnimator.SetBool("surpresa", false);
                 alertaContextualAnimator.SetBool("pegar", false);
+                alertaContextualAnimator.SetBool("dormir", false);
             }
             if(tipoDeAcao == Tipo.Surpresa){
                 alertaContextualAnimator.SetBool("conversa", false);
                 alertaContextualAnimator.SetBool("interacao", false);
                 alertaContextualAnimator.SetBool("surpresa", true);
                 alertaContextualAnimator.SetBool("pegar", false);
+                alertaContextualAnimator.SetBool("dormir", false);
             }
             if(tipoDeAcao == Tipo.Pegar){
                 alertaContextualAnimator.SetBool("conversa", false);
                 alertaContextualAnimator.SetBool("interacao", false);
                 alertaContextualAnimator.SetBool("surpresa", false);
                 alertaContextualAnimator.SetBool("pegar", true);
+                alertaContextualAnimator.SetBool("dormir", false);
+            }
+            if(tipoDeAcao == Tipo.Dormir){
+                alertaContextualAnimator.SetBool("conversa", false);
+                alertaContextualAnimator.SetBool("interacao", false);
+                alertaContextualAnimator.SetBool("surpresa", false);
+                alertaContextualAnimator.SetBool("pegar", false);
+                alertaContextualAnimator.SetBool("dormir", true);
             }
         }
     }
@@ -69,7 +81,8 @@ public class AlertaContextual : MonoBehaviour
             alertaContextualAnimator.SetBool("conversa", false);
             alertaContextualAnimator.SetBool("interacao", false);
             alertaContextualAnimator.SetBool("surpresa", false);
-            alertaContextualAnimator.SetBool("pegar", true);
+            alertaContextualAnimator.SetBool("pegar", false);
+            alertaContextualAnimator.SetBool("dormir", false);
         }
     }
 }

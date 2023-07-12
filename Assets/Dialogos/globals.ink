@@ -7,6 +7,7 @@ VAR SPAWN = 0
 VAR ArmaAtual = "Nenhuma" // Poderia ser: Grassblade, etc.
 VAR HoraDoDia = 0
 
+
 // NPC
     // Zoroastros
 VAR TalkedToZoroastros = "Não"
@@ -17,3 +18,6 @@ VAR questActive = 0
 
 // Etc.
 VAR pokemon_name = ""
+
+VAR NomeDoItem = "aaa"
+VAR Quantidade = 0
