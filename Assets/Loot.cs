@@ -6,7 +6,9 @@ public class Loot : MonoBehaviour, IColetavel
 {
     public static event HandleLootCollected OnLootCollected;
     public delegate void HandleLootCollected (ItemData itemData);
-    private ItemData lootData;
+
+    //mudei aqui para "public". Ass. Victor 08/07/2023 AEON de peixes
+    public ItemData lootData;
 
     public void Collect(){
         Destroy(gameObject);

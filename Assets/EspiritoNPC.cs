@@ -8,64 +8,44 @@ public class EspiritoNPC : MonoBehaviour, iInteragivel
 {
     [SerializeField] private TextAsset inkJSON;
 
+    private GameObject Ignorancio;
+
+    public GameController GameController;
+
     //private Story inkStory;
 
-    private bool spawned = false;
+    //private bool spawned = false;
 
-    private Dictionary<string, Ink.Runtime.Object> variables;
+    //private Dictionary<string, Ink.Runtime.Object> variables;
 
     Story inkStory;
 
     public void Start()
     {
         inkStory = new Story(inkJSON.text);
+        Ignorancio = transform.GetChild(0).gameObject;
     }
 
     public void Update()
     {
         int spawn = ((Ink.Runtime.IntValue)DialogManager.Instance.GetVariable("SPAWN")).value;
 
-        if (spawn == 1 && !spawned)
+        if (GameController.timeOfDay != 2)
         {
-            spawned = true;
-            EnemySpawner enemySpawner = GetComponentInChildren<EnemySpawner>();
-            enemySpawner.SpawnEnemies();
+            Ignorancio.GetComponentInChildren<SpriteRenderer>().enabled = false;
+
+        }
+        else if (spawn == 1)
+        {
+            Ignorancio.GetComponentInChildren<SpriteRenderer>().enabled = true;
+
         }
     }
 
-    /* public void ChecaVariaveisLocais()
-    {
-        //SPAWN é um bool definido no arquivo Ink "espirito"
-        //converte Ink.Runtime.Object (valor da variavel bool SPAWN) para string 
-        string value = inkStory.variablesState.GetVariableWithName("SPAWN").ToString();
-
-        //if(value == "1")
-        Debug.Log("SPAWN: " + value);
-
-        /*   variables = new Dictionary<string, Ink.Runtime.Object>();
-          foreach (string name in inkStory.variablesState)
-          {
-              Ink.Runtime.Object value = inkStory.variablesState.GetVariableWithName(name);
-              variables.Add(name, value);
-              Debug.Log("nova variável LOCAL adicionada: " + name + " = " + value);
-
-              inkStory.variablesState.variableChangedEvent += (name, value) => Debug.Log("mudou variavel");
-
-          } 
-    } */
-
-
     public void Interacao()
     {
-        string pokemonName = ((Ink.Runtime.StringValue)DialogManager.Instance.GetVariable("pokemon_name")).value;
-
-        if (pokemonName == "Squirtle" && !spawned)
-        {
-            EnemySpawner enemySpawner = GetComponentInChildren<EnemySpawner>();
-            enemySpawner.SpawnEnemies();
-            spawned = true;
-        }
-
+        //Atualiza a ink var "hora do dia" para o valor atual do timeofday (convertido para ink object)
+        DialogManager.Instance.SetVariableState("HoraDoDia", new Ink.Runtime.IntValue(GameController.timeOfDay));
         DialogManager.Instance.StartDialogue(inkJSON);
     }
 }

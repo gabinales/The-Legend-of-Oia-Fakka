@@ -211,7 +211,7 @@ public class playerController : MonoBehaviour
 
         if (collider != null)
         {
-            Debug.Log("interagiu com o npc: " + collider);
+            //Debug.Log("interagiu com o npc: " + collider);
             collider.GetComponent<iInteragivel>()?.Interacao(); // ? significa: Se é interagível, execute a função.
         }
         Debug.Log("não está interagindo com a layer NPC");

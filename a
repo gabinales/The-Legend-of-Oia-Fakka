@@ -1,0 +1,541 @@
+[33mcommit 5baf48d9e5aa6b16c18429f6a9b66b14b1285e26[m[33m ([m[1;36mHEAD -> [m[1;32mataque[m[33m)[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jul 11 13:58:36 2023 -0300
+
+    fading roof melhorado
+
+[33mcommit 38402ae05408c33f7ec234462ec2b9c4c5f218f1[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jul 10 18:16:23 2023 -0300
+
+    fade telhado
+    
+    falta colocar colisão nos móveis e ajustar visibilidade
+
+[33mcommit cc925b4303732b4e5e3697d00772cc9d25c902a6[m
+Author: victor-v-b <53495630+victor-v-b@users.noreply.github.com>
+Date:   Sat Jul 8 15:46:21 2023 -0300
+
+    fodaseee
+
+[33mcommit ce55d36c9210b987e8d3ee34d1e1c9a9e472377c[m
+Author: victor-v-b <53495630+victor-v-b@users.noreply.github.com>
+Date:   Sat Jul 8 15:42:59 2023 -0300
+
+    fix cama
+
+[33mcommit 359f6e131e0c1acfcb2bd2a648ebf4a4fff3370d[m
+Merge: 5a7be2a a83c456
+Author: victor-v-b <53495630+victor-v-b@users.noreply.github.com>
+Date:   Sat Jul 8 15:06:48 2023 -0300
+
+    cama, timeofday no gamecontroller
+
+[33mcommit 5a7be2a82c944855ea56d52b745079baaf9a6909[m
+Author: Ctor <ctor@mail.com>
+Date:   Sat Jul 8 13:19:46 2023 -0300
+
+    aa
+
+[33mcommit a83c4565df296d164899eb528fe73fe7dda7db0b[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jul 7 23:22:20 2023 -0300
+
+    Quest Zoroastros Ok (acho)
+    
+    quest do zoroastros praticamente funcional, só falta a parte visual da UI.
+
+[33mcommit 7bb90c9aa7621923c6d1a721e0473e30a350beca[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Wed Jul 5 16:00:48 2023 -0300
+
+    última versão
+
+[33mcommit 0f13299e7cf108ed268a8969ef949005cf8f836a[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jul 3 11:24:43 2023 -0300
+
+    sistema de quest
+    
+    GameEventsManager gerencia o script QuestEvents, responsável por iniciar, avançar e finalizar as quests.
+    
+    Sistema de Quest (scripts):
+    Quest
+    QuestData
+    QuestManager
+    Quest Point
+    QuestState
+    QuestStep
+    QuestInfoSO (Scriptable Object)
+    CutTheGrassQuestStep
+    QuestStepState (incompleto)
+
+[33mcommit 5ad8797e6addeba7b7412774fb7cddf0adc2b05a[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 30 21:00:48 2023 -0300
+
+    atualização zoroastros
+
+[33mcommit 5e312d4838e4a175838b3aacc629f508aa6d952c[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Thu Jun 29 01:52:58 2023 -0300
+
+    patch Alerta Contextual
+    
+    alerta contextual de pegar itens
+    aperte V para pegar itens
+
+[33mcommit 74abcc390db2695576c928edd35224026ed3e244[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Wed Jun 28 21:22:51 2023 -0300
+
+    ++ cutscene
+    
+    e ajustes no script do Alerta Contextual
+
+[33mcommit bed9f35d2002b2c287475dddf24173f30bf06542[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Wed Jun 28 04:28:41 2023 -0300
+
+    + 1 cutscene
+
+[33mcommit 832486eb354cddefedaaec1f8e206c2a230dbf35[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jun 27 23:46:12 2023 -0300
+
+    patch 27.06
+    
+    diálogos ink
+    cutscene
+    assets
+    ignorâncio
+
+[33mcommit 90cc15b073153f14e4bdb21623d818c5af70eeea[m
+Merge: 7151f75 2bc09ee
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jun 27 23:27:45 2023 -0300
+
+    Merge branch 'gincana-do-barão-dantene' into ataque
+
+[33mcommit 2bc09ee66741ab1003a1fc9877c41b7b2e57f618[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jun 27 18:29:31 2023 -0300
+
+    cutscene
+    
+    ainda falta:
+    sfx da cruz sendo destruída
+
+[33mcommit 7151f75bc2d572e6e4c3900106ad91d9b439dda4[m[33m ([m[1;32mgincana-do-barão-dantene[m[33m)[m
+Author: Ctor <ctor@mail.com>
+Date:   Tue Jun 27 19:02:22 2023 -0300
+
+    dialogo ignorancio
+
+[33mcommit a8bf0fe2aa76f4de8a29ff18f90a95faa9aa1b01[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jun 27 14:19:50 2023 -0300
+
+    novos assets
+
+[33mcommit 86594e2b7a4b3d943079cb7714e3955b8e3b8d04[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jun 26 17:38:59 2023 -0300
+
+    display de status, sistema de diálogos e menu do inventário
+
+[33mcommit 6890b0223f1ddddc331608039453d97487a08eb3[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jun 26 15:43:58 2023 -0300
+
+    tudo funcionando até o último patch
+    
+    + inventário funcional
+    + diálogo funcional
+    
+    - falta consertar o HP na UI
+
+[33mcommit 842b5c5dd738416ad1679d9a392f1b7359161fd3[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jun 26 03:54:57 2023 -0300
+
+    menu remodelado
+
+[33mcommit bbb40f490c26546ba70ad3efcd3a319a80a6a94e[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sun Jun 25 20:37:59 2023 -0300
+
+    menu de pause navegável
+    
+    setas verticais para navegar entre os menus principais e setas horizontais para navegar entre os sub-itens.
+
+[33mcommit a704e10c2c99c730b36bb37444d11d52a3840544[m
+Merge: 2d72008 97a7a92
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sun Jun 25 16:36:03 2023 -0300
+
+    Merge branch 'dialogo' into gincana-do-barão-dantene
+
+[33mcommit 2d72008797d53795da12e7487ce10489ac578cb0[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sun Jun 25 16:32:35 2023 -0300
+
+    inventário + movimentação
+
+[33mcommit 97a7a9242b9df2064d85a58762a5380be7db34a7[m[33m ([m[1;31morigin/dialogo[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdialogo[m[33m)[m
+Author: Ctor <ctor@mail.com>
+Date:   Sun Jun 25 16:25:12 2023 -0300
+
+    dialogo sistemas
+
+[33mcommit ab71136be00f3d605155b5072263d7309da7053d[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 24 23:05:32 2023 -0300
+
+    patch inventário
+
+[33mcommit c093102958b045fa7cb28bc7aacb7ff2877b0a25[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 24 14:51:44 2023 -0300
+
+    patch 24.06
+    
+    tenta aí
+
+[33mcommit e573e1ee27c46544ce389580737677deebc3b6fe[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 24 01:31:01 2023 -0300
+
+    gamecontroller agora pausa no K
+
+[33mcommit ddbef8233dcd65d10460a8a8a20e3829901d086b[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 23 23:49:36 2023 -0300
+
+    sistema de inventário
+    
+    + ajustes
+
+[33mcommit 956bef77a990a6c995467553044734bf24f5946e[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 23 16:36:58 2023 -0300
+
+    patch
+    
+    o knockback ainda tá mais ou menos
+
+[33mcommit 45c1e3a4ec23a7e10a063c25098ee1ed398a7a03[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 23 00:18:39 2023 -0300
+
+    UI display de vida
+    
+    + outras coisas
+
+[33mcommit 8504deac849b374d465ea38fba5bb8c5f5b3bedf[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Thu Jun 22 13:38:10 2023 -0300
+
+    espada vfx revamp
+    
+    ajustei hitboxes e partículas do ataque
+
+[33mcommit 4b9c0dd0a184b88bc498b65bcca6053e5b554e5f[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Wed Jun 21 23:07:42 2023 -0300
+
+    particle system na espadahit
+
+[33mcommit dfc457c291d07bd99c9ed369c7f25561d3d2c8e8[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Wed Jun 21 05:03:59 2023 -0300
+
+    loot drop
+    
+    + 3 itens coletáveis (scriptable objects)
+    - falta debuggar
+
+[33mcommit 37d2eba3b23deb00ff4d2a9fda6eb263c163e225[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jun 20 23:58:59 2023 -0300
+
+    bloom + algumas partículas
+
+[33mcommit b2d7daf3a21fdff38ac48e992530a281d1607186[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jun 20 17:48:29 2023 -0300
+
+    urp + iluminação em Mjonir Field
+
+[33mcommit c14dbc9b4d4d8342530df0485fd37b993a5eb708[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jun 20 03:49:28 2023 -0300
+
+    patch enemy spawner
+    
+    + sfx enemy spawner
+    + hddisplay consertado na scene da gincana
+
+[33mcommit 50c1ff60a30f5731b0dc8721effbff474c768b9d[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jun 20 02:48:29 2023 -0300
+
+    alavanca spawna inimigos
+    
+    implementação do "Spawner de inimigos":
+    spawna uma lista de inimigos selecionados de acordo com a lista de posições especificadas da tela.
+
+[33mcommit 0352cb1f4abaf14f5db4084c66ea4eb4b18f8a02[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Tue Jun 20 00:19:37 2023 -0300
+
+    correção de bugs + sfx
+    
+    + sfx Cohen, Alavanca e Plínio
+    + correção de bugs relacionados a áudio
+    + alteração em EspadaHit para decidir se o último hit é fatal (som único de morte) ou não (som comum de dano)
+    
+    falta:
+    - inimigo pode ficar travado na animação de "damaged"
+
+[33mcommit 7cbdb40d259472cb0078d4d2a8081db44a4f61bc[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jun 19 20:15:53 2023 -0300
+
+    animação de dano Cohen
+
+[33mcommit 5690f3c8e1adde42b27b8fda902a15be3e39d85c[m
+Merge: 777aca5 0101191
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jun 19 19:50:20 2023 -0300
+
+    Merge branch 'gincana-do-barão-dantene' of https://github.com/gabinales/The-Legend-of-Oia-Fakka into gincana-do-barão-dantene
+
+[33mcommit 777aca50f1f5f1da0de04fb7cedb831eda982906[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jun 19 19:49:42 2023 -0300
+
+    alavanca funcionando
+
+[33mcommit 0101191a23ffb876cd062849eaf7b7bbab7153f6[m
+Author: Ctor <ctor@mail.com>
+Date:   Mon Jun 19 16:55:02 2023 -0300
+
+    popup de dano funcionando
+
+[33mcommit d0b5dbc94001a6ad65cddc9706de9b5f9680ca3a[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jun 19 12:53:22 2023 -0300
+
+    assets armadilha
+
+[33mcommit f7844b8ff78f0bc5548d29d552a238d6fbe6fdf7[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jun 19 11:49:44 2023 -0300
+
+    switch On/Off
+    
+    + animação
+    + colisão
+
+[33mcommit bd50d5b4f318e795a6488340c6398baec6628b90[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Mon Jun 19 10:42:51 2023 -0300
+
+    interface ISwitch
+    
+    objetos switch podem ser ativados ou desativados
+    
+    falta:
+    - funções da alavanca
+    - animação da alavanca
+
+[33mcommit 785c2128c383d0a03cb4d36ed5c9e38c10ef4d89[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sun Jun 18 23:44:49 2023 -0300
+
+    patch do patch
+    
+    tudo certo
+
+[33mcommit 6edd8ce4d64869f04b2441fbe105dffb2a057361[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sun Jun 18 23:15:52 2023 -0300
+
+    patch geral: diálogos
+
+[33mcommit 4ec49dffa840ce8238807d1e2f547cf36d8d8d77[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sun Jun 18 21:24:24 2023 -0300
+
+    cenário + movimentação básica
+    
+    falta:
+    - chat (Duardo Mimmcher)
+    - ativar a alavanca
+
+[33mcommit 681492c0a30bc420de9b685ac0336066c304536a[m
+Author: Ctor <ctor@mail.com>
+Date:   Sun Jun 18 06:00:26 2023 -0300
+
+    musik
+
+[33mcommit acddbd1a0c6b7ba1ddfd9b2ddf18700e6b50dea7[m
+Merge: 97cc8d2 19c6898
+Author: Ctor <ctor@mail.com>
+Date:   Sun Jun 18 04:58:20 2023 -0300
+
+    hp display no momento esta com reset manual apertando a letra "z". esse comando está no script game controller no objeto game controller.
+    
+    precisa tirar esse reset e na verdade fazer um instantiate de um novo canvas
+
+[33mcommit 19c68983fd3979cb7838e39baa0a7c52c4f5761b[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 17 23:25:07 2023 -0300
+
+    agora vai
+
+[33mcommit 7d5788c1ad0903ac8d53fa5be246c7935b058449[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 17 22:59:25 2023 -0300
+
+    ta tudo fodido
+
+[33mcommit 96da93ad0608a2799b934136af5f0b6477b54f43[m[33m ([m[1;31morigin/damageHandler-unificado[m[33m, [m[1;32mdamageHandler-unificado[m[33m)[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 17 19:46:05 2023 -0300
+
+    AlertaContextual Script
+    
+    função de pegar coletável temporariamente desabilitada.
+
+[33mcommit 9bf48d1f6c4a232cbc7d3fc4c505ed27a86769e2[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 17 15:51:30 2023 -0300
+
+    correção de bugs
+
+[33mcommit 97cc8d232d4445ac7e3dd8ea09ea268f38025af6[m
+Author: Ctor <ctor@mail.com>
+Date:   Sat Jun 17 12:01:58 2023 -0300
+
+    revert caso de merrda
+
+[33mcommit 4c9190e934e2686de889016c08154bdea1ad869a[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 17 05:06:02 2023 -0300
+
+    damage handler 3.0
+    
+    damage handler agora corta a grama
+
+[33mcommit 19b424b93eced4152b0442a8227977bfcd7d23fa[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 17 02:54:06 2023 -0300
+
+    correção no damage handler
+    
+    adiciona corretamente múltiplos damageHandles à lista.
+
+[33mcommit 25236f9a916495167be56e697553fa174620b93b[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Sat Jun 17 00:21:56 2023 -0300
+
+    Gerenciador de Dano Universal
+    
+    Integração dos scripts DamageHandler, EspadaHit e playerController.
+
+[33mcommit 287dfae795e426c1e22285e8dc5065f47ab78dab[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 16 17:21:57 2023 -0300
+
+    pop-up dano
+
+[33mcommit 80ed0f2c2d0bdb4d51fbe73efb3ba5e1d1bae79c[m
+Author: Ctor <ctor@mail.com>
+Date:   Fri Jun 16 12:52:20 2023 -0300
+
+    tentativa de display hp
+
+[33mcommit 53cae0ab71ab5b28e5284eae2a884cdaff8f658b[m
+Author: Ctor <ctor@mail.com>
+Date:   Fri Jun 16 12:45:40 2023 -0300
+
+    tentativa de display hp
+
+[33mcommit 526fd055c514562a2f26338a9ce8aa1d491a1e5f[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 16 11:12:47 2023 -0300
+
+    [inimigo] cohen patch 2.0 correto
+    
+    p.s.: quebrou os npcs.
+
+[33mcommit e28dce16b82af60fcde1607972a68f27eeca85d5[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 16 11:10:31 2023 -0300
+
+    [inimigo] cohen patch 2.0
+    
+    p.s.: quebrou os npcs.
+
+[33mcommit 563f96cee7d7de2a4d45dfcc7376cb6f4bbb1d97[m
+Author: Ctor <ctor@mail.com>
+Date:   Fri Jun 16 10:13:37 2023 -0300
+
+    tag weapon
+
+[33mcommit 1121a544bedb56643b0beb0727e25a42feae7a82[m
+Author: Ctor <ctor@mail.com>
+Date:   Fri Jun 16 10:00:59 2023 -0300
+
+    HP do cohen
+
+[33mcommit 68dea9bd299ef6942558ecababf542e3cd6ed009[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 16 08:34:45 2023 -0300
+
+    update spritesheet cohenPerseguicao
+
+[33mcommit 83004c78a3430b0e572465e93458d753ba4c88a7[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 16 08:23:56 2023 -0300
+
+    [inimigo] cohen pt2
+
+[33mcommit 683bcf97ba1f6aa2f8d69f9e39bcff1dd694bfa6[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 16 03:53:10 2023 -0300
+
+    [inimigo] cohen idle
+
+[33mcommit fb5eac52b037035804d3c1f75b505b96e34b976a[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 16 01:24:26 2023 -0300
+
+    pivot sprite npc corrigido
+
+[33mcommit 67251c9901af68037b7d257262c1939bb49cc6a5[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 16 01:19:50 2023 -0300
+
+    layer npc
+
+[33mcommit 314bad494ecb0467c2347c39ce11a2c6248d442f[m
+Author: gabinales <136241817+gabinales@users.noreply.github.com>
+Date:   Fri Jun 16 01:03:50 2023 -0300
+
+    alterações collider do tilemap Barreiras
+
+[33mcommit 3e4b55eeb655b21935de3dbc7081d294a26d5bac[m
+Author: Ctor <ctor@mail.com>
+Date:   Thu Jun 15 22:51:13 2023 -0300
+
+    mais progresso no minigame
+
+[33mcommit 2ce0285dbdabc8289ec4c31fa152c053437d853f[m
+Merge: 6ed6232 29adbe3
+Author: Ctor <ctor@mail.com>
+Date:   Thu Jun 15 22:49:14 2023 -0300
+
+    Mgit reset --hard 6ed6232b595925df847a9511540491f7erge branch 'master' of https://github.com/gabinales/The-Legend-of-Oia-Fakka
