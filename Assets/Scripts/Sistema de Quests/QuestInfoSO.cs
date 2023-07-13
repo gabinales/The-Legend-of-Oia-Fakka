@@ -19,7 +19,8 @@ public class QuestInfoSO : ScriptableObject
     [Header("Etapas")]
     public GameObject[] questStepPrefabs; // Lista de prefabs que representam as etapas da Quest
 
-    // Recompensas etc.
+    [Header("Recompensas")]
+    public ItemData[] recompensas;
 
     private void OnValidate(){ // Método nativo do Editor. Altera o valor de "id" para o nome do SO.
         #if UNITY_EDITOR

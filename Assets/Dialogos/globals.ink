@@ -13,6 +13,7 @@ VAR HoraDoDia = 0
 VAR TalkedToZoroastros = "Não"
 VAR CutsceneGrassblade = "Não viu cutscene"
 VAR ZoroastrosDialogState = "Não interagiu"
+VAR EntregouChave = "N"
     // Ignorancio
 VAR questActive = 0
 

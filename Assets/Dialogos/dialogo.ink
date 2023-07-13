@@ -1,6 +1,7 @@
 INCLUDE globals.ink
 EXTERNAL StartQuest(id)
 EXTERNAL FinishQuest(id)
+EXTERNAL RecebeuChaveZoroastros()
 
 EXTERNAL ChangeInkVariable(variableName, newValue)
 
@@ -155,11 +156,6 @@ EXTERNAL ChangeInkVariable(variableName, newValue)
             ->END
 === quest_finalizada ===
     {~Gurdim|Moleque|Garoto}, como vai? O que ainda faz por aqui? #speaker: Zoroastros
-    * Por favor, me explique novamente como usar a espada! #speaker: Svard
-        Ora, mas que memória ruim, {~gurdim|moleque|garoto}! Vou repetir mais uma vez, então preste atenção: seja qual for a arma que você estiver usando, simplesmente aperte X para atacar. E é isso!
-        ** Entendido! #speaker: Svard
-            E não se esqueça... Você não conseguiu essa espada comigo! #speaker: Zoroastros
-            -> END
     * Eu gostaria de ouvir mais a respeito das pessoas desaparecidas. #speaker: Svard
         {~Gurdim|Moleque|Garoto}, venha cá, eu sei o que você está pensando: "Eu sou jovem, tenho uma arma... Sou invencível como um rinoceronte-lanudo!". #speaker: Zoroastros
         Criança, isso é balela. Não tente bancar o herói. Siga na linha e quem sabe você não consegue chegar no seu destino sem nenhum arranhão, hein?
@@ -167,3 +163,22 @@ EXTERNAL ChangeInkVariable(variableName, newValue)
         ** Pode deixar, sr. Zoroastros. #speaker: Svard
             E não se esqueça... Você não conseguiu essa espada comigo! #speaker: Zoroastros
             -> END
+    * Por acaso há algum banheiro por aqui? #speaker: Svard
+        Ora, mas é claro! #speaker: Zoroastros
+        Ou você acha que eu faço as minhas necessidades no chão, como um animal?
+        {EntregouChave == "N": -> zoroastros_entrega_a_chave}
+        {EntregouChave == "S": -> zoroastros_ja_entregou_a_chave}
+        -> END
+            
+        
+=== zoroastros_entrega_a_chave ===
+    O banheiro fica à direita. Você vai precisar passar por dentro da minha cabana.
+    ~ RecebeuChaveZoroastros()
+    ~ ChangeInkVariable("EntregouChave", "S")
+    Pegue esta chave, {~gurdim|moleque|garoto}. E aproveite a vista, heh-heh!
+    -> END
+        
+=== zoroastros_ja_entregou_a_chave ===
+    Siga à direita e passe por dentro da cabana. Use a chave que eu te entreguei (aquela com o chaveiro maneiro) para abrir a porta.
+    E não deixe de dar descarga quando terminar, {~gurdim|moleque|garoto}!
+    -> END

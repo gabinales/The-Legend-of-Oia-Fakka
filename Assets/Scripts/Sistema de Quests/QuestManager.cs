@@ -105,7 +105,14 @@ public class QuestManager : MonoBehaviour
     }
 
     private void ClaimRewards(Quest quest){
-        Debug.Log("GANHOU RECOMPENSA!!!");
+        Debug.Log("GANHOU RECOMPENSA!!! (ou não)");
+        // Adiciona as recompensas (se houver) no inventário:
+        if(quest.info.recompensas != null){
+            Inventory inventory = FindObjectOfType<Inventory>();
+            foreach(ItemData recompensa in quest.info.recompensas){
+                inventory.Add(recompensa);
+            }
+        }
     }
 
     private void QuestStepStateChange(string id, int stepIndex, QuestStepState questStepState){

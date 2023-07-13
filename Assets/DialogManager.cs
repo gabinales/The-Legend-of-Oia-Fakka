@@ -115,6 +115,17 @@ public class DialogManager : MonoBehaviour
             Ink.Runtime.Object obj = new Ink.Runtime.StringValue(newValue);
             DialogManager.Instance.SetVariableState(variableName, obj);
         });
+        // Funções que devem passar futuramente para os scripts apropriados:
+        currentStory.BindExternalFunction("RecebeuChaveZoroastros", () => // Para receber a 
+        {                                                                   // chave do Zoroastros
+            Inventory inventory = FindObjectOfType<Inventory>();
+            NPCZoroastros zoroastros = FindObjectOfType<NPCZoroastros>();
+            if(zoroastros != null){
+                ItemData chave = zoroastros.chave;
+                zoroastros.EntregouChave();
+                inventory.Add(chave);
+            }
+        });
         currentStory.BindExternalFunction("MudaHora", (int id) =>
                 {
                     gameController.timeOfDay = id;
@@ -181,7 +192,7 @@ public class DialogManager : MonoBehaviour
 
         dialogVariables.StopListening(currentStory);
 
-        // Para usar no Ink (deixar de usar, no caso)
+        // Para usar no Ink (deixar de usar, no caso) em tese é pra dar unbind em toda função q foi adicionada anteriormente
         currentStory.UnbindExternalFunction("StartQuest");
 
         gameController.state = GameState.MovimentacaoLivre;
