@@ -1,0 +1,2 @@
+"Aqui jaz Astolfo, o bravo camponês que, em um ato de extrema ousadia, tentou domesticar os porcos selvagens das Florestas Abandonadas. #speaker: Lápide
+Infelizmente, as criaturas simplesmente riram de suas tentativas e o presentearam com uma bela charge na primeira página do Jornal dos Porcos. Não suportanto a vergonha, Astolfo jogou-se do penhasco."

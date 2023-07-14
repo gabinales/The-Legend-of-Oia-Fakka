@@ -1,0 +1,2 @@
+"Aqui repousa Maria das Graças, nossa eterna Leiteira Viajante no Tempo. #speaker: Lápide
+Ela dominou a arte de ordenhar vacas em diferentes épocas, garantindo sempre leite fresco através do continuum espaço-tempo. Seu legado permanece um mistério até hoje."

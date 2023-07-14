@@ -1,0 +1,1 @@
+"Aqui descansa em paz nosso eterno carteiro, Barnabé, tragicamente esmagado por uma abóbora gigante." #speaker: Lápide

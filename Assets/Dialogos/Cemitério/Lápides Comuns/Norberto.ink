@@ -1,0 +1,2 @@
+"Que descanse em paz, Norbert, o guru da colheita zen. Ele passou anos ensinando as plantas a meditar, acreditando que uma alface em paz poderia levar à iluminação de toda a horta. #speaker: Lápide
+Ainda hoje, seu jardim é o mais sereno de todos."

@@ -1,0 +1,2 @@
+"Aqui jaz Florisbela, estimada cultivadora de vegetais de proporções absurdas. #speaker: Lápide
+Sua abóbora gigante ganhou fama nas redondezas, mas causou estragos catastróficos ao rolar morro abaixo, levando consigo o celeiro e o pobre carteiro local, Barnabé."
