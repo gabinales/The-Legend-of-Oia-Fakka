@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b65ea56aaafc8f4d9ae10193fcaa01c
+guid: 86f9655b914b78d4ca9c27b756a2a5ef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,64 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tilesheet1_casa-porta_0
+      name: tilesheet1_casa-porta 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 2
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52429d3ba2285c949bcb7723b84cd7ac
-      internalID: -929314571
+      spriteID: 81019ef2f30e0f445a9bda9d2b16733e
+      internalID: 166599892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesheet1_casa-porta_1
+      name: tilesheet1_casa-porta 1_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 17
+        y: 2
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d0676a201de10947a6bf0bd2050019a
-      internalID: -1518650052
+      spriteID: ad349cf9f582edf4a809beb157246f6f
+      internalID: -1399744910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesheet1_casa-porta_2
+      name: tilesheet1_casa-porta 1_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 33
+        y: 2
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30b395279a978124684f38f9a441aeab
-      internalID: 158168378
+      spriteID: c00e5532751db9c40a95a5fbdd6cac14
+      internalID: 1783292670
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tilesheet1_casa-porta_0: -929314571
-      tilesheet1_casa-porta_1: -1518650052
-      tilesheet1_casa-porta_2: 158168378
+      tilesheet1_casa-porta 1_0: 166599892
+      tilesheet1_casa-porta 1_1: -1399744910
+      tilesheet1_casa-porta 1_2: 1783292670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

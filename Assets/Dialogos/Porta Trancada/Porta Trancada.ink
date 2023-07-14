@@ -1,0 +1,1 @@
+Porta trancada. #speaker: Aviso

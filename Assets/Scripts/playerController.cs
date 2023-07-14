@@ -203,18 +203,18 @@ public class playerController : MonoBehaviour
     public void Interage()
     {
         var orientacaoJogador = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
-        var posicaoInteracao = transform.position + orientacaoJogador;
+        var posicaoInteracao = transform.position + orientacaoJogador / 4;
 
         Debug.DrawLine(transform.position, posicaoInteracao, Color.red, 1f);
 
-        var collider = Physics2D.OverlapCircle(posicaoInteracao, 0.2f, npcLayer); // Checa se, ao fim da linha vermelha (posicaoInteracao) há um NPC.
+        var collider = Physics2D.OverlapCircle(posicaoInteracao, 0.2f, npcLayer | corposSolidosLayer); // Checa se, ao fim da linha vermelha (posicaoInteracao) há um NPC.
 
         if (collider != null)
         {
             //Debug.Log("interagiu com o npc: " + collider);
             collider.GetComponent<iInteragivel>()?.Interacao(); // ? significa: Se é interagível, execute a função.
         }
-        Debug.Log("não está interagindo com a layer NPC");
+        Debug.Log("Não há nenhum NPC ou Corpo Sólido específico ao seu alcance.");
 
     }
 }
