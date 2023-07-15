@@ -32,13 +32,14 @@ public class playerController : MonoBehaviour
     public Rigidbody2D playerRb;
     private bool isMoving = false;
     private bool isAttacking = false; // Para controlar o estado de ataque.
-    private Vector2 moveDirection;
-
+    public Vector2 moveDirection;
 
     //Animação do sprite
-    private Animator animator;
+    public Animator animator;
     private int moveXHash = Animator.StringToHash("moveX");
     private int moveYHash = Animator.StringToHash("moveY");
+
+    public bool isCutsceneActive = false;
 
     public void podeMover()
     {
@@ -57,7 +58,7 @@ public class playerController : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         playerCollider = GetComponent<BoxCollider2D>();
         //damageHandler = GetComponent<DamageHandler>();
     }
@@ -65,7 +66,7 @@ public class playerController : MonoBehaviour
     public void HandleUpdate() // Tudo relacionado a inputs
     {
         //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando.
-        if (!isMoving && !isAttacking)
+        if (!isMoving && !isAttacking && !isCutsceneActive)
         { //Move-se apenas se estiver parado e não estiver atacando.
             moveDirection.x = Input.GetAxisRaw("Horizontal");
             moveDirection.y = Input.GetAxisRaw("Vertical");
@@ -94,7 +95,7 @@ public class playerController : MonoBehaviour
         //Botão de Ataque (X)
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.X))
         {
-            if (!isMoving)
+            if (!isMoving && !isCutsceneActive)
             {
                 isAttacking = true;
                 animator.SetTrigger("Atacando");

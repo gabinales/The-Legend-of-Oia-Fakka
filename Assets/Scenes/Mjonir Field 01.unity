@@ -17123,7 +17123,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 635172595
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -23033,7 +23033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.2, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30271,7 +30271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843953546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.52, y: 9.14, z: 0}
+  m_LocalPosition: {x: 6.53, y: 9.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30479,6 +30479,8 @@ PlayableDirector:
     value: {fileID: 1114035506}
   - key: {fileID: -7097598887010169193, guid: d944e85835b445b4da1c2f4a6ddef35e, type: 2}
     value: {fileID: 1114035507}
+  - key: {fileID: -4823077935724058400, guid: ca384886ce3d54b42902b7a0da42d847, type: 2}
+    value: {fileID: 6690629918375471041}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &847547307
@@ -32516,11 +32518,11 @@ MonoBehaviour:
   - triggerTransform: {fileID: 1648543824}
     cutscene: {fileID: 11400000, guid: ca384886ce3d54b42902b7a0da42d847, type: 2}
     cutsceneJaReproduzida: 0
-    duracaoPausa: 2
+    duracaoPausa: 3
   - triggerTransform: {fileID: 1808148774}
     cutscene: {fileID: 11400000, guid: 39157dc1096012e40b65f66ebf2900a8, type: 2}
     cutsceneJaReproduzida: 0
-    duracaoPausa: 2
+    duracaoPausa: 3
   pController: {fileID: 6690629918375471029}
 --- !u!4 &1084150158
 Transform:
@@ -36534,6 +36536,8 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: 895bec6ed12370f4790b034027db8116, type: 3}
   withChat: 1
   playerStats: {fileID: 6690629918375471038}
+  pController: {fileID: 6690629918375471029}
+  duracaoPausa: 2
   director: {fileID: 847547306}
   cutscene: {fileID: 11400000, guid: d944e85835b445b4da1c2f4a6ddef35e, type: 2}
 --- !u!61 &1410691185
@@ -49910,7 +49914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1128055064071636347, guid: d4c85120c11571f419c99add9992be4e, type: 3}
       propertyPath: m_Pitch
-      value: 1.2000844
+      value: 1.2541504
       objectReference: {fileID: 0}
     - target: {fileID: 1412267782628194409, guid: d4c85120c11571f419c99add9992be4e, type: 3}
       propertyPath: m_RootOrder
@@ -49918,11 +49922,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1412267782628194409, guid: d4c85120c11571f419c99add9992be4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.71
+      value: -4.29
       objectReference: {fileID: 0}
     - target: {fileID: 1412267782628194409, guid: d4c85120c11571f419c99add9992be4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.03
+      value: -1.81
       objectReference: {fileID: 0}
     - target: {fileID: 1412267782628194409, guid: d4c85120c11571f419c99add9992be4e, type: 3}
       propertyPath: m_LocalPosition.z

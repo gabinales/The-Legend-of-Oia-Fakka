@@ -86,7 +86,7 @@ public class DialogManager : MonoBehaviour
 
     //chamado por Interaçao() de iInteragiveis
     public void StartDialogue(TextAsset inkJSON)
-    {
+    {   
         gameController.state = GameState.Dialogo;
         caixaDeDialogo.SetActive(true);
         currentStory = new Story(inkJSON.text);

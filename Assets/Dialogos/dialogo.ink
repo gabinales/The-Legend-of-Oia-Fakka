@@ -10,9 +10,9 @@ EXTERNAL ChangeInkVariable(variableName, newValue)
 
 === main ===
 {ArmaAtual != "Nenhuma" && CutsceneGrassblade == "Não viu cutscene": -> pegou_a_espada}
-{ZoroastrosDialogState == "Já pegou a espada" && TalkedToZoroastros == "Não": -> conversou_depois_de_pegar_a_espada}
+{CutsceneGrassblade == "Viu cutscene" && TalkedToZoroastros == "Não": -> conversou_depois_de_pegar_a_espada}
 
-{ZoroastrosDialogState == "Já pegou a espada" && TalkedToZoroastros == "Sim": -> agora_va_e_corte}
+{CutsceneGrassblade == "Viu cutscene" && TalkedToZoroastros == "Sim": -> agora_va_e_corte}
 {ZoroastrosDialogState == "Em progresso" && TalkedToZoroastros == "Sim": -> agora_va_e_corte}
 
 {ArmaAtual == "Nenhuma" && TalkedToZoroastros == "Não": -> conversou_antes_de_pegar_a_espada}
@@ -48,6 +48,7 @@ EXTERNAL ChangeInkVariable(variableName, newValue)
             *** Isso parece fácil. Pode deixar que eu me viro! #speaker: Svard
                 ~ StartQuest("UmaEspadaChamadaGrassblade")
                 ~ ChangeInkVariable("TalkedToZoroastros", "Sim")
+                ~ ChangeInkVariable("CutsceneGrassblade", "XXX")
                 ~ ChangeInkVariable("ZoroastrosDialogState", "Em progresso")
                 Heh-heh! Estou esperando! #speaker: Coveiro
                 ->END
@@ -57,6 +58,7 @@ EXTERNAL ChangeInkVariable(variableName, newValue)
         ** Só isso? Tudo bem... Vamos lá! #speaker: Svard
             ~ StartQuest("UmaEspadaChamadaGrassblade")
             ~ ChangeInkVariable("TalkedToZoroastros", "Sim")
+            ~ ChangeInkVariable("CutsceneGrassblade", "XXX")
             ~ ChangeInkVariable("ZoroastrosDialogState", "Em progresso")
             É isso aí, {~gurdim|moleque|garoto}! Caso já tenha se esquecido como se usa uma lâmina, simplesmente aperte X para cortar. Mas cuidado, pois só me resta um único olho bom, hein! #speaker: Coveiro
             -> END

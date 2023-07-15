@@ -19,6 +19,9 @@ public class CutsceneTrigger : MonoBehaviour
         if(cutsceneToPlay != null && !cutsceneToPlay.cutsceneJaReproduzida){
             cutsceneToPlay.cutsceneJaReproduzida = true;
             pController.enabled = false;
+            //pController.animator.enabled = false;
+            //pController.isCutsceneActive = true;
+            
             StartCoroutine(ReproduzirCutscene(cutsceneToPlay));
         }
     }
@@ -30,6 +33,8 @@ public class CutsceneTrigger : MonoBehaviour
 
         yield return new WaitForSeconds(cutsceneData.duracaoPausa);
         pController.enabled = true;
+        //pController.animator.enabled = true;
+        //pController.isCutsceneActive = false;
     }
 
     [System.Serializable]

@@ -11,7 +11,10 @@ using UnityEngine.Playables;
 public class PickWeaponGrassblade : QuestPoint
 {
     public PlayerStats playerStats;
-    //[SerializeField] private TextAsset inkJSON;
+    public playerController pController; // Para interromper o fluxo de controle do personagem.
+    
+    [Header("Cutscene")]
+    public float duracaoPausa;
 
     public PlayableDirector director;
     public PlayableAsset cutscene;
@@ -34,19 +37,26 @@ public class PickWeaponGrassblade : QuestPoint
 
         // Exibe a cutscene:
         if(director != null){
-            director.playableAsset = cutscene;
-            director.stopped += OnCutsceneStopped;
-            director.Play();
+            pController.enabled = false;
+            //pController.isCutsceneActive = true;
+            ReproduzirCutscene();
         }
+    }
+
+    private void ReproduzirCutscene(){
+        director.playableAsset = cutscene;
+        director.stopped += OnCutsceneStopped;
+        director.Play();
     }
 
     private void OnCutsceneStopped(PlayableDirector director){
         if(!alreadyPlayed){
-            alreadyPlayed = true;
             // Inicia o diálogo após a cutscene terminar:
+            pController.moveDirection = Vector2.zero;
             DialogManager.Instance.StartDialogue(inkJSON);
+            alreadyPlayed = true;
+            pController.enabled = true;
+            //pController.isCutsceneActive = false;
         }
     }
-
-        
 }
