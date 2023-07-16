@@ -10,10 +10,6 @@ public class EspadaHit : MonoBehaviour
     public float duracaoDoKnockback;
     public int danoAtaque;
 
-    // SFX do hit Espada
-    public AudioSource AudioSource;
-    public AudioClip espadaHit;
-
     // VFX do hit da Espada
     public GameObject Fagulhas;
 
@@ -26,7 +22,6 @@ public class EspadaHit : MonoBehaviour
     void OnTriggerEnter2D(Collider2D colisor)
     {
         GameObject other = colisor.gameObject;
-        //TocaAudioSource();
 
         // Dano e Knockback: (apenas inimigos)
         if (other.CompareTag("enemy"))
@@ -46,6 +41,8 @@ public class EspadaHit : MonoBehaviour
         // Outros efeitos (cortar grama, ativar switch...):
         if (other.CompareTag("destrutivel"))
         {
+            tileDestrutivel obj = other.GetComponent<tileDestrutivel>();
+            obj.TocaSFX();
             Animator animator = other.GetComponent<Animator>();
             animator.SetBool("destroy", true);
         }
@@ -69,12 +66,5 @@ public class EspadaHit : MonoBehaviour
             adversario.velocity = Vector2.zero;
             //adversario.isKinematic = true;
         }
-    }
-
-    public void TocaAudioSource()
-    {
-        AudioSource.clip = espadaHit;
-        AudioSource.pitch = (Random.Range(1.5f, 1.8f));
-        AudioSource.Play();
     }
 }

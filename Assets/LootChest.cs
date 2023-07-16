@@ -24,8 +24,7 @@ public class LootChest : MonoBehaviour, iInteragivel
         if(!pegou){
             // Exibe animação, se houver:
             if(animator != null){
-                animator.SetTrigger("aberto");
-                // Por algum motivo, a animação tá pulando pro último frame.
+                animator.SetTrigger("ativou");
             }
 
             // Abre a caixa de diálogo, mas antes informa 

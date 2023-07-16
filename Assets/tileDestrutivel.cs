@@ -5,15 +5,21 @@ using System;
 
 public class tileDestrutivel : MonoBehaviour
 {
+    public AudioSource audiosource;
+
     // Evento que será acionado quando um tile for destruído:
     public static event Action<GameObject> TileDestroyed;
 
-
     // Destrói o tile (grama, cruz, vaso, etc.) e dropa o item:
-    public void DestroyTile(){ // Função chamada pela animação de destruição do tile
+    public void DestroyTile(){ // Função chamada pela animação de destruição do tile 
         GetComponent<LootBag>().InstantiateLoot(transform.position);
         Destroy(gameObject);
 
         TileDestroyed?.Invoke(gameObject); // Sinaliza para todas as classes interessadas.
+    }
+    
+    public void TocaSFX(){
+        //audiosource.pitch = (Random.Range(0.7f, 2.5f));
+        audiosource.Play();
     }
 }

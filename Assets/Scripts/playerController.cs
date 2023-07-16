@@ -7,7 +7,7 @@ using UnityEngine.Playables;
 public class playerController : MonoBehaviour
 {
     // Patrick 23.06 --- booleana para interromper a Coroutine Move() quando toma dano
-    private bool isKnockback = false;
+    //private bool isKnockback = false;
 
     // Patrick 15.06 --- Blocos seguráveis
     public GameObject blocoSeguravel;
@@ -15,17 +15,25 @@ public class playerController : MonoBehaviour
     private bool podeSegurar = false;
     //
 
-    // Patrick 17.06 --- SFX da Espada
-    [Header("SFX de Ataque")]
-    public AudioSource espadaSFX;
-    public AudioClip sfxClip;
+    private PlayerStats pStats;
 
-    public void TocaSwingSFX()
+    [Header("SFX de Ataque")]
+    public AudioSource ataqueSFX;
+    public AudioClip[] ataqueClip;
+
+    public void TocaAtaqueSFX()
     {
-        espadaSFX.pitch = (Random.Range(0.7f, 2.5f));
-        espadaSFX.PlayOneShot(sfxClip);
+        ataqueSFX.pitch = (Random.Range(0.7f, 2.5f));
+        if(pStats.ArmaAtual == Arma.Nenhuma){
+            ataqueSFX.PlayOneShot(ataqueClip[0]);
+        }
+        else if(pStats.ArmaAtual == Arma.Grassblade){
+            ataqueSFX.PlayOneShot(ataqueClip[1]);
+        }
+        else{
+            Debug.Log("Arma inválida!!!");
+        }
     }
-    //
 
     [Header("Movimento")]
     public float moveSpeed;
@@ -38,8 +46,6 @@ public class playerController : MonoBehaviour
     public Animator animator;
     private int moveXHash = Animator.StringToHash("moveX");
     private int moveYHash = Animator.StringToHash("moveY");
-
-    public bool isCutsceneActive = false;
 
     public void podeMover()
     {
@@ -58,15 +64,14 @@ public class playerController : MonoBehaviour
 
     private void Awake()
     {
-        //animator = GetComponent<Animator>();
         playerCollider = GetComponent<BoxCollider2D>();
-        //damageHandler = GetComponent<DamageHandler>();
+        pStats = GetComponent<PlayerStats>();
     }
 
     public void HandleUpdate() // Tudo relacionado a inputs
     {
         //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando.
-        if (!isMoving && !isAttacking && !isCutsceneActive)
+        if (!isMoving && !isAttacking)
         { //Move-se apenas se estiver parado e não estiver atacando.
             moveDirection.x = Input.GetAxisRaw("Horizontal");
             moveDirection.y = Input.GetAxisRaw("Vertical");
@@ -95,11 +100,11 @@ public class playerController : MonoBehaviour
         //Botão de Ataque (X)
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.X))
         {
-            if (!isMoving && !isCutsceneActive)
+            if (!isMoving)
             {
                 isAttacking = true;
                 animator.SetTrigger("Atacando");
-                TocaSwingSFX();
+                TocaAtaqueSFX();
             }
 
         }
@@ -157,9 +162,6 @@ public class playerController : MonoBehaviour
         blocoSeguravel.transform.SetParent(null);
         segurandoBloco = false;
     }
-
-    // Patrick 22.06 --- Andar em cima do item para coletá-lo
-    // Patrick 28.06 --- Colisão com os triggers de cutscenes
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("coletavel"))
@@ -185,7 +187,6 @@ public class playerController : MonoBehaviour
             }
         }
     }
-
     private Transform GetClosestTriggerTransform(Vector2 point, Transform parent){ // Retorna o Transform do filho mais próximo em relação a um ponto específico.
         Transform closestChild = null;
         float closestDistance = Mathf.Infinity; // Ao iniciar a variável com Mathf.Infinity, garante-se que qualquer valor real de distância seja menor do que closestDistance, permitindo que seja substituído no decorrer do código.
@@ -199,7 +200,6 @@ public class playerController : MonoBehaviour
         }
         return closestChild;
     }
-    // 
 
     public void Interage()
     {

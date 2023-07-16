@@ -5220,7 +5220,7 @@ MonoBehaviour:
   investida: 12
   duracaoDoKnockback: 0.1
   danoAtaque: 2
-  AudioSource: {fileID: 8603550665669534908}
+  AudioSource: {fileID: 1128055064071636347}
   espadaHit: {fileID: 8300000, guid: ba3def7d2c4a3f34ebac428e726bf803, type: 3}
   Fagulhas: {fileID: 1039798718734391355, guid: 2852d04059614b74abb5b48ff54474a1, type: 3}
 --- !u!198 &5735768437978858810
@@ -20438,10 +20438,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocoSeguravel: {fileID: 0}
-  espadaSFX: {fileID: 1128055064071636347}
-  sfxClip: {fileID: 8300000, guid: dcf3293d805eb9b41aba0e5924fca40d, type: 3}
-  moveSpeed: 6
-  playerRb: {fileID: 0}
+  ataqueSFX: {fileID: 1128055064071636347}
+  sfxClip:
+  - {fileID: 8300000, guid: d36adb477055d4546a12b2d85f8ac223, type: 3}
+  - {fileID: 8300000, guid: dcf3293d805eb9b41aba0e5924fca40d, type: 3}
+  moveSpeed: 4.2
+  playerRb: {fileID: 4043328433714806152}
+  moveDirection: {x: 0, y: 0}
   animator: {fileID: 8433947274183721407}
   corposSolidosLayer:
     serializedVersion: 2

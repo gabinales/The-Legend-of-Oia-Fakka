@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class tileSFXScript : MonoBehaviour
 {
-    public AudioClip[] sfxArray;
+    private AudioSource TileSFX;
+    public AudioClip clip;
 
-    private void OnTriggerEnter2D(Collider2D collision){
-
-        if(collision.gameObject.CompareTag("Player")){
-            TocaSFX(0);
-        }
-        if(collision.gameObject.CompareTag("weapon")){
-            int randomNumber = Random.Range(1,3);
-            TocaSFX(randomNumber);
+    private void Start(){
+        TileSFX = GetComponent<AudioSource>();
+    }
+    private void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.CompareTag("Player")){
+            TocaTileSFX();
         }
     }
 
-    private void TocaSFX(int index){
-        AudioSource.PlayClipAtPoint(sfxArray[index], transform.position);
-        //Debug.Log(sfxArray[index]);
+    private void TocaTileSFX(){
+        TileSFX.pitch = (Random.Range(0.7f, 2.5f));
+        TileSFX.PlayOneShot(clip);
     }
 }

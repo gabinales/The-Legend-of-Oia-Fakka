@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 04087dc9b28f3174481cde7b43529de8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilesheet1_casa-interior_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: 2}
+        - {x: -3, y: -2}
+        - {x: 3, y: -2}
+        - {x: 3, y: 2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0390657a407b4f46a529335138ff230
+      internalID: 1643050012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tilesheet1_casa-interior_0: 1605618436
+      tilesheet1_casa-interior_1: -1506808455
+      tilesheet1_casa-interior_10: -1793024094
+      tilesheet1_casa-interior_11: -338513436
+      tilesheet1_casa-interior_12: -420491080
+      tilesheet1_casa-interior_13: 1519987199
+      tilesheet1_casa-interior_14: -430746953
+      tilesheet1_casa-interior_15: -1762228681
+      tilesheet1_casa-interior_16: -1679002160
+      tilesheet1_casa-interior_17: 1076636839
+      tilesheet1_casa-interior_18: -1795263436
+      tilesheet1_casa-interior_19: 529999127
+      tilesheet1_casa-interior_2: -857041972
+      tilesheet1_casa-interior_20: 1643050012
+      tilesheet1_casa-interior_21: 501371646
+      tilesheet1_casa-interior_22: 5295118
+      tilesheet1_casa-interior_23: -1983561540
+      tilesheet1_casa-interior_24: 393644396
+      tilesheet1_casa-interior_25: -453360171
+      tilesheet1_casa-interior_26: 1308340855
+      tilesheet1_casa-interior_27: 678409151
+      tilesheet1_casa-interior_28: 629032573
+      tilesheet1_casa-interior_29: 2012379339
+      tilesheet1_casa-interior_3: 374867864
+      tilesheet1_casa-interior_30: -393695841
+      tilesheet1_casa-interior_31: 1581877982
+      tilesheet1_casa-interior_32: 1161034908
+      tilesheet1_casa-interior_33: -1465736871
+      tilesheet1_casa-interior_34: 1371463708
+      tilesheet1_casa-interior_35: 1052908484
+      tilesheet1_casa-interior_36: -1878422924
+      tilesheet1_casa-interior_37: 1783557507
+      tilesheet1_casa-interior_38: 1676954107
+      tilesheet1_casa-interior_39: 1558806956
+      tilesheet1_casa-interior_4: -1749889057
+      tilesheet1_casa-interior_40: 1358928069
+      tilesheet1_casa-interior_41: -2079133889
+      tilesheet1_casa-interior_42: 671440472
+      tilesheet1_casa-interior_43: -1695729269
+      tilesheet1_casa-interior_44: 579626882
+      tilesheet1_casa-interior_45: -627733359
+      tilesheet1_casa-interior_46: 1500887993
+      tilesheet1_casa-interior_47: -892147365
+      tilesheet1_casa-interior_48: 1962045596
+      tilesheet1_casa-interior_49: 2046520684
+      tilesheet1_casa-interior_5: -1421857992
+      tilesheet1_casa-interior_50: -1025356385
+      tilesheet1_casa-interior_51: 1208513786
+      tilesheet1_casa-interior_52: 1791653452
+      tilesheet1_casa-interior_53: 186900326
+      tilesheet1_casa-interior_54: -473069377
+      tilesheet1_casa-interior_55: -1610878713
+      tilesheet1_casa-interior_56: -1672838787
+      tilesheet1_casa-interior_57: 134257160
+      tilesheet1_casa-interior_58: -985983260
+      tilesheet1_casa-interior_59: -1867107725
+      tilesheet1_casa-interior_6: 1569293269
+      tilesheet1_casa-interior_60: -479498776
+      tilesheet1_casa-interior_61: -1388269385
+      tilesheet1_casa-interior_62: 1292576985
+      tilesheet1_casa-interior_63: 1008197029
+      tilesheet1_casa-interior_64: 868794328
+      tilesheet1_casa-interior_65: 911397627
+      tilesheet1_casa-interior_66: -1572773992
+      tilesheet1_casa-interior_67: -1591649569
+      tilesheet1_casa-interior_68: 924521802
+      tilesheet1_casa-interior_69: 1536297648
+      tilesheet1_casa-interior_7: 1599743923
+      tilesheet1_casa-interior_70: -287927552
+      tilesheet1_casa-interior_71: -865605043
+      tilesheet1_casa-interior_72: 404497231
+      tilesheet1_casa-interior_73: -1451921500
+      tilesheet1_casa-interior_74: 722778762
+      tilesheet1_casa-interior_75: 164232002
+      tilesheet1_casa-interior_76: 1521472143
+      tilesheet1_casa-interior_8: -311673813
+      tilesheet1_casa-interior_9: 554308692
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
