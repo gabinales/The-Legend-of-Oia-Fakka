@@ -6,8 +6,14 @@ using UnityEngine.Playables;
 
 public class playerController : MonoBehaviour
 {
-    // Patrick 23.06 --- booleana para interromper a Coroutine Move() quando toma dano
-    //private bool isKnockback = false;
+    private static playerController instance;
+    public static playerController Instance{
+        get{
+            return instance;
+        }
+    }
+    private FMODEvents fmodEvents;
+    private int currentTerrainType;
 
     // Patrick 15.06 --- Blocos seguráveis
     public GameObject blocoSeguravel;
@@ -62,10 +68,22 @@ public class playerController : MonoBehaviour
     public LayerMask destrutiveisLayer;
     public LayerMask blocoEmpurravelLayer;
 
+    [Header("Passos SFX")]
+    private float distanceMoved = 0f;
+    public float stepDistance = 1f;
+
     private void Awake()
     {
+        if(instance != null && instance != this){
+            Destroy(this.gameObject);
+        }
+        else{
+            instance = this;
+        }
+        
         playerCollider = GetComponent<BoxCollider2D>();
         pStats = GetComponent<PlayerStats>();
+        fmodEvents = FMODEvents.instance;
     }
 
     public void HandleUpdate() // Tudo relacionado a inputs
@@ -117,6 +135,10 @@ public class playerController : MonoBehaviour
                 SeguraBloco();
         }
     }
+
+    public void UpdateTerrainType(int terrainType){
+        currentTerrainType = terrainType;
+    }
     private void FixedUpdate()
     { // Tudo relacionado à movimentação do Rigidbody2D
 
@@ -134,10 +156,26 @@ public class playerController : MonoBehaviour
 
         if (hit.collider == null && !isAttacking)
         { // Não há colisão, pode mover o jogador
+            float moveDistance = Vector2.Distance(playerRb.position, targetPosition);
+            distanceMoved += moveDistance;
+
+            if(distanceMoved >= stepDistance){
+                distanceMoved -= stepDistance;
+                
+                PlayFootstepSound();
+            }
+
             playerRb.MovePosition(playerRb.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
             isMoving = true;
         }
         isMoving = false;
+    }
+
+    private void PlayFootstepSound(){
+        if(fmodEvents != null){
+            fmodEvents.SetFootstepTerrain(currentTerrainType);
+            fmodEvents.PlayFootstepSound();
+        }
     }
 
     // Patrick 15.06 --- Botão de segurar (Z)

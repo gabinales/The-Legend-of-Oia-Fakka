@@ -5,8 +5,6 @@ using System;
 
 public class tileDestrutivel : MonoBehaviour
 {
-    public AudioSource audiosource;
-
     // Evento que será acionado quando um tile for destruído:
     public static event Action<GameObject> TileDestroyed;
 
@@ -20,6 +18,6 @@ public class tileDestrutivel : MonoBehaviour
     
     public void TocaSFX(){
         //audiosource.pitch = (Random.Range(0.7f, 2.5f));
-        audiosource.Play();
+        //audiosource.Play();
     }
 }

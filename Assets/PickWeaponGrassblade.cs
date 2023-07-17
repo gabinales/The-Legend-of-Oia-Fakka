@@ -25,8 +25,11 @@ public class PickWeaponGrassblade : QuestPoint
     private bool alreadyPlayed = false;
 
     public override void Interacao(){ // essa Interacao (override) sobrepõe a Interacao (virtual) na classe base QuestPoint
+        // FMOD:
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.weaponCollected, this.transform.position);
+        
         // Altera o valor da variável armaAtual em playerStats e habilita o ataque de espada:
-        FindObjectOfType<AudioManager>().Play("PegouNovaArma");
+
         playerStats.ArmaAtual = Arma.Grassblade;
         
         // Altera o valor da variável ArmaAtual no globals.ink:

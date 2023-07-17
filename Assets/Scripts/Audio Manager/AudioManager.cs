@@ -1,39 +1,25 @@
 using UnityEngine.Audio;
 using UnityEngine;
-using System;
+using FMODUnity;
 
 public class AudioManager : MonoBehaviour
 {
-    public Sound[] sounds;
+    //public Sound[] sounds;
 
-    public static AudioManager instance; // Pois só pode haver um AudioManager 
-                                         // persintindo através das Scenes. 
-
-    void Awake(){
-        if(instance == null){
-            instance = this;
-        }
-        else{
-            Destroy(gameObject);
-            return;
-        }
-
-        DontDestroyOnLoad(gameObject);
-
-        foreach(Sound s in sounds){
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-        }
+    public static AudioManager instance{
+        get;
+        private set;
     }
 
-    public void Play(string name){
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        if(s == null){
-            Debug.LogWarning("Som " + name + " não encontrado.");
+    private void Awake(){
+        if(instance != null){
+            Debug.LogError("Mais de um AudioManager encontrado na Scene.");
         }
-        s.source.Play();
+        instance = this;
+    }
+
+
+    public void PlayOneShot(EventReference sound, Vector3 worldPos){
+        RuntimeManager.PlayOneShot(sound, worldPos);
     }
 }
