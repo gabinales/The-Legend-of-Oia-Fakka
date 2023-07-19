@@ -13,6 +13,7 @@ public class Loot : MonoBehaviour, IColetavel
     public void Collect(){
         Destroy(gameObject);
         OnLootCollected?.Invoke(lootData); // Avisa às classes interessadas, como Inventory.
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.lootCollected, this.transform.position);
     }
 
     public void Initialize(ItemData itemData){

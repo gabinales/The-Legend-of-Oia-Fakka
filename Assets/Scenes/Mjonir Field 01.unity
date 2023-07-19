@@ -461,13 +461,27 @@ MonoBehaviour:
       Data3: -105133900
       Data4: 2082770586
     Path: event:/SvardAttack
+  <lootCollected>k__BackingField:
+    Guid:
+      Data1: -1514783154
+      Data2: 1256498652
+      Data3: -1908102763
+      Data4: 1662906895
+    Path: event:/LootCollected
   <waterFlowing>k__BackingField:
     Guid:
       Data1: -1768363116
       Data2: 1074803509
       Data3: -597664888
       Data4: -1191564732
-    Path: event:/WaterFlowing
+    Path: event:/Ambientes/WaterFlowing
+  <cemiterio>k__BackingField:
+    Guid:
+      Data1: 1586410887
+      Data2: 1098825865
+      Data3: 699001266
+      Data4: -310320045
+    Path: event:/Ambientes/Cemiterio
   <weaponCollected>k__BackingField:
     Guid:
       Data1: -342144789
@@ -15774,7 +15788,7 @@ MonoBehaviour:
       Data2: 1074803509
       Data3: -597664888
       Data4: -1191564732
-    Path: event:/WaterFlowing
+    Path: event:/Ambientes/WaterFlowing
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -20508,6 +20522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 266830544}
   - component: {fileID: 266830543}
+  - component: {fileID: 266830545}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -20543,6 +20558,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &266830545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266830542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331989394c6f4fb4c9819f1a856a4172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx:
+    Guid:
+      Data1: 1586410887
+      Data2: 1098825865
+      Data3: 699001266
+      Data4: -310320045
+    Path: event:/Ambientes/Cemiterio
+  ExecutarNoEnable: 0
+  ExecutarNoDisable: 0
+  ExecutarNoStart: 1
 --- !u!114 &268874473 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5871320925445114158, guid: 3d9d88a99605f6d4d91c9fedeffaf183, type: 3}
@@ -31477,7 +31514,7 @@ MonoBehaviour:
       Data2: 1074803509
       Data3: -597664888
       Data4: -1191564732
-    Path: event:/WaterFlowing
+    Path: event:/Ambientes/WaterFlowing
   Event: 
   PlayEvent: 1
   StopEvent: 0

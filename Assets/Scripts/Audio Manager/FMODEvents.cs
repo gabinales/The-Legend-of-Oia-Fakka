@@ -13,16 +13,18 @@ public enum ArmaType
 public class FMODEvents : MonoBehaviour
 {
     [field: Header("Svard SFX")]
-    [field: SerializeField] public EventReference svardAttack { get; private set; }
+    [field: SerializeField] public EventReference svardAttack {get; private set; }
+    [field: SerializeField] public EventReference lootCollected {get; private set; }
     [field: Header("Ambiente")]
-    [field: SerializeField] public EventReference waterFlowing { get; private set; }
+    [field: SerializeField] public EventReference waterFlowing {get; private set; }
+    [field: SerializeField] public EventReference cemiterio {get; private set; }
     [field: Header("Interagíveis")]
-    [field: SerializeField] public EventReference weaponCollected { get; private set; }
-    [field: SerializeField] public EventReference lootChestOpened { get; private set; }
-    [field: SerializeField] public EventReference toiletFlush { get; private set; }
+    [field: SerializeField] public EventReference weaponCollected {get; private set; }
+    [field: SerializeField] public EventReference lootChestOpened {get; private set; }
+    [field: SerializeField] public EventReference toiletFlush {get; private set; }
     [field: Header("Portas")]
-    [field: SerializeField] public EventReference portaSimplesAbre { get; private set; }
-    [field: SerializeField] public EventReference portaSimplesFecha { get; private set; }
+    [field: SerializeField] public EventReference portaSimplesAbre {get; private set; }
+    [field: SerializeField] public EventReference portaSimplesFecha {get; private set; }
     [field: Header("Destrutíveis")]
     [field: SerializeField] public EventReference gramaCortavel {get; private set; }
     [field: SerializeField] public EventReference cruzSimples {get; private set; }

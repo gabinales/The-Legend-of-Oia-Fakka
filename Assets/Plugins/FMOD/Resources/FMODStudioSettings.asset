@@ -443,8 +443,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - Ambience
-  - Dialog
+  - Ambientes
   - SFX
   - UI
   BanksToLoad: []

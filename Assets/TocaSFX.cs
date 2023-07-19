@@ -11,6 +11,13 @@ public class TocaSFX : MonoBehaviour
 
     public bool ExecutarNoEnable;
     public bool ExecutarNoDisable;
+    public bool ExecutarNoStart;
+
+    private void Start(){
+        if(ExecutarNoStart){
+            Toca();
+        }
+    }
 
     public void Toca(){
         AudioManager.instance.PlayOneShot(sfx, gameObject.transform.position);
