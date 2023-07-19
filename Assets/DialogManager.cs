@@ -21,7 +21,7 @@ public class DialogManager : MonoBehaviour
     public TextMeshProUGUI nome;
 
     [Header("Escolhas UI")]
-    [SerializeField] private GameObject[] escolhas;
+    [SerializeField] public GameObject[] escolhas;
 
     private TextMeshProUGUI[] escolhasText;
     private Story currentStory;
@@ -88,6 +88,7 @@ public class DialogManager : MonoBehaviour
     public void StartDialogue(TextAsset inkJSON)
     {   
         gameController.state = GameState.Dialogo;
+        gameController.enabled = false;
         caixaDeDialogo.SetActive(true);
         currentStory = new Story(inkJSON.text);
         dialogoOcorrendo = true;
@@ -127,8 +128,10 @@ public class DialogManager : MonoBehaviour
             }
         });
         currentStory.BindExternalFunction("MudaHora", (int id) =>
-                {
-                    gameController.timeOfDay = id;
+                {  
+                    gameController.enabled = true; // Como o gameController fica desligado
+                    gameController.timeOfDay = id;  // durante o diálogo, é preciso religa-lo
+                    gameController.enabled = false; // e depois desliga-lo novamente.
                 });
 
         //continua o dialogo (nesse caso, começa)
@@ -195,6 +198,7 @@ public class DialogManager : MonoBehaviour
         // Para usar no Ink (deixar de usar, no caso) em tese é pra dar unbind em toda função q foi adicionada anteriormente
         currentStory.UnbindExternalFunction("StartQuest");
 
+        gameController.enabled = true;
         gameController.state = GameState.MovimentacaoLivre;
     }
 

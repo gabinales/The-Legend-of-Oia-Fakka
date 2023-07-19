@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3674388928464668982
 SpriteRenderer:
@@ -100,6 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc7eb0cf975eaa4cbd3cdb206efdbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tileDestruidoSFX:
+    Guid:
+      Data1: 311232711
+      Data2: 1206006480
+      Data3: -432180584
+      Data4: 132467679
+    Path: event:/Destrutiveis/CruzSimples
 --- !u!114 &7757136976366349289
 MonoBehaviour:
   m_ObjectHideFlags: 0

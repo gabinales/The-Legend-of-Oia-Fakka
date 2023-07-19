@@ -27,6 +27,9 @@ public class LootChest : MonoBehaviour, iInteragivel
                 animator.SetTrigger("ativou");
             }
 
+            // Efeito sonoro:
+            TocaSFX();
+
             // Abre a caixa de diálogo, mas antes informa 
             // ao Ink o item e a quantidade:
             Ink.Runtime.Object nomeDoItem = new Ink.Runtime.StringValue(_nomeDoItem);
@@ -44,5 +47,9 @@ public class LootChest : MonoBehaviour, iInteragivel
 
             pegou = true;
         }
+    }
+
+    public void TocaSFX(){
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.lootChestOpened, this.transform.position);
     }
 }

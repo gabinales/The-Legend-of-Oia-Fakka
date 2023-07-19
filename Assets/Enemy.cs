@@ -15,8 +15,6 @@ public class Enemy : MonoBehaviour, IAtacavel
     public float duracaoKnockback;
     public string nomeAdversario;
     public float velocidade;
-    public AudioSource audiosource;
-    public List<AudioClip> enemySfx;
     public Animator animator;
 
     private bool isKnockback = false;
@@ -27,17 +25,17 @@ public class Enemy : MonoBehaviour, IAtacavel
 
     public void SfxDamaged(){
         if(hpAtual >= 0){
-            if(!audiosource.isPlaying){
+            /*if(!audiosource.isPlaying){
                 audiosource.PlayOneShot(enemySfx[1]);
-            }
+            }*/
         }
         Debug.Log("Hp atual: "+hpAtual);
-        Debug.Log("Som tocado: "+ enemySfx[1]);
+        //Debug.Log("Som tocado: "+ enemySfx[1]);
     }
     public void SfxDefeated(){
-        if(!audiosource.isPlaying){
+        /*if(!audiosource.isPlaying){
             audiosource.PlayOneShot(enemySfx[2]);
-        }
+        }*/
         animator.SetBool("Morte", true);
     }
 

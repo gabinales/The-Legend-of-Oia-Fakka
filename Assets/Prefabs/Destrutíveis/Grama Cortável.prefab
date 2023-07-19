@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3373932821641311665
 SpriteRenderer:
@@ -167,14 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0867d8550d7344c9cb3644c0b29224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fmodEvent:
-    Guid:
-      Data1: 1804609922
-      Data2: 1324977000
-      Data3: -276827496
-      Data4: -553392929
-    Path: event:/Footsteps
-  terrainType: 0
+  terrainType: 1
 --- !u!114 &1548853175646730022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +180,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc7eb0cf975eaa4cbd3cdb206efdbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tileDestruidoSFX:
+    Guid:
+      Data1: 1715837133
+      Data2: 1305712845
+      Data3: 1321241490
+      Data4: -235082039
+    Path: event:/Destrutiveis/GramaCortavel
 --- !u!114 &2070961270598812241
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,9 +12,9 @@ public class Plinio : Enemy, ISwitch
     public void Toggle(){
         estado = !estado;
         animator.SetBool("ativado", estado);
-        if(!audiosource.isPlaying){
+        /*if(!audiosource.isPlaying){
             audiosource.PlayOneShot(enemySfx[0]);
-        }
+        }*/
 
         layerP = gameObject.layer;
 
@@ -36,8 +36,8 @@ public class Plinio : Enemy, ISwitch
         estado = true;
         animator.SetBool("ativado", estado);
         gameObject.layer = 7;
-        if(!audiosource.isPlaying){
+        /*if(!audiosource.isPlaying){
             audiosource.PlayOneShot(enemySfx[0]);  // Um pouco redundante
-        }
+        }*/
     }
 }

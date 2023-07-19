@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
 // O controlador decide entre os estados CORRENDO e FALANDO, etc.
@@ -17,6 +18,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] playerController pController;
     public GameObject JanelaPause;
+    public GameObject pauseFirstSelected;
 
     [SerializeField] private GameObject globalLight;
     private UnityEngine.Rendering.Universal.Light2D light2D;
@@ -85,6 +87,8 @@ public class GameController : MonoBehaviour
         if (state == GameState.MovimentacaoLivre)
         {
             pController.HandleUpdate();
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(pauseFirstSelected);
         }
     }
 
@@ -97,11 +101,15 @@ public class GameController : MonoBehaviour
         {
             JanelaPause.SetActive(true);
             Time.timeScale = 0.005f; // QUASE para o tempo
+
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.telaPauseAbre, pController.transform.position);
         }
         if (isPaused == false)
         {
             JanelaPause.SetActive(false);
             Time.timeScale = 1f;
+
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.telaPauseFecha, pController.transform.position);
         }
     }
 }

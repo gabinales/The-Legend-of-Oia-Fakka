@@ -49,6 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pController: {fileID: 919148202519791623, guid: d4c85120c11571f419c99add9992be4e, type: 3}
   JanelaPause: {fileID: 4790139077052258452, guid: 0f6828e66aaaec148971ec9533d4e6fa, type: 3}
+  pauseFirstSelected: {fileID: 0}
+  dialogoFirstSelected: {fileID: 0}
+  globalLight: {fileID: 0}
+  timeOfDay: 0
   state: 0
 --- !u!114 &1497883252546069953
 MonoBehaviour:
@@ -80,7 +84,10 @@ MonoBehaviour:
   caixaDeDialogo: {fileID: 0}
   textoDialogo: {fileID: 0}
   nome: {fileID: 0}
-  escolhas: []
+  escolhas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   letrasPorSegundo: 120
 --- !u!114 &1449402897289758495
 MonoBehaviour:

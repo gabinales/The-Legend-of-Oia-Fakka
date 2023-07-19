@@ -23,18 +23,15 @@ public class playerController : MonoBehaviour
 
     private PlayerStats pStats;
 
-    [Header("SFX de Ataque")]
-    public AudioSource ataqueSFX;
-    public AudioClip[] ataqueClip;
-
     public void TocaAtaqueSFX()
     {
-        ataqueSFX.pitch = (Random.Range(0.7f, 2.5f));
         if(pStats.ArmaAtual == Arma.Nenhuma){
-            ataqueSFX.PlayOneShot(ataqueClip[0]);
+            FMODEvents.instance.SetArmaType(ArmaType.Nenhuma);
+            FMODEvents.instance.PlaySvardAttackSound();
         }
         else if(pStats.ArmaAtual == Arma.Grassblade){
-            ataqueSFX.PlayOneShot(ataqueClip[1]);
+            FMODEvents.instance.SetArmaType(ArmaType.Grassblade);
+            FMODEvents.instance.PlaySvardAttackSound();
         }
         else{
             Debug.Log("Arma inválida!!!");
@@ -80,13 +77,13 @@ public class playerController : MonoBehaviour
         else{
             instance = this;
         }
-        
+
         playerCollider = GetComponent<BoxCollider2D>();
         pStats = GetComponent<PlayerStats>();
         fmodEvents = FMODEvents.instance;
     }
 
-    public void HandleUpdate() // Tudo relacionado a inputs
+    public void HandleUpdate() // Tudo relacionado a inputs, executado de acordo com o state MovimentacaoLivre no GameController
     {
         //1. Verifica se o jogador está pressionando alguma tecla OU já está atacando.
         if (!isMoving && !isAttacking)
@@ -118,7 +115,7 @@ public class playerController : MonoBehaviour
         //Botão de Ataque (X)
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.X))
         {
-            if (!isMoving)
+            if (!isMoving && !isAttacking)
             {
                 isAttacking = true;
                 animator.SetTrigger("Atacando");

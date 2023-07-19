@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using FMODUnity;
 
 public class tileDestrutivel : MonoBehaviour
 {
+    [Header("SFX")]
+    [SerializeField] private EventReference tileDestruidoSFX;
     // Evento que será acionado quando um tile for destruído:
     public static event Action<GameObject> TileDestroyed;
 
@@ -14,10 +17,11 @@ public class tileDestrutivel : MonoBehaviour
         Destroy(gameObject);
 
         TileDestroyed?.Invoke(gameObject); // Sinaliza para todas as classes interessadas.
+
+        //TocaSFX();
     }
     
     public void TocaSFX(){
-        //audiosource.pitch = (Random.Range(0.7f, 2.5f));
-        //audiosource.Play();
+        AudioManager.instance.PlayOneShot(tileDestruidoSFX, transform.position);
     }
 }

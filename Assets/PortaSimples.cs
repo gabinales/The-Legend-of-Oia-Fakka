@@ -19,6 +19,7 @@ public class PortaSimples : MonoBehaviour, iInteragivel
     public void Interacao(){
         if(!estaAberta){
             animator.SetTrigger("abriu");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.portaSimplesAbre, this.transform.position);
             estaAberta = true;
 
             // Desbloqueia a passagem pelo tempo determinado em tempoFechamento:
@@ -29,6 +30,7 @@ public class PortaSimples : MonoBehaviour, iInteragivel
 
     private void FecharPorta(){
         animator.SetTrigger("fechou");
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.portaSimplesFecha, this.transform.position);
         estaAberta = false;
 
         // Bloqueia novamente a passagem:

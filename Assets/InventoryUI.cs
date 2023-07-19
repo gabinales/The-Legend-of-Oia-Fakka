@@ -18,6 +18,7 @@ public class InventoryUI : MonoBehaviour
 
     private Inventory inventory;
     private int selectedItemIndex = -1;
+    public GameObject pauseFirstSelected;
 
     private void Start(){
         inventory = GetComponent<Inventory>();
@@ -46,6 +47,7 @@ public class InventoryUI : MonoBehaviour
                 itemStackSizes[i].gameObject.SetActive(false);
             }
         }
+        EventSystem.current.SetSelectedGameObject(pauseFirstSelected);
     }
 
     public void SelectItem(int index){

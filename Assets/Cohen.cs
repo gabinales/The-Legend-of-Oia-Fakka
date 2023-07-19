@@ -20,9 +20,9 @@ public class Cohen : Enemy // Cohen contém todas as funções de Adversario.
     void FixedUpdate()
     {
         if (gameObject.GetComponent<Cohen>().hpAtual<=0){
-            if(!audiosource.isPlaying){
+            /*if(!audiosource.isPlaying){
                 audiosource.PlayOneShot(enemySfx[2]);
-            }
+            }*/
             animator.SetBool("Morte", true);
         }
         VerificaDistancia();
