@@ -7,6 +7,8 @@ using System;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using Ink.UnityIntegration;
+using FMODUnity;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour
 {
@@ -116,6 +118,15 @@ public class DialogManager : MonoBehaviour
             Ink.Runtime.Object obj = new Ink.Runtime.StringValue(newValue);
             DialogManager.Instance.SetVariableState(variableName, obj);
         });
+        currentStory.BindExternalFunction("TocaFMODEvent", (string eventReference) =>
+        {
+            var fmodEvent = RuntimeManager.CreateInstance(eventReference);
+            fmodEvent.start();
+        });
+        currentStory.BindExternalFunction("TrocaScene", (string sceneToLoad) =>
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        });
         // Funções que devem passar futuramente para os scripts apropriados:
         currentStory.BindExternalFunction("RecebeuChaveZoroastros", () => // Para receber a 
         {                                                                   // chave do Zoroastros
@@ -154,6 +165,8 @@ public class DialogManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
+            
+
             string nextFala = currentStory.Continue();
 
             StartCoroutine(DigitaTexto(nextFala));
@@ -161,9 +174,12 @@ public class DialogManager : MonoBehaviour
 
             HandleTags(currentStory.currentTags);
 
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.proximaFala, gameObject.transform.position);
+
         }
         else
         {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ultimaFala, gameObject.transform.position);
             ExitDialogue();
         }
     }

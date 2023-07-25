@@ -32,7 +32,6 @@ public class UIManager : MonoBehaviour
     private void Update(){
         if(gameController == null || gameController.state != GameState.MovimentacaoLivre){
             // Se o jogo não estiver no estado de Movimentação Livre, não rastreie a inatividade
-            Debug.Log("Deu gamestate null.");
             return;
         }
         if(Input.anyKeyDown || Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0){

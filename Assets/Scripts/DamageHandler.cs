@@ -21,13 +21,6 @@ public class DamageHandler : MonoBehaviour
     {
         if (objeto.CompareTag("enemy"))
         {
-            if(dano >= objeto.GetComponent<Cohen>().hpAtual){
-                objeto.GetComponent<Cohen>().SfxDefeated();
-                objeto.GetComponent<Cohen>().hpAtual -= dano;
-            }
-            objeto.GetComponent<Cohen>().SfxDamaged();
-            objeto.GetComponent<Cohen>().hpAtual -= dano;
-
             DamageIndicator indicator = Instantiate(hpDisplay, objeto.transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
             indicator.textMeshPro.text = dano.ToString();
 

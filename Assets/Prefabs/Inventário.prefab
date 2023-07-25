@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSlotContainer: {fileID: 0}
+  itemDataPanel: {fileID: 0}
   itemImages:
   - {fileID: 0}
   - {fileID: 0}
@@ -71,3 +72,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  spriteImage: {fileID: 0}
+  nameLabel: {fileID: 0}
+  infoLabel: {fileID: 0}
+  pauseFirstSelected: {fileID: 0}

@@ -14,14 +14,23 @@ public class FMODEvents : MonoBehaviour
 {
     [field: Header("Svard SFX")]
     [field: SerializeField] public EventReference svardAttack {get; private set; }
-    [field: SerializeField] public EventReference lootCollected {get; private set; }
+    [field: SerializeField] public EventReference danoHit {get; private set; }
+    [field: Header("Alerta Contextual")]
+    [field: SerializeField] public EventReference surpresaAlertaContextual {get; private set; }
+    [field: Header("Inimigos")]
+    [field: SerializeField] public EventReference plinioToggle {get; private set; }
     [field: Header("Ambiente")]
     [field: SerializeField] public EventReference waterFlowing {get; private set; }
     [field: SerializeField] public EventReference cemiterio {get; private set; }
+    [field: SerializeField] public EventReference penhascoBeiramar {get; private set; }
     [field: Header("Interagíveis")]
-    [field: SerializeField] public EventReference weaponCollected {get; private set; }
     [field: SerializeField] public EventReference lootChestOpened {get; private set; }
-    [field: SerializeField] public EventReference toiletFlush {get; private set; }
+    [field: SerializeField] public EventReference vasoSanitarioDescarga {get; private set; }
+    [field: SerializeField] public EventReference vasoSanitarioDescargaEntupida {get; private set; }
+    [field: Header("Switches")]
+    [field: SerializeField] public EventReference alavancaToggle {get; private set; }
+    [field: SerializeField] public EventReference cristalVerdeAtiva {get; private set; }
+    [field: SerializeField] public EventReference cristalVerdeDesativa {get; private set; }
     [field: Header("Portas")]
     [field: SerializeField] public EventReference portaSimplesAbre {get; private set; }
     [field: SerializeField] public EventReference portaSimplesFecha {get; private set; }
@@ -34,13 +43,26 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference selecionaBotao {get; private set; }
     [field: SerializeField] public EventReference apertaBotao {get; private set; }
     [field: SerializeField] public EventReference abrePainelItem {get; private set; }
+    [field: Header("Diálogo")]
+    [field: SerializeField] public EventReference proximaFala {get; private set; }
+    [field: SerializeField] public EventReference ultimaFala {get; private set; }
+    [field: SerializeField] public EventReference confirmaFala {get; private set; }
+    [field: SerializeField] public EventReference cancelaFala {get; private set; }
+    [field: Header("Cutscenes")]
+    [field: SerializeField] public EventReference cutscene2 {get; private set; }
+    [field: SerializeField] public EventReference cutscene3 {get; private set; }
+    [field: Header("Game")]
+    [field: SerializeField] public EventReference novoItem {get; private set; }
+    [field: SerializeField] public EventReference ativaSpawner {get; private set; }
+    [field: SerializeField] public EventReference lootCollected {get; private set; }
+    [field: SerializeField] public EventReference puzzleResolvido {get; private set; }
 
-    private const string SvardAttackEventPath = "event:/SvardAttack";
+    private const string SvardAttackEventPath = "event:/Player/SvardAttack";
     private EventInstance svardAttackEventInstance;
     private PARAMETER_ID armaParameterId;
     private int currentArmaType = 0;
 
-    private const string FootstepEventPath = "event:/Footsteps";
+    private const string FootstepEventPath = "event:/Player/Footsteps";
     private EventInstance footstepEventInstance;
     private PARAMETER_ID terrainParameterId;
     private int currentTerrainType;

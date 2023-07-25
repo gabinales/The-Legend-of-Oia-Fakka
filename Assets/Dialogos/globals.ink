@@ -8,12 +8,16 @@ VAR ArmaAtual = "Nenhuma" // Poderia ser: Grassblade, etc.
 VAR HoraDoDia = 0
 
 
-// NPC
+// NPCs
     // Zoroastros
 VAR TalkedToZoroastros = "Não"
 VAR CutsceneGrassblade = "Não viu cutscene"
 VAR ZoroastrosDialogState = "Não interagiu"
 VAR EntregouChave = "N"
+
+    // Vaso Sanitário do Cemitério
+VAR VasoSanitarioEntupido = "Não"
+
     // Ignorancio
 VAR questActive = 0
 

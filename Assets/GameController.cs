@@ -28,8 +28,6 @@ public class GameController : MonoBehaviour
     // Para trocar entre os diferentes estados:
     public GameState state;
 
-    DamageHandler DamageHandler;
-
     // Patrick 24.06 --- Estado Pausado
     private bool isPaused = false;
     private bool isTalking = false;
@@ -40,17 +38,6 @@ public class GameController : MonoBehaviour
         light2D = globalLight.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
 
         Time.timeScale = 1f;
-
-        DamageHandler = GetComponent<DamageHandler>();
-    }
-    private void Awake()
-    {
-        /*
-        if(instance != null){
-            Debug.LogError("Mais de um Game Controller na cena");
-        }
-        instance = this;
-        */
     }
 
     private void Update()

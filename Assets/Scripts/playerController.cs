@@ -15,13 +15,9 @@ public class playerController : MonoBehaviour
     private FMODEvents fmodEvents;
     private int currentTerrainType;
 
-    // Patrick 15.06 --- Blocos seguráveis
-    public GameObject blocoSeguravel;
-    private bool segurandoBloco = false;
-    private bool podeSegurar = false;
-    //
-
     private PlayerStats pStats;
+    public VetorPosicaoInicialPlayer posicaoInicial; // Útil para reposicionar corretamente o jogador 
+                                                        // durante as transições entre Scenes
 
     public void TocaAtaqueSFX()
     {
@@ -34,7 +30,7 @@ public class playerController : MonoBehaviour
             FMODEvents.instance.PlaySvardAttackSound();
         }
         else{
-            Debug.Log("Arma inválida!!!");
+            Debug.Log("TocaAtaqueSFX: Arma inválida!!!");
         }
     }
 
@@ -69,6 +65,9 @@ public class playerController : MonoBehaviour
     private float distanceMoved = 0f;
     public float stepDistance = 1f;
 
+    private void Start(){
+        transform.position = posicaoInicial.posicaoInicial;
+    }
     private void Awake()
     {
         if(instance != null && instance != this){
@@ -121,15 +120,6 @@ public class playerController : MonoBehaviour
                 animator.SetTrigger("Atacando");
                 TocaAtaqueSFX();
             }
-
-        }
-        // Patrick 15.06 --- Botão de segurar (Z)
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            if (segurandoBloco)
-                SoltaBloco();
-            else if (podeSegurar)
-                SeguraBloco();
         }
     }
 
@@ -143,13 +133,13 @@ public class playerController : MonoBehaviour
         Vector2 targetPosition = playerRb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
 
         // Verifica colisões nas camadas NPC e CorposSolidos
-        float playerWidth = playerCollider.bounds.size.x / 2;
-        float playerHeight = playerCollider.bounds.size.y / 2;
+        float playerWidth = playerCollider.bounds.size.x;
+        float playerHeight = playerCollider.bounds.size.y;
         float castDistance = moveSpeed * Time.fixedDeltaTime + Mathf.Max(playerWidth, playerHeight);
-        RaycastHit2D hit = Physics2D.BoxCast(playerRb.position, playerCollider.bounds.size, 0f, moveDirection, castDistance / 4, LayerMask.GetMask("CorposSolidos", "NPC"));
+        RaycastHit2D hit = Physics2D.BoxCast(playerRb.position, playerCollider.bounds.size, 0f, moveDirection, castDistance / 8, LayerMask.GetMask("CorposSolidos", "NPC"));
 
         // Desenha o raio na Scene
-        Debug.DrawRay(playerRb.position, moveDirection * castDistance, Color.red);
+        Debug.DrawRay(playerRb.position, moveDirection * castDistance/8, Color.red);
 
         if (hit.collider == null && !isAttacking)
         { // Não há colisão, pode mover o jogador
@@ -175,28 +165,6 @@ public class playerController : MonoBehaviour
         }
     }
 
-    // Patrick 15.06 --- Botão de segurar (Z)
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject == blocoSeguravel)
-            podeSegurar = true;
-    }
-    void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject == blocoSeguravel)
-            podeSegurar = false;
-    }
-
-    void SeguraBloco()
-    {
-        blocoSeguravel.transform.SetParent(transform);
-        segurandoBloco = true;
-    }
-    void SoltaBloco()
-    {
-        blocoSeguravel.transform.SetParent(null);
-        segurandoBloco = false;
-    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("coletavel"))
@@ -247,10 +215,8 @@ public class playerController : MonoBehaviour
 
         if (collider != null)
         {
-            //Debug.Log("interagiu com o npc: " + collider);
             collider.GetComponent<iInteragivel>()?.Interacao(); // ? significa: Se é interagível, execute a função.
         }
         Debug.Log("Não há nenhum NPC ou Corpo Sólido específico ao seu alcance.");
-
     }
 }

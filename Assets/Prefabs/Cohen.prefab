@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  hpMax: 4
+  hpMax: 5
   hpAtual: 0
   defesa: 0
   danoBase: 0

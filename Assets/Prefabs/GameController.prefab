@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3215853978044471205}
   - component: {fileID: 4926716810547104119}
   - component: {fileID: 1497883252546069953}
-  - component: {fileID: 1449402897289758495}
   - component: {fileID: 4581553939180434787}
   m_Layer: 0
   m_Name: GameController
@@ -50,9 +49,8 @@ MonoBehaviour:
   pController: {fileID: 919148202519791623, guid: d4c85120c11571f419c99add9992be4e, type: 3}
   JanelaPause: {fileID: 4790139077052258452, guid: 0f6828e66aaaec148971ec9533d4e6fa, type: 3}
   pauseFirstSelected: {fileID: 0}
-  dialogoFirstSelected: {fileID: 0}
   globalLight: {fileID: 0}
-  timeOfDay: 0
+  timeOfDay: 1
   state: 0
 --- !u!114 &1497883252546069953
 MonoBehaviour:
@@ -68,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalsInkFile:
     compileAutomatically: 0
-    inkAsset: {fileID: 0}
+    inkAsset: {fileID: 102900000, guid: 290b3b871fee26a4ca5f69b55d783908, type: 3}
     jsonAssetDirectory: {fileID: 0}
     jsonAsset: {fileID: 0}
     unhandledCompileErrors: []
@@ -80,7 +78,7 @@ MonoBehaviour:
     masterInkAsset: {fileID: 0}
     includePaths: []
     includes: []
-  gameController: {fileID: 0}
+  gameController: {fileID: 4926716810547104119}
   caixaDeDialogo: {fileID: 0}
   textoDialogo: {fileID: 0}
   nome: {fileID: 0}
@@ -89,19 +87,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   letrasPorSegundo: 120
---- !u!114 &1449402897289758495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5714191200594150876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adfabfd6ac7dc7449cea422979ca77f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpDisplay: {fileID: 0}
 --- !u!114 &4581553939180434787
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,18 +5,12 @@ using UnityEngine;
 
 public class EspadaHit : MonoBehaviour
 {
-    private DamageHandler damageHandler;
     public float investida;
     public float duracaoDoKnockback;
     public int danoAtaque;
 
     // VFX do hit da Espada
     public GameObject Fagulhas;
-
-    private void Awake()
-    {
-        damageHandler = GetComponent<DamageHandler>();
-    }
 
     //porrada da espada
     void OnTriggerEnter2D(Collider2D colisor)
@@ -34,8 +28,7 @@ public class EspadaHit : MonoBehaviour
             diferenca = diferenca.normalized * investida;
             adversario.AddForce(diferenca, ForceMode2D.Impulse);
             StartCoroutine(KnockbackCo(adversario));
-
-            damageHandler.Damage(danoAtaque, other);
+            
             //danoAtaque *= 2;
         }
         // Outros efeitos (cortar grama, ativar switch...):

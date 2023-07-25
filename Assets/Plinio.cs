@@ -4,40 +4,39 @@ using UnityEngine;
 
 public class Plinio : Enemy, ISwitch
 {
-    //private Animator animator;
-    public bool estado;
-    private int layerP;
-    //public PlayerStats player;
+    [Header("Plínio")]
+    public bool estaAtivado;
+    private int layerPlinio;
+    private BoxCollider2D boxCollider;
+
+    private void Awake(){
+        animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
+    }
 
     public void Toggle(){
-        estado = !estado;
-        animator.SetBool("ativado", estado);
-        /*if(!audiosource.isPlaying){
-            audiosource.PlayOneShot(enemySfx[0]);
-        }*/
+        estaAtivado = !estaAtivado;
+        animator.SetBool("ativado", estaAtivado);
+       
+        // Toca SFX:
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.plinioToggle, this.transform.position);
 
-        layerP = gameObject.layer;
+        layerPlinio = gameObject.layer;
 
-        if(layerP == 7){
+        if(layerPlinio == 9){
             gameObject.layer = 0;
+            boxCollider.enabled = false;
         }
-        if(layerP == 0){
-            gameObject.layer = 7;
+        if(layerPlinio == 0){
+            gameObject.layer = 9;
+            boxCollider.enabled = true;
         }
-
-        Invoke("Reativa", 5f);
     }
 
-    private void Awake() {
-        animator = GetComponent<Animator>();
-    }
-
-    void Reativa(){
-        estado = true;
-        animator.SetBool("ativado", estado);
-        gameObject.layer = 7;
-        /*if(!audiosource.isPlaying){
-            audiosource.PlayOneShot(enemySfx[0]);  // Um pouco redundante
-        }*/
+    public void ReativaPlinio(){
+        estaAtivado = true;
+        animator.SetBool("ativado", estaAtivado);
+        gameObject.layer = 9;
+        boxCollider.enabled = true;
     }
 }

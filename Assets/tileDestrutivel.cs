@@ -8,7 +8,8 @@ public class tileDestrutivel : MonoBehaviour
 {
     [Header("SFX")]
     [SerializeField] private EventReference tileDestruidoSFX;
-    // Evento que será acionado quando um tile for destruído:
+
+    // Evento que será acionado sempre que um tile for destruído:
     public static event Action<GameObject> TileDestroyed;
 
     // Destrói o tile (grama, cruz, vaso, etc.) e dropa o item:

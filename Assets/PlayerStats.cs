@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour, IAtacavel
 {   
     private int hp;
     private int hpMax = 10;
-    private Arma armaAtual = Arma.Nenhuma; // Começa o jogo desarmado.
+    private Arma armaAtual = Arma.Nenhuma;
     private Animator animator;
 
     public int Hp{
@@ -51,7 +51,7 @@ public class PlayerStats : MonoBehaviour, IAtacavel
 
     public void InitDefaults(){
         Hp = HpMax;
-        ArmaAtual = Arma.Nenhuma;
+        ArmaAtual = Arma.Grassblade;
     }
 
     private void Awake(){
@@ -60,15 +60,16 @@ public class PlayerStats : MonoBehaviour, IAtacavel
     }
 
     public void Dano(int quantidade){
-        Debug.Log("Dano");
+        Hp = hp - quantidade;
+        cameraController.instance.ScreenKick();
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.danoHit, this.transform.position);
     }
     public void Cura(int quantidade){
-        Debug.Log("Cura");
+        Debug.Log("Cura: " + quantidade);
     }
     
     // permite que subclasses de PlayerStats personalizem o comportamento quando o HP é alterado e acionem o evento HpAlterado, notificando os listeners sobre a mudança no HP.
     protected virtual void OnHpAlterado(int novoHp){
         HpAlterado?.Invoke(novoHp); // Isso notificará todas as classes inscritas no evento, passando o novo valor do HP como parâmetro
     }
-
 }
