@@ -6,25 +6,27 @@ using UnityEngine;
 
 public class TestarSolo : MonoBehaviour
 {
-    [SerializeField] private float extraHeight = 0.25f;
+    [SerializeField] private float radius = 0.1f; // Raio da esfera para detecção de solo
     [SerializeField] private LayerMask whatIsGround;
 
-    private RaycastHit2D groundHit;
-
-    private Collider2D coll;
-
-    private void Start(){
-        coll = GetComponent<Collider2D>();
+    private void Start()
+    {
+        // Nenhuma alteração no Start, pode manter como estava
     }
 
-    public bool IsGrounded(){
-        groundHit = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, extraHeight, whatIsGround);
+    public bool IsGrounded()
+    {
+        // Executar um cast de esfera para baixo
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, radius, whatIsGround);
 
-        if(groundHit.collider != null){
+        // Verificar se houve colisão e a layer do objeto atingido
+        if (hit != null && hit.gameObject != gameObject)
+        {
             Debug.Log("tá seguro");
             return true;
         }
-        else{
+        else
+        {
             Debug.Log("não tá seguro");
             return false;
         }
