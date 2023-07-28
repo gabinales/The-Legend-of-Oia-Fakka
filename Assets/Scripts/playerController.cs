@@ -99,7 +99,6 @@ public class playerController : MonoBehaviour
                 animator.SetFloat(moveYHash, moveDirection.y);
 
                 moveDirection = Vector2.ClampMagnitude(moveDirection, 1f); // Limita a velocidade
-
             }
             else
             {
@@ -207,7 +206,7 @@ public class playerController : MonoBehaviour
     public void Interage()
     {
         var orientacaoJogador = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY")); //reutilizando as posições que já estão settadas para o Animator.
-        var posicaoInteracao = transform.position + orientacaoJogador / 4;
+        var posicaoInteracao = transform.position + orientacaoJogador;
 
         Debug.DrawLine(transform.position, posicaoInteracao, Color.red, 1f);
 

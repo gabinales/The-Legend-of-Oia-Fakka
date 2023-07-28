@@ -313,3 +313,17 @@ MonoBehaviour:
       Data3: -2046862164
       Data4: -1596311130
     Path: event:/Game/PuzzleResolvido
+  <caiuNoBuraco>k__BackingField:
+    Guid:
+      Data1: 83690148
+      Data2: 1291207489
+      Data3: 1629049492
+      Data4: -1946744834
+    Path: event:/Player/CaiuNoBuraco
+  <usouTeleporte>k__BackingField:
+    Guid:
+      Data1: 1125392919
+      Data2: 1274775189
+      Data3: 950998696
+      Data4: 344032942
+    Path: event:/Game/UsouTeleporte

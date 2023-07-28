@@ -56,6 +56,8 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference ativaSpawner {get; private set; }
     [field: SerializeField] public EventReference lootCollected {get; private set; }
     [field: SerializeField] public EventReference puzzleResolvido {get; private set; }
+    [field: SerializeField] public EventReference caiuNoBuraco {get; private set; }
+    [field: SerializeField] public EventReference usouTeleporte {get; private set; }
 
     private const string SvardAttackEventPath = "event:/Player/SvardAttack";
     private EventInstance svardAttackEventInstance;

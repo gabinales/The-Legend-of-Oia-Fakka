@@ -61,8 +61,6 @@ public class PlayerStats : MonoBehaviour, IAtacavel
 
     public void Dano(int quantidade){
         Hp = hp - quantidade;
-        cameraController.instance.ScreenKick();
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.danoHit, this.transform.position);
     }
     public void Cura(int quantidade){
         Debug.Log("Cura: " + quantidade);

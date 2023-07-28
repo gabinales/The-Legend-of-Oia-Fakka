@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 
 // O controlador decide entre os estados CORRENDO e FALANDO, etc.
 public enum GameState
-{ // Todos os estados possíveis.
+{
     MovimentacaoLivre,
     Dialogo,
     Loja
@@ -30,8 +30,6 @@ public class GameController : MonoBehaviour
 
     // Patrick 24.06 --- Estado Pausado
     private bool isPaused = false;
-    private bool isTalking = false;
-
 
     private void Start()
     {

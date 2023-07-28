@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour, IAtacavel
             IAtacavel IAtacavel = colisor.gameObject.GetComponent<IAtacavel>();
             if(IAtacavel != null){
                 IAtacavel.Dano(danoToque);
+                cameraController.instance.ScreenKick();
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.danoHit, this.transform.position);
             }
         }
     }
