@@ -38,7 +38,7 @@ public class BuracoDano : MonoBehaviour
                 pStats.Dano(1);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.caiuNoBuraco, this.transform.position);
 
-                safeGroundSaver.WarpPlayerToSafeGround();
+                safeGroundSaver.Invoke("WarpPlayerToSafeGround", 1f);
 
                 StartCoroutine(RetomarControle(other));
             }
