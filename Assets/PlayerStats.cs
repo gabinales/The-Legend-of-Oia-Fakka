@@ -15,18 +15,18 @@ public enum Arma{
 
 public class PlayerStats : MonoBehaviour, IAtacavel
 {   
-    private int hp;
+    private int hpAtual;
     private int hpMax = 10;
     private Arma armaAtual = Arma.Nenhuma;
     private Animator animator;
 
-    public int Hp{
+    public int HpAtual{
         get{
-            return hp;
+            return hpAtual;
         }
         set{
-            hp = value;
-            OnHpAlterado(hp); // Aciona o evento e passa o parâmetro para os Listeners interessados (como o UIManager)
+            hpAtual = value;
+            OnHpAlterado(hpAtual); // Aciona o evento e passa o parâmetro para os Listeners interessados (como o UIManager)
         }
     }
     public int HpMax{
@@ -50,7 +50,7 @@ public class PlayerStats : MonoBehaviour, IAtacavel
     public event System.Action<int> HpAlterado; // Torna este evento público para qualquer classe que tenha uma referência de PlayerStats
 
     public void InitDefaults(){
-        Hp = HpMax;
+        HpAtual = HpMax;
         ArmaAtual = Arma.Grassblade;
     }
 
@@ -60,10 +60,10 @@ public class PlayerStats : MonoBehaviour, IAtacavel
     }
 
     public void Dano(int quantidade){
-        Hp = hp - quantidade;
+        HpAtual = hpAtual - quantidade;
     }
-    public void Cura(int quantidade){
-        Debug.Log("Cura: " + quantidade);
+    public void Morre(){
+        Debug.Log("Morreu");
     }
     
     // permite que subclasses de PlayerStats personalizem o comportamento quando o HP é alterado e acionem o evento HpAlterado, notificando os listeners sobre a mudança no HP.

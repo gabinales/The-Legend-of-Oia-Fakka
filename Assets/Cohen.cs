@@ -15,11 +15,11 @@ public class Cohen : Enemy // Cohen contém todas as funções de Adversario.
     void Start()
     {
         alvo = GameObject.FindWithTag("Player").transform;
-        hpAtual = hpMax;
+        HpAtual = HpMax;
     }
     void FixedUpdate()
     {
-        if (gameObject.GetComponent<Cohen>().hpAtual<=0){
+        if (gameObject.GetComponent<Cohen>().HpAtual<=0){
             /*if(!audiosource.isPlaying){
                 audiosource.PlayOneShot(enemySfx[2]);
             }*/

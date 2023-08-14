@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
     
     void Start(){
         gameController = FindObjectOfType<GameController>();
-        AtualizaHpText(playerStats.Hp);
+        AtualizaHpText(playerStats.HpAtual);
     }
 
     private void Update(){

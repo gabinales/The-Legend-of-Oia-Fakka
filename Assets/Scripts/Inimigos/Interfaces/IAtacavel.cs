@@ -5,5 +5,9 @@ using UnityEngine;
 public interface IAtacavel
 {
     void Dano(int quantidade);
-    void Cura(int quantidade);
+
+    void Morre();
+
+    int HpMax {get; set; }
+    int HpAtual {get; set; }
 }
